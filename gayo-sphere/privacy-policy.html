@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Gayo Sphere</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { manrope: ['Manrope', 'sans-serif'] },
+          colors: { brand: { blue: '#2563EB', dark: '#0A0A0A' } }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Manrope', sans-serif; background: #ffffff; color: #0A0A0A; overflow-x: hidden; }
+
+    /* ── Hamburger ── */
+    #mobile-menu { transition: opacity 0.25s ease, visibility 0.25s ease; }
+    #mobile-menu.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    #mobile-menu:not(.hidden) { opacity: 1; visibility: visible; }
+    .ham-line { display: block; width: 22px; height: 2px; background: #0A0A0A; transition: transform 0.25s ease, opacity 0.25s ease; }
+    .ham-open .ham-line:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .ham-open .ham-line:nth-child(2) { opacity: 0; }
+    .ham-open .ham-line:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    /* ── Footer link hover ── */
+    .footer-link { transition: color 0.15s ease; }
+    .footer-link:hover { color: #ffffff; }
+
+    /* ── TOC ── */
+    .toc-link {
+      display: block;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: #6B7280;
+      padding: 6px 12px;
+      border-left: 2px solid transparent;
+      transition: color 0.15s ease, border-color 0.15s ease;
+      text-decoration: none;
+      line-height: 1.5;
+    }
+    .toc-link:hover { color: #0A0A0A; border-left-color: #D1D5DB; }
+    .toc-link.active { color: #2563EB; border-left-color: #2563EB; font-weight: 600; }
+
+    /* ── Content sections ── */
+    .policy-section { scroll-margin-top: 88px; }
+    .policy-section h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #0A0A0A;
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #F3F4F6;
+    }
+    .policy-section p {
+      font-size: 0.9375rem;
+      line-height: 1.85;
+      color: #374151;
+      margin-bottom: 1rem;
+    }
+    .policy-section p:last-child { margin-bottom: 0; }
+    .policy-section ul {
+      list-style: none;
+      margin: 0.75rem 0 1rem;
+    }
+    .policy-section ul li {
+      font-size: 0.9375rem;
+      line-height: 1.85;
+      color: #374151;
+      padding: 0.375rem 0 0.375rem 1.25rem;
+      position: relative;
+    }
+    .policy-section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.85rem;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #2563EB;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.55s ease forwards; }
+    .fade-up-d1 { animation-delay: 0.1s; opacity: 0; }
+    .fade-up-d2 { animation-delay: 0.2s; opacity: 0; }
+    .fade-up-d3 { animation-delay: 0.3s; opacity: 0; }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════ -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100" style="height:64px;">
+  <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2.5 no-underline">
+      <div class="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center flex-shrink-0">
+        <span class="text-white font-bold text-sm leading-none">GS</span>
+      </div>
+      <span class="text-sm font-semibold text-gray-900">Gayo Sphere</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="work.html"      class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors duration-150">Work</a>
+      <a href="services.html"  class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors duration-150">Services</a>
+      <a href="the-team.html"  class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors duration-150">Team</a>
+      <a href="insight.html"   class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors duration-150">Insight</a>
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <a href="contact-us.html"
+         class="hidden md:inline-flex items-center px-5 py-2 bg-blue-600 text-white text-sm font-semibold rounded-full hover:bg-blue-700 transition-colors duration-150">
+        Contact Us
+      </a>
+      <button id="ham-btn" aria-label="Toggle menu"
+              class="md:hidden flex flex-col gap-[5px] justify-center items-center w-10 h-10 rounded-lg hover:bg-gray-50 transition-colors">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-white flex flex-col" style="padding-top:64px;">
+  <div class="flex flex-col gap-1 px-6 pt-8 pb-6">
+    <a href="work.html"     class="text-2xl font-semibold text-gray-900 py-3 border-b border-gray-100">Work</a>
+    <a href="services.html" class="text-2xl font-semibold text-gray-900 py-3 border-b border-gray-100">Services</a>
+    <a href="the-team.html" class="text-2xl font-semibold text-gray-900 py-3 border-b border-gray-100">Team</a>
+    <a href="insight.html"  class="text-2xl font-semibold text-gray-900 py-3 border-b border-gray-100">Insight</a>
+  </div>
+  <div class="px-6 pt-6">
+    <a href="contact-us.html"
+       class="inline-flex items-center px-8 py-3 bg-blue-600 text-white text-base font-semibold rounded-full hover:bg-blue-700 transition-colors duration-150">
+      Contact Us
+    </a>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section class="pt-24 pb-14 px-6 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto">
+    <div class="max-w-2xl">
+      <span class="fade-up fade-up-d1 inline-flex items-center gap-2 text-xs font-semibold text-blue-600 uppercase tracking-widest mb-5">
+        <span class="w-4 h-px bg-blue-600"></span>Legal
+      </span>
+      <h1 class="fade-up fade-up-d2 text-4xl sm:text-5xl font-extrabold leading-[1.1] tracking-tight text-[#0A0A0A] mb-5">
+        Privacy Policy
+      </h1>
+      <p class="fade-up fade-up-d3 text-base text-gray-500 font-medium">
+        Effective Date: <strong class="text-gray-700">March 16, 2026</strong> &nbsp;·&nbsp; gayo-sphere.cloud
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     CONTENT + TOC
+════════════════════════════════════════ -->
+<div class="max-w-7xl mx-auto px-6 py-16">
+  <div class="flex flex-col lg:flex-row gap-16">
+
+    <!-- ── Sticky TOC (desktop) ── -->
+    <aside class="hidden lg:block w-64 flex-shrink-0">
+      <div class="sticky top-24">
+        <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4 px-3">Contents</p>
+        <nav id="toc" class="flex flex-col gap-0.5">
+          <a href="#introduction"       class="toc-link">Introduction</a>
+          <a href="#information-we-collect" class="toc-link">Information We Collect</a>
+          <a href="#how-we-use"         class="toc-link">How We Use Your Information</a>
+          <a href="#disclosure"         class="toc-link">Disclosure of Your Information</a>
+          <a href="#international"      class="toc-link">International Data Transfers</a>
+          <a href="#tracking"           class="toc-link">Tracking Technologies</a>
+          <a href="#retention"          class="toc-link">Data Retention</a>
+          <a href="#security"           class="toc-link">Security of Your Information</a>
+          <a href="#children"           class="toc-link">Policy for Children</a>
+          <a href="#your-rights"        class="toc-link">Your Privacy Rights</a>
+          <a href="#updates"            class="toc-link">Updates to This Policy</a>
+          <a href="#contact"            class="toc-link">Contact Us</a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- ── Policy Content ── -->
+    <div class="flex-1 min-w-0 max-w-3xl space-y-12">
+
+      <section id="introduction" class="policy-section">
+        <h2>Introduction</h2>
+        <p>Welcome to Gayo Sphere, operated by Gayo Sphere. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our application and use our services. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the application.</p>
+      </section>
+
+      <section id="information-we-collect" class="policy-section">
+        <h2>Information We Collect</h2>
+        <p>We may collect information about you in a variety of ways. The information we may collect via the application includes the following.</p>
+
+        <p><strong>Personal Data.</strong> Personally identifiable information, such as your name, shipping address, email address, and telephone number, that you voluntarily give to us when you register with the application or when you choose to participate in various activities related to the application.</p>
+
+        <p><strong>Derivative Data.</strong> Information our servers automatically collect when you access the application, such as your native actions that are integral to the application, including your IP address, browser type, operating system, access times, and the pages you have viewed directly before and after accessing the application.</p>
+
+        <p><strong>Financial Data.</strong> Financial information, such as data related to your payment method that we may collect when you purchase, order, return, exchange, or request information about our services from the application. We store only very limited, if any, financial information that we collect. Otherwise, all financial information is stored by our payment processor, and you are encouraged to review their privacy policy and contact them directly for responses to your questions.</p>
+
+        <p><strong>Device Data.</strong> Device information such as your mobile device ID, model, and manufacturer, and information about the location of your device, if you access the application from a mobile device.</p>
+      </section>
+
+      <section id="how-we-use" class="policy-section">
+        <h2>How We Use Your Information</h2>
+        <p>Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the application to:</p>
+        <ul>
+          <li>Create and manage your account</li>
+          <li>Process your transactions and send you related information including purchase confirmations and invoices</li>
+          <li>Manage your orders, payments, and refunds</li>
+          <li>Provide customer support and respond to your requests, comments, and inquiries</li>
+          <li>Monitor and analyze usage and trends to improve your experience with the application</li>
+          <li>Send you technical notices, updates, security alerts, and support and administrative messages</li>
+          <li>Deliver targeted advertising, newsletters, and other information regarding promotions and the application to you</li>
+        </ul>
+      </section>
+
+      <section id="disclosure" class="policy-section">
+        <h2>Disclosure of Your Information</h2>
+        <p>We may share information we have collected about you in certain situations. Your information may be disclosed:</p>
+        <ul>
+          <li><strong>By law or to protect rights</strong> — if we believe the release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others.</li>
+          <li><strong>Third-party service providers</strong> — we may share your information with third-party service providers that perform services for us or on our behalf, including payment processing, data analysis, email delivery, hosting services, customer service, and marketing assistance.</li>
+          <li><strong>Business transfers</strong> — we may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.</li>
+        </ul>
+      </section>
+
+      <section id="international" class="policy-section">
+        <h2>International Data Transfers</h2>
+        <p>Your information, including Personal Data, may be transferred to and maintained on computers or servers located outside of your state, province, country, or other governmental jurisdiction where the data protection laws may differ from those from your jurisdiction. Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.</p>
+      </section>
+
+      <section id="tracking" class="policy-section">
+        <h2>Tracking Technologies</h2>
+        <p>We may use cookies, web beacons, tracking pixels, and other tracking technologies on the application to help customize the application and improve your experience. You can set your browser to remove or reject cookies, but be aware that such action could affect the availability and functionality of the application.</p>
+        <p>We may also partner with selected third-party vendors to allow tracking technologies and remarketing services on the application through the use of first-party cookies and third-party cookies. This helps us analyze and track users' use of the application, determine the popularity of certain content, and better understand online activity.</p>
+      </section>
+
+      <section id="retention" class="policy-section">
+        <h2>Data Retention</h2>
+        <p>We will only retain your personal information for as long as necessary to fulfill the purposes we collected it for, including for the purposes of satisfying any legal, accounting, or reporting requirements.</p>
+      </section>
+
+      <section id="security" class="policy-section">
+        <h2>Security of Your Information</h2>
+        <p>We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse.</p>
+      </section>
+
+      <section id="children" class="policy-section">
+        <h2>Policy for Children</h2>
+        <p>We do not knowingly solicit information from or market to children under the age of 13. If we learn that we have collected personal information from a child under age 13 without verification of parental consent, we will delete that information as quickly as possible.</p>
+      </section>
+
+      <section id="your-rights" class="policy-section">
+        <h2>Your Privacy Rights</h2>
+        <p>Depending on your location, you may have specific rights regarding your personal information, including:</p>
+        <ul>
+          <li>The right to access the personal information we hold about you</li>
+          <li>The right to request that we correct any inaccurate personal information</li>
+          <li>The right to request that we delete your personal information</li>
+          <li>The right to object to or restrict the processing of your personal information</li>
+          <li>The right to request the transfer of your data to another organization</li>
+        </ul>
+        <p>If you would like to exercise any of these rights, please contact us using the information provided below.</p>
+      </section>
+
+      <section id="updates" class="policy-section">
+        <h2>Updates to This Policy</h2>
+        <p>We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the Effective Date of this Privacy Policy. You are encouraged to periodically review this Privacy Policy to stay informed of updates.</p>
+      </section>
+
+      <section id="contact" class="policy-section">
+        <h2>Contact Us</h2>
+        <p>If you have questions or comments about this Privacy Policy, please contact us at:</p>
+        <div class="mt-5 p-6 rounded-2xl bg-gray-50 border border-gray-100 space-y-2">
+          <p class="font-semibold text-[#0A0A0A]">Gayo Sphere</p>
+          <p class="text-sm text-gray-600">Purok 3, Barangay 3, San Francisco, Agusan del Sur, Philippines 8501</p>
+          <a href="mailto:cozy.downloads.store@gmail.com" class="text-sm text-blue-600 hover:text-blue-700 transition-colors block">cozy.downloads.store@gmail.com</a>
+          <p class="text-sm text-gray-600">07089861692</p>
+          <a href="https://gayo-sphere.cloud" class="text-sm text-blue-600 hover:text-blue-700 transition-colors block">gayo-sphere.cloud</a>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer class="bg-[#0A0A0A] text-white px-6 py-16">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-16">
+
+      <div>
+        <div class="flex items-center gap-2.5 mb-5">
+          <div class="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-sm leading-none">GS</span>
+          </div>
+          <span class="text-sm font-semibold text-white">Gayo Sphere</span>
+        </div>
+        <p class="text-sm text-gray-400 leading-relaxed mb-4">
+          AI automation and e-commerce solutions that scale your business without scaling your team.
+        </p>
+        <a href="mailto:clarence.gayo@gmail.com" class="text-sm text-blue-400 hover:text-blue-300 transition-colors duration-150">
+          clarence.gayo@gmail.com
+        </a>
+      </div>
+
+      <div>
+        <p class="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-5">Features</p>
+        <ul class="space-y-3">
+          <li><a href="work.html"     class="text-sm text-gray-400 footer-link">Work</a></li>
+          <li><a href="services.html" class="text-sm text-gray-400 footer-link">Services</a></li>
+          <li><a href="the-team.html" class="text-sm text-gray-400 footer-link">Team</a></li>
+          <li><a href="insight.html"  class="text-sm text-gray-400 footer-link">Insight</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-5">General</p>
+        <ul class="space-y-3">
+          <li><a href="contact-us.html"     class="text-sm text-blue-400 footer-link">Contact us</a></li>
+          <li><a href="privacy-policy.html" class="text-sm text-gray-400 footer-link">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html" class="text-sm text-gray-400 footer-link">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-5">Find Us</p>
+        <div class="flex items-start gap-2">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0">
+            <path d="M8 1.5C5.51 1.5 3.5 3.51 3.5 6c0 3.75 4.5 8.5 4.5 8.5S12.5 9.75 12.5 6c0-2.49-2.01-4.5-4.5-4.5zM8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="#6B7280"/>
+          </svg>
+          <p class="text-sm text-gray-400">Tokyo, Japan</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <p class="text-xs text-gray-600">© 2026 Gayo Sphere. All rights reserved.</p>
+        <span class="text-gray-800">·</span>
+        <a href="privacy-policy.html"    class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Privacy Policy</a>
+        <a href="terms-of-service.html"  class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Terms of Service</a>
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="https://www.linkedin.com/in/cldgayo/" target="_blank" rel="noopener"
+           class="text-xs text-gray-500 hover:text-white transition-colors duration-150">LinkedIn</a>
+        <a href="https://github.com/Gayo321" target="_blank" rel="noopener"
+           class="text-xs text-gray-500 hover:text-white transition-colors duration-150">GitHub</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════ -->
+<script>
+  // Hamburger
+  const hamBtn  = document.getElementById('ham-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamBtn.addEventListener('click', () => {
+    const open = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden', open);
+    hamBtn.classList.toggle('ham-open', !open);
+  });
+
+  // Active TOC highlight on scroll
+  const sections = document.querySelectorAll('.policy-section');
+  const tocLinks = document.querySelectorAll('.toc-link');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-64px 0px -60% 0px', threshold: 0 });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>

@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Work — Gayo Sphere</title>
+  <meta name="description" content="Every project is a custom automation solution designed for scale. Browse our full portfolio of AI automation and e-commerce systems." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { manrope: ['Manrope', 'sans-serif'] },
+          colors: {
+            brand: { blue: '#2563EB', dark: '#0A0A0A', border: '#E5E7EB' }
+          },
+          borderRadius: { '2xl': '16px' }
+        }
+      }
+    }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Manrope', sans-serif; background: #fff; color: #0A0A0A; -webkit-font-smoothing: antialiased; }
+
+    /* Nav */
+    .nav-link { font-size: 14px; color: #0A0A0A; font-weight: 500; text-decoration: none; transition: color 0.2s; }
+    .nav-link:hover { color: #2563EB; }
+    .nav-link.active { color: #2563EB; }
+
+    /* Mobile menu overlay */
+    #mobile-menu {
+      position: fixed; inset: 0; background: #fff; z-index: 100;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    #mobile-menu.open { opacity: 1; pointer-events: all; }
+    #mobile-menu a { font-size: 2rem; font-weight: 700; color: #0A0A0A; text-decoration: none; margin: 12px 0; transition: color 0.2s; }
+    #mobile-menu a:hover { color: #2563EB; }
+
+    /* Work project cards */
+    .work-card { border-radius: 16px; overflow: hidden; text-decoration: none; display: block; transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.35s; }
+    .work-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    .work-card-img { height: 220px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .work-card-body { padding: 22px 22px 26px; }
+
+    /* Category badge */
+    .badge { display: inline-flex; align-items: center; padding: 3px 10px; border-radius: 9999px; font-size: 11px; font-weight: 700; letter-spacing: 0.03em; }
+    .badge-blue { background: #EFF6FF; color: #2563EB; }
+    .badge-dark { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9); }
+
+    /* Thumb grid */
+    .thumb-card { border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; position: relative; cursor: pointer; }
+    .thumb-card img, .thumb-card .thumb-bg { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .thumb-card:hover .thumb-bg { transform: scale(1.06); }
+
+    /* Partner logos */
+    .partner-logo { filter: grayscale(1); opacity: 0.55; height: 28px; object-fit: contain; transition: opacity 0.2s, filter 0.2s; }
+    .partner-logo:hover { filter: grayscale(0); opacity: 1; }
+
+    /* Testimonial card */
+    .testimonial-card { background: #F9FAFB; border-radius: 16px; padding: 28px; border: 1px solid #E5E7EB; }
+
+    /* CTA */
+    .cta-btn { background: #2563EB; color: #fff; border-radius: 9999px; padding: 14px 36px; font-size: 1.0625rem; font-weight: 600; text-decoration: none; display: inline-block; transition: opacity 0.2s, transform 0.2s; }
+    .cta-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    /* Footer */
+    .footer-link { color: #fff; font-size: 14px; text-decoration: none; transition: color 0.2s; display: block; margin-bottom: 10px; }
+    .footer-link:hover { color: #60A5FA; }
+    .footer-section-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6B7280; margin-bottom: 16px; }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-in { animation: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+
+    /* Stagger for grid cards */
+    .work-card:nth-child(1) { animation: fadeInUp 0.5s 0.05s both; }
+    .work-card:nth-child(2) { animation: fadeInUp 0.5s 0.12s both; }
+    .work-card:nth-child(3) { animation: fadeInUp 0.5s 0.19s both; }
+    .work-card:nth-child(4) { animation: fadeInUp 0.5s 0.26s both; }
+    .work-card:nth-child(5) { animation: fadeInUp 0.5s 0.33s both; }
+    .work-card:nth-child(6) { animation: fadeInUp 0.5s 0.40s both; }
+    .work-card:nth-child(7) { animation: fadeInUp 0.5s 0.47s both; }
+    .work-card:nth-child(8) { animation: fadeInUp 0.5s 0.54s both; }
+    .work-card:nth-child(9) { animation: fadeInUp 0.5s 0.61s both; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════ NAVBAR ═══════════════════════════════════════════ -->
+<nav style="position:fixed;top:0;left:0;right:0;height:64px;background:#fff;border-bottom:1px solid #E5E7EB;z-index:50;display:flex;align-items:center;padding:0 32px;">
+  <div style="max-width:1280px;width:100%;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
+    <!-- Logo -->
+    <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+      <div style="width:36px;height:36px;background:#2563EB;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <span style="color:#fff;font-weight:800;font-size:13px;font-family:'Manrope',sans-serif;letter-spacing:-0.03em;">GS</span>
+      </div>
+      <span style="font-weight:600;font-size:15px;color:#0A0A0A;font-family:'Manrope',sans-serif;">Gayo Sphere</span>
+    </a>
+
+    <!-- Desktop links -->
+    <div style="display:flex;align-items:center;gap:32px;" class="hidden md:flex">
+      <a href="work.html" class="nav-link active">Work</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="the-team.html" class="nav-link">Team</a>
+      <a href="insight.html" class="nav-link">Insight</a>
+    </div>
+
+    <!-- CTA + Hamburger -->
+    <div style="display:flex;align-items:center;gap:16px;">
+      <a href="contact.html" style="background:#2563EB;color:#fff;border-radius:9999px;padding:8px 20px;font-size:14px;font-weight:600;text-decoration:none;font-family:'Manrope',sans-serif;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'" class="hidden md:inline-block">Contact Us</a>
+      <button id="hamburger" class="md:hidden" onclick="toggleMenu()" aria-label="Open menu" style="background:none;border:none;cursor:pointer;padding:4px;display:flex;flex-direction:column;gap:5px;">
+        <span style="display:block;width:22px;height:2px;background:#0A0A0A;border-radius:2px;"></span>
+        <span style="display:block;width:22px;height:2px;background:#0A0A0A;border-radius:2px;"></span>
+        <span style="display:block;width:22px;height:2px;background:#0A0A0A;border-radius:2px;"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Overlay Menu -->
+<div id="mobile-menu">
+  <button onclick="toggleMenu()" style="position:absolute;top:20px;right:28px;background:none;border:none;cursor:pointer;font-size:28px;color:#0A0A0A;">✕</button>
+  <a href="index.html" onclick="toggleMenu()">Home</a>
+  <a href="work.html" onclick="toggleMenu()" style="color:#2563EB;">Work</a>
+  <a href="services.html" onclick="toggleMenu()">Services</a>
+  <a href="the-team.html" onclick="toggleMenu()">Team</a>
+  <a href="insight.html" onclick="toggleMenu()">Insight</a>
+  <a href="contact.html" onclick="toggleMenu()" style="color:#2563EB;margin-top:16px;">Contact Us →</a>
+</div>
+
+<!-- ═══════════════════════════════════════════ HERO ═══════════════════════════════════════════ -->
+<section style="padding:120px 32px 80px;max-width:1280px;margin:0 auto;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;">
+
+    <!-- Left: headline -->
+    <div class="animate-in">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:24px;">
+        <span style="width:7px;height:7px;background:#2563EB;border-radius:50%;display:inline-block;"></span>
+        <span style="font-size:13px;color:#6B7280;font-weight:500;letter-spacing:0.02em;">Our Work</span>
+      </div>
+      <h1 style="font-size:clamp(2rem,4.5vw,3rem);font-weight:800;letter-spacing:-0.03em;color:#0A0A0A;line-height:1.12;">The work we do, and the people we help.</h1>
+    </div>
+
+    <!-- Right: subtitle -->
+    <div class="animate-in delay-2" style="padding-bottom:8px;">
+      <p style="font-size:1.0625rem;color:#6B7280;line-height:1.75;">We build intelligent systems that help entrepreneurs and businesses automate their most complex operations. Every project is a custom solution designed for scale.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ DIVIDER ═══════════════════════════════════════════ -->
+<div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+  <hr style="border:none;border-top:1px solid #E5E7EB;" />
+</div>
+
+<!-- ═══════════════════════════════════════════ PROJECT GRID ═══════════════════════════════════════════ -->
+<section style="padding:64px 32px 96px;max-width:1280px;margin:0 auto;" id="projects-section">
+
+  <p style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#9CA3AF;margin-bottom:32px;">Our Work</p>
+
+  <div id="projects-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;">
+
+    <!-- Project 1 — Voice-to-Calendar AI Engine -->
+    <a href="#" class="work-card" style="background:#F8FAFC;border:1px solid #E5E7EB;" data-project="1">
+      <div class="work-card-img" style="background:linear-gradient(135deg,#EFF6FF 0%,#DBEAFE 60%,#BFDBFE 100%);">
+        <svg width="200" height="130" viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Voice wave + calendar connection -->
+          <rect x="15" y="50" width="44" height="30" rx="10" fill="#2563EB" opacity="0.12" stroke="#2563EB" stroke-width="1.5"/>
+          <text x="37" y="70" font-family="Manrope,sans-serif" font-size="9" fill="#2563EB" text-anchor="middle" font-weight="700">Vapi</text>
+          <!-- voice waves -->
+          <path d="M37 44 Q37 38 37 32" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+          <path d="M30 46 Q28 38 30 30" stroke="#2563EB" stroke-width="1.2" stroke-linecap="round" opacity="0.25"/>
+          <path d="M44 46 Q46 38 44 30" stroke="#2563EB" stroke-width="1.2" stroke-linecap="round" opacity="0.25"/>
+          <!-- connector line -->
+          <line x1="59" y1="65" x2="78" y2="65" stroke="#2563EB" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <!-- n8n node -->
+          <rect x="78" y="50" width="44" height="30" rx="10" fill="#2563EB"/>
+          <text x="100" y="68" font-family="Manrope,sans-serif" font-size="10" fill="#fff" text-anchor="middle" font-weight="800">n8n</text>
+          <!-- connector line -->
+          <line x1="122" y1="65" x2="141" y2="65" stroke="#2563EB" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <!-- Calendar node -->
+          <rect x="141" y="50" width="44" height="30" rx="10" fill="#2563EB" opacity="0.12" stroke="#2563EB" stroke-width="1.5"/>
+          <text x="163" y="64" font-family="Manrope,sans-serif" font-size="7.5" fill="#2563EB" text-anchor="middle" font-weight="700">Google</text>
+          <text x="163" y="74" font-family="Manrope,sans-serif" font-size="7.5" fill="#2563EB" text-anchor="middle" font-weight="700">Calendar</text>
+          <!-- Airtable below -->
+          <line x1="100" y1="80" x2="100" y2="95" stroke="#2563EB" stroke-width="1.2" stroke-dasharray="3 2" opacity="0.5"/>
+          <rect x="78" y="95" width="44" height="22" rx="7" fill="#2563EB" opacity="0.08" stroke="#2563EB" stroke-width="1.2"/>
+          <text x="100" y="109" font-family="Manrope,sans-serif" font-size="8" fill="#2563EB" text-anchor="middle" font-weight="600">Airtable</text>
+        </svg>
+      </div>
+      <div class="work-card-body" style="background:#fff;">
+        <span class="badge badge-blue">AI Automation</span>
+        <p class="project-title" style="font-size:1.0625rem;font-weight:700;color:#0A0A0A;margin-top:10px;margin-bottom:6px;line-height:1.4;">Voice-to-Calendar AI Engine</p>
+        <p class="project-tools" style="font-size:13px;color:#6B7280;font-weight:500;margin-bottom:14px;">n8n · Vapi · Airtable</p>
+        <span style="font-size:13px;color:#2563EB;font-weight:600;">View case study →</span>
+      </div>
+    </a>
+
+    <!-- Project 2 — Social Media Engagement Engine -->
+    <a href="#" class="work-card" style="background:#0A0A0A;" data-project="2">
+      <div class="work-card-img" style="background:linear-gradient(135deg,#111827 0%,#1E3A5F 100%);">
+        <svg width="200" height="130" viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Social hub rings -->
+          <circle cx="100" cy="65" r="40" fill="none" stroke="#2563EB" stroke-width="1" opacity="0.25"/>
+          <circle cx="100" cy="65" r="26" fill="none" stroke="#2563EB" stroke-width="1.2" opacity="0.4"/>
+          <circle cx="100" cy="65" r="14" fill="#2563EB" opacity="0.15"/>
+          <circle cx="100" cy="65" r="7" fill="#2563EB" opacity="0.9"/>
+          <!-- Orbit icons -->
+          <circle cx="140" cy="65" r="7" fill="#60A5FA" opacity="0.85"/>
+          <text x="140" y="69" font-family="Manrope,sans-serif" font-size="7" fill="#fff" text-anchor="middle" font-weight="700">IG</text>
+          <circle cx="100" cy="25" r="6" fill="#93C5FD" opacity="0.7"/>
+          <text x="100" y="29" font-family="Manrope,sans-serif" font-size="6" fill="#fff" text-anchor="middle" font-weight="700">TW</text>
+          <circle cx="60" cy="65" r="6" fill="#60A5FA" opacity="0.6"/>
+          <text x="60" y="69" font-family="Manrope,sans-serif" font-size="6" fill="#fff" text-anchor="middle" font-weight="700">FB</text>
+          <circle cx="100" cy="105" r="5" fill="#BFDBFE" opacity="0.5"/>
+          <text x="100" y="109" font-family="Manrope,sans-serif" font-size="5.5" fill="#fff" text-anchor="middle" font-weight="600">YT</text>
+          <!-- Labels -->
+          <text x="158" y="49" font-family="Manrope,sans-serif" font-size="8" fill="#93C5FD" font-weight="600">Gemini</text>
+          <text x="38" y="50" font-family="Manrope,sans-serif" font-size="8" fill="#93C5FD" font-weight="600">n8n</text>
+        </svg>
+      </div>
+      <div class="work-card-body" style="background:#0A0A0A;">
+        <span class="badge badge-dark">AI Automation</span>
+        <p class="project-title" style="font-size:1.0625rem;font-weight:700;color:#fff;margin-top:10px;margin-bottom:6px;line-height:1.4;">Social Media Engagement Engine</p>
+        <p class="project-tools" style="font-size:13px;color:#6B7280;font-weight:500;margin-bottom:14px;">n8n · Gemini · OpenWeatherMap</p>
+        <span style="font-size:13px;color:#60A5FA;font-weight:600;">View case study →</span>
+      </div>
+    </a>
+
+    <!-- Project 3 — Media Production Pipeline -->
+    <a href="#" class="work-card" style="background:#1E3A5F;" data-project="3">
+      <div class="work-card-img" style="background:linear-gradient(135deg,#0F2340 0%,#1E3A5F 50%,#2563EB 100%);">
+        <svg width="200" height="130" viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Pipeline flow -->
+          <rect x="10" y="50" width="32" height="30" rx="9" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+          <text x="26" y="64" font-family="Manrope,sans-serif" font-size="7" fill="rgba(255,255,255,0.8)" text-anchor="middle" font-weight="600">Script</text>
+          <text x="26" y="73" font-family="Manrope,sans-serif" font-size="6" fill="rgba(255,255,255,0.5)" text-anchor="middle">AI</text>
+          <line x1="42" y1="65" x2="58" y2="65" stroke="rgba(255,255,255,0.25)" stroke-width="1.2" stroke-dasharray="4 3"/>
+          <polygon points="56,62 60,65 56,68" fill="rgba(255,255,255,0.4)"/>
+          <!-- Gemini box -->
+          <rect x="60" y="44" width="40" height="42" rx="10" fill="rgba(37,99,235,0.45)" stroke="rgba(96,165,250,0.4)" stroke-width="1.5"/>
+          <text x="80" y="64" font-family="Manrope,sans-serif" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">Gemini</text>
+          <text x="80" y="75" font-family="Manrope,sans-serif" font-size="7" fill="rgba(255,255,255,0.6)" text-anchor="middle">Process</text>
+          <line x1="100" y1="65" x2="116" y2="65" stroke="rgba(255,255,255,0.25)" stroke-width="1.2" stroke-dasharray="4 3"/>
+          <polygon points="114,62 118,65 114,68" fill="rgba(255,255,255,0.4)"/>
+          <!-- n8n box -->
+          <rect x="118" y="50" width="32" height="30" rx="9" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+          <text x="134" y="68" font-family="Manrope,sans-serif" font-size="9" fill="rgba(255,255,255,0.9)" text-anchor="middle" font-weight="700">n8n</text>
+          <line x1="150" y1="65" x2="165" y2="65" stroke="rgba(255,255,255,0.25)" stroke-width="1.2" stroke-dasharray="4 3"/>
+          <polygon points="163,62 167,65 163,68" fill="rgba(255,255,255,0.4)"/>
+          <!-- YouTube icon -->
+          <circle cx="176" cy="65" r="14" fill="rgba(255,0,0,0.15)" stroke="rgba(255,0,0,0.4)" stroke-width="1.2"/>
+          <polygon points="170,58 184,65 170,72" fill="#FF0000" opacity="0.85"/>
+        </svg>
+      </div>
+      <div class="work-card-body" style="background:#1E3A5F;">
+        <span class="badge badge-dark">AI Automation</span>
+        <p class="project-title" style="font-size:1.0625rem;font-weight:700;color:#fff;margin-top:10px;margin-bottom:6px;line-height:1.4;">Automated Media Production Pipeline</p>
+        <p class="project-tools" style="font-size:13px;color:#93C5FD;font-weight:500;margin-bottom:14px;">n8n · Google Gemini · YouTube</p>
+        <span style="font-size:13px;color:#60A5FA;font-weight:600;">View case study →</span>
+      </div>
+    </a>
+
+    <!-- Project 4 — Knowledge-Base Customer Experience Agent -->
+    <a href="#" class="work-card" style="background:#F9FAFB;border:1px solid #E5E7EB;" data-project="4">
+      <div class="work-card-img" style="background:linear-gradient(135deg,#F0FDF4 0%,#DCFCE7 100%);">
+        <svg width="200" height="130" viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Knowledge base visual -->
+          <rect x="30" y="30" width="55" height="70" rx="10" fill="#DCFCE7" stroke="#16A34A" stroke-width="1.5"/>
+          <line x1="40" y1="48" x2="75" y2="48" stroke="#16A34A" stroke-width="1.2" opacity="0.5"/>
+          <line x1="40" y1="58" x2="70" y2="58" stroke="#16A34A" stroke-width="1.2" opacity="0.4"/>
+          <line x1="40" y1="68" x2="72" y2="68" stroke="#16A34A" stroke-width="1.2" opacity="0.3"/>
+          <line x1="40" y1="78" x2="65" y2="78" stroke="#16A34A" stroke-width="1.2" opacity="0.25"/>
+          <text x="57" y="41" font-family="Manrope,sans-serif" font-size="8" fill="#16A34A" text-anchor="middle" font-weight="700">KB</text>
+          <!-- n8n connector -->
+          <line x1="85" y1="65" x2="108" y2="65" stroke="#16A34A" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <!-- Chat bubble output -->
+          <rect x="110" y="40" width="60" height="50" rx="12" fill="#16A34A" opacity="0.1" stroke="#16A34A" stroke-width="1.5"/>
+          <polygon points="125,90 120,100 135,90" fill="#16A34A" opacity="0.3"/>
+          <text x="140" y="62" font-family="Manrope,sans-serif" font-size="7.5" fill="#16A34A" text-anchor="middle" font-weight="700">AI Chat</text>
+          <text x="140" y="73" font-family="Manrope,sans-serif" font-size="7" fill="#16A34A" text-anchor="middle">Agent</text>
+          <!-- FB -->
+          <circle cx="155" cy="32" r="9" fill="#1877F2" opacity="0.15"/>
+          <text x="155" y="36" font-family="Manrope,sans-serif" font-size="9" fill="#1877F2" text-anchor="middle" font-weight="800">f</text>
+        </svg>
+      </div>
+      <div class="work-card-body" style="background:#fff;">
+        <span class="badge" style="background:#F0FDF4;color:#16A34A;">AI Automation</span>
+        <p class="project-title" style="font-size:1.0625rem;font-weight:700;color:#0A0A0A;margin-top:10px;margin-bottom:6px;line-height:1.4;">Knowledge-Base Customer Experience Agent</p>
+        <p class="project-tools" style="font-size:13px;color:#6B7280;font-weight:500;margin-bottom:14px;">n8n · Facebook Graph API</p>
+        <span style="font-size:13px;color:#2563EB;font-weight:600;">View case study →</span>
+      </div>
+    </a>
+
+    <!-- Project 5 — Intelligent Document Management System -->
+    <a href="#" class="work-card" style="background:#FAFAFA;border:1px solid #E5E7EB;" data-project="5">
+      <div class="work-card-img" style="background:linear-gradient(135deg,#FFF7ED 0%,#FFEDD5 100%);">
+        <svg width="200" height="130" viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Document stack -->
+          <rect x="50" y="35" width="45" height="60" rx="8" fill="#FED7AA" stroke="#EA580C" stroke-width="1.5" opacity="0.7"/>
+          <rect x="56" y="28" width="45" height="60" rx="8" fill="#FDBA74" stroke="#EA580C" stroke-width="1.5" opacity="0.8"/>
+          <rect x="62" y="21" width="45" height="60" rx="8" fill="#FB923C" stroke="#EA580C" stroke-width="1.5" opacity="0.9"/>
+          <line x1="72" y1="35" x2="97" y2="35" stroke="white" stroke-width="1.2" opacity="0.6"/>
+          <line x1="72" y1="42" x2="97" y2="42" stroke="white" stroke-width="1.2" opacity="0.5"/>
+          <line x1="72" y1="49" x2="92" y2="49" stroke="white" stroke-width="1.2" opacity="0.4"/>
+          <!-- Make logo hint -->
+          <circle cx="145" cy="65" r="20" fill="#6D00CC" opacity="0.1"/>
+          <text x="145" y="70" font-family="Manrope,sans-serif" font-size="9" fill="#6D00CC" text-anchor="middle" font-weight="800">Make</text>
+          <line x1="110" y1="55" x2="125" y2="60" stroke="#EA580C" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.6"/>
+          <!-- Google Drive -->
+          <polygon points="140,90 155,90 147.5,105" fill="#4285F4" opacity="0.15" stroke="#4285F4" stroke-width="1.2"/>
+          <text x="148" y="104" font-family="Manrope,sans-serif" font-size="6" fill="#4285F4" text-anchor="middle" font-weight="700">Drive</text>
+        </svg>
+      </div>
+      <div class="work-card-body" style="background:#fff;">
+        <span class="badge" style="background:#FFF7ED;color:#EA580C;">Automation</span>
+        <p class="project-title" style="font-size:1.0625rem;font-weight:700;color:#0A0A0A;margin-top:10px;margin-bottom:6px;line-height:1.4;">Intelligent Document Management System</p>
+        <p class="project-tools" style="font-size:13px;color:#6B7280;font-weight:500;margin-bottom:14px;">Make · Google Drive</p>
+        <span style="font-size:13px;color:#2563EB;font-weight:600;">View case study →</span>
+      </div>
+    </a>
+
+    <!-- Project 6 — Financial Data & Project Sync -->
+    <a href="#" class="work-card" style="background:#0D2437;" data-project="6">
+      <div class="work-card-img" style="background:linear-gradient(135deg,#064E3B 0%,#065F46 60%,#0D9488 100%);">
+        <svg width="200" height="130" viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Financial graph -->
+          <polyline points="20,95 45,75 70,80 95,55 120,60 145,35 170,40" stroke="#34D399" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+          <polygon points="20,95 45,75 70,80 95,55 120,60 145,35 170,40 170,95" fill="#34D399" opacity="0.1"/>
+          <!-- Data points -->
+          <circle cx="45" cy="75" r="4" fill="#34D399"/>
+          <circle cx="95" cy="55" r="4" fill="#34D399"/>
+          <circle cx="145" cy="35" r="5" fill="#fff" stroke="#34D399" stroke-width="2"/>
+          <!-- Labels -->
+          <text x="145" y="28" font-family="Manrope,sans-serif" font-size="7.5" fill="#34D399" text-anchor="middle" font-weight="700">Xero</text>
+          <text x="95" y="48" font-family="Manrope,sans-serif" font-size="7.5" fill="#34D399" text-anchor="middle" font-weight="700">Asana</text>
+          <text x="50" y="108" font-family="Manrope,sans-serif" font-size="7.5" fill="rgba(52,211,153,0.6)" text-anchor="middle">Make</text>
+        </svg>
+      </div>
+      <div class="work-card-body" style="background:#0D2437;">
+        <span class="badge" style="background:rgba(52,211,153,0.15);color:#34D399;">Finance Automation</span>
+        <p class="project-title" style="font-size:1.0625rem;font-weight:700;color:#fff;margin-top:10px;margin-bottom:6px;line-height:1.4;">Financial Data &amp; Project Sync</p>
+        <p class="project-tools" style="font-size:13px;color:#6EE7B7;font-weight:500;margin-bottom:14px;">Make · Xero · Asana</p>
+        <span style="font-size:13px;color:#34D399;font-weight:600;">View case study →</span>
+      </div>
+    </a>
+
+    <!-- Project 7 — CRM Lifecycle Orchestration -->
+    <a href="#" class="work-card" style="background:#0A0A0A;" data-project="7">
+      <div class="work-card-img" style="background:linear-gradient(135deg,#111827 0%,#1F2937 100%);">
+        <svg width="200" height="130" viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- CRM funnel stages -->
+          <rect x="10" y="52" width="30" height="26" rx="8" fill="#2563EB" opacity="0.8"/>
+          <text x="25" y="69" font-family="Manrope,sans-serif" font-size="7.5" fill="#fff" text-anchor="middle" font-weight="700">Lead</text>
+          <polygon points="40,65 50,59 50,71" fill="#2563EB" opacity="0.5"/>
+          <rect x="50" y="52" width="30" height="26" rx="8" fill="#2563EB" opacity="0.85"/>
+          <text x="65" y="65" font-family="Manrope,sans-serif" font-size="7" fill="#fff" text-anchor="middle" font-weight="700">Qualify</text>
+          <text x="65" y="73" font-family="Manrope,sans-serif" font-size="6" fill="rgba(255,255,255,0.7)" text-anchor="middle">GHL</text>
+          <polygon points="80,65 90,59 90,71" fill="#2563EB" opacity="0.5"/>
+          <rect x="90" y="52" width="30" height="26" rx="8" fill="#2563EB" opacity="0.9"/>
+          <text x="105" y="65" font-family="Manrope,sans-serif" font-size="7" fill="#fff" text-anchor="middle" font-weight="700">Nurture</text>
+          <text x="105" y="73" font-family="Manrope,sans-serif" font-size="6" fill="rgba(255,255,255,0.7)" text-anchor="middle">Zapier</text>
+          <polygon points="120,65 130,59 130,71" fill="#2563EB" opacity="0.5"/>
+          <rect x="130" y="52" width="30" height="26" rx="8" fill="#1D4ED8"/>
+          <text x="145" y="65" font-family="Manrope,sans-serif" font-size="7" fill="#fff" text-anchor="middle" font-weight="700">Close</text>
+          <text x="145" y="73" font-family="Manrope,sans-serif" font-size="6" fill="rgba(255,255,255,0.7)" text-anchor="middle">Asana</text>
+          <!-- Zapier arrow up -->
+          <line x1="165" y1="65" x2="178" y2="65" stroke="#2563EB" stroke-width="1.2" stroke-dasharray="3 2" opacity="0.5"/>
+          <circle cx="183" cy="65" r="7" fill="#FF4A00" opacity="0.2"/>
+          <text x="183" y="69" font-family="Manrope,sans-serif" font-size="7" fill="#FF4A00" text-anchor="middle" font-weight="700">Z</text>
+        </svg>
+      </div>
+      <div class="work-card-body" style="background:#0A0A0A;">
+        <span class="badge badge-dark">CRM Setup</span>
+        <p class="project-title" style="font-size:1.0625rem;font-weight:700;color:#fff;margin-top:10px;margin-bottom:6px;line-height:1.4;">CRM Lifecycle Orchestration</p>
+        <p class="project-tools" style="font-size:13px;color:#6B7280;font-weight:500;margin-bottom:14px;">Zapier · Asana · GoHighLevel</p>
+        <span style="font-size:13px;color:#60A5FA;font-weight:600;">View case study →</span>
+      </div>
+    </a>
+
+    <!-- Project 8 — Lead Intelligence Pipeline -->
+    <a href="#" class="work-card" style="background:#F9FAFB;border:1px solid #E5E7EB;" data-project="8">
+      <div class="work-card-img" style="background:linear-gradient(135deg,#F0F9FF 0%,#E0F2FE 100%);">
+        <svg width="200" height="130" viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Lead enrichment flow -->
+          <circle cx="40" cy="65" r="20" fill="#0EA5E9" opacity="0.12" stroke="#0EA5E9" stroke-width="1.5"/>
+          <text x="40" y="62" font-family="Manrope,sans-serif" font-size="8" fill="#0EA5E9" text-anchor="middle" font-weight="700">Apollo</text>
+          <text x="40" y="72" font-family="Manrope,sans-serif" font-size="7" fill="#0EA5E9" text-anchor="middle">Search</text>
+          <line x1="60" y1="65" x2="78" y2="65" stroke="#0EA5E9" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <polygon points="76,62 80,65 76,68" fill="#0EA5E9"/>
+          <!-- Zapier enrichment -->
+          <rect x="80" y="50" width="40" height="30" rx="10" fill="#FF4A00" opacity="0.15" stroke="#FF4A00" stroke-width="1.5"/>
+          <text x="100" y="64" font-family="Manrope,sans-serif" font-size="8.5" fill="#FF4A00" text-anchor="middle" font-weight="700">Zapier</text>
+          <text x="100" y="74" font-family="Manrope,sans-serif" font-size="7" fill="#FF4A00" text-anchor="middle">Enrich</text>
+          <line x1="120" y1="65" x2="138" y2="65" stroke="#0EA5E9" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <polygon points="136,62 140,65 136,68" fill="#0EA5E9"/>
+          <!-- Slack output -->
+          <circle cx="155" cy="65" r="20" fill="#ECE8F5" stroke="#4A154B" stroke-width="1.5"/>
+          <text x="155" y="62" font-family="Manrope,sans-serif" font-size="8" fill="#4A154B" text-anchor="middle" font-weight="700">Slack</text>
+          <text x="155" y="72" font-family="Manrope,sans-serif" font-size="7" fill="#4A154B" text-anchor="middle">Alert</text>
+        </svg>
+      </div>
+      <div class="work-card-body" style="background:#fff;">
+        <span class="badge" style="background:#F0F9FF;color:#0EA5E9;">Lead Intelligence</span>
+        <p class="project-title" style="font-size:1.0625rem;font-weight:700;color:#0A0A0A;margin-top:10px;margin-bottom:6px;line-height:1.4;">Lead Intelligence Pipeline</p>
+        <p class="project-tools" style="font-size:13px;color:#6B7280;font-weight:500;margin-bottom:14px;">Zapier · Apollo · Slack</p>
+        <span style="font-size:13px;color:#2563EB;font-weight:600;">View case study →</span>
+      </div>
+    </a>
+
+    <!-- Project 9 — Content Distribution System -->
+    <a href="#" class="work-card" style="background:#2563EB;" data-project="9">
+      <div class="work-card-img" style="background:linear-gradient(135deg,#1D4ED8 0%,#2563EB 50%,#3B82F6 100%);">
+        <svg width="200" height="130" viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Content distribution hub -->
+          <circle cx="100" cy="65" r="18" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <text x="100" y="62" font-family="Manrope,sans-serif" font-size="7.5" fill="#fff" text-anchor="middle" font-weight="700">Zapier</text>
+          <text x="100" y="72" font-family="Manrope,sans-serif" font-size="7" fill="rgba(255,255,255,0.7)" text-anchor="middle">Hub</text>
+          <!-- Spokes -->
+          <line x1="83" y1="55" x2="55" y2="35" stroke="rgba(255,255,255,0.3)" stroke-width="1.2" stroke-dasharray="4 3"/>
+          <line x1="100" y1="47" x2="100" y2="22" stroke="rgba(255,255,255,0.3)" stroke-width="1.2" stroke-dasharray="4 3"/>
+          <line x1="117" y1="55" x2="145" y2="35" stroke="rgba(255,255,255,0.3)" stroke-width="1.2" stroke-dasharray="4 3"/>
+          <line x1="83" y1="75" x2="55" y2="95" stroke="rgba(255,255,255,0.3)" stroke-width="1.2" stroke-dasharray="4 3"/>
+          <line x1="117" y1="75" x2="145" y2="95" stroke="rgba(255,255,255,0.3)" stroke-width="1.2" stroke-dasharray="4 3"/>
+          <!-- Platform nodes -->
+          <circle cx="50" cy="30" r="12" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.35)" stroke-width="1.2"/>
+          <text x="50" y="34" font-family="Manrope,sans-serif" font-size="7" fill="#fff" text-anchor="middle" font-weight="700">LinkedIn</text>
+          <circle cx="100" cy="17" r="12" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.35)" stroke-width="1.2"/>
+          <text x="100" y="21" font-family="Manrope,sans-serif" font-size="7" fill="#fff" text-anchor="middle" font-weight="700">IG</text>
+          <circle cx="150" cy="30" r="12" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.35)" stroke-width="1.2"/>
+          <text x="150" y="34" font-family="Manrope,sans-serif" font-size="7" fill="#fff" text-anchor="middle" font-weight="700">Twitter</text>
+          <circle cx="50" cy="100" r="11" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.35)" stroke-width="1.2"/>
+          <text x="50" y="104" font-family="Manrope,sans-serif" font-size="7" fill="#fff" text-anchor="middle" font-weight="700">Blog</text>
+          <circle cx="150" cy="100" r="11" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.35)" stroke-width="1.2"/>
+          <text x="150" y="104" font-family="Manrope,sans-serif" font-size="7" fill="#fff" text-anchor="middle" font-weight="700">Email</text>
+        </svg>
+      </div>
+      <div class="work-card-body" style="background:#2563EB;">
+        <span class="badge" style="background:rgba(255,255,255,0.2);color:#fff;">Content Distribution</span>
+        <p class="project-title" style="font-size:1.0625rem;font-weight:700;color:#fff;margin-top:10px;margin-bottom:6px;line-height:1.4;">Content Distribution System</p>
+        <p class="project-tools" style="font-size:13px;color:rgba(255,255,255,0.65);font-weight:500;margin-bottom:14px;">Zapier · LinkedIn · Instagram</p>
+        <span style="font-size:13px;color:#fff;font-weight:600;opacity:0.9;">View case study →</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ AUTOMATION THAT DELIVERS ═══════════════════════════════════════════ -->
+<section style="padding:0 32px 96px;max-width:1280px;margin:0 auto;">
+  <div style="background:#F9FAFB;border-radius:16px;padding:56px 48px;border:1px solid #E5E7EB;">
+    <!-- Heading -->
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:24px;">
+      <div style="max-width:420px;">
+        <p style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9CA3AF;margin-bottom:10px;">Our Approach</p>
+        <h2 style="font-size:clamp(1.625rem,3vw,2rem);font-weight:800;letter-spacing:-0.025em;color:#0A0A0A;line-height:1.25;">Automation that delivers.</h2>
+      </div>
+      <p style="font-size:15px;color:#6B7280;line-height:1.75;max-width:380px;">Every system we build is designed for scale, reliability, and measurable impact. We don't just automate — we engineer outcomes.</p>
+    </div>
+
+    <!-- 4-column thumbnail grid -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;">
+
+      <div class="thumb-card">
+        <div class="thumb-bg" style="background:linear-gradient(135deg,#EFF6FF,#DBEAFE);display:flex;align-items:center;justify-content:center;padding:16px;">
+          <span style="font-size:11px;font-weight:700;color:#2563EB;text-align:center;line-height:1.4;">Voice-to-Calendar<br/>AI Engine</span>
+        </div>
+      </div>
+      <div class="thumb-card">
+        <div class="thumb-bg" style="background:linear-gradient(135deg,#0A0A0A,#1E3A5F);display:flex;align-items:center;justify-content:center;padding:16px;">
+          <span style="font-size:11px;font-weight:700;color:#60A5FA;text-align:center;line-height:1.4;">Social Media<br/>Engagement</span>
+        </div>
+      </div>
+      <div class="thumb-card">
+        <div class="thumb-bg" style="background:linear-gradient(135deg,#0F2340,#2563EB);display:flex;align-items:center;justify-content:center;padding:16px;">
+          <span style="font-size:11px;font-weight:700;color:#fff;text-align:center;line-height:1.4;">Media Production<br/>Pipeline</span>
+        </div>
+      </div>
+      <div class="thumb-card">
+        <div class="thumb-bg" style="background:linear-gradient(135deg,#F0FDF4,#DCFCE7);display:flex;align-items:center;justify-content:center;padding:16px;">
+          <span style="font-size:11px;font-weight:700;color:#16A34A;text-align:center;line-height:1.4;">Knowledge-Base<br/>CX Agent</span>
+        </div>
+      </div>
+      <div class="thumb-card">
+        <div class="thumb-bg" style="background:linear-gradient(135deg,#FFF7ED,#FFEDD5);display:flex;align-items:center;justify-content:center;padding:16px;">
+          <span style="font-size:11px;font-weight:700;color:#EA580C;text-align:center;line-height:1.4;">Document Mgmt<br/>System</span>
+        </div>
+      </div>
+      <div class="thumb-card">
+        <div class="thumb-bg" style="background:linear-gradient(135deg,#064E3B,#0D9488);display:flex;align-items:center;justify-content:center;padding:16px;">
+          <span style="font-size:11px;font-weight:700;color:#34D399;text-align:center;line-height:1.4;">Financial Data<br/>&amp; Project Sync</span>
+        </div>
+      </div>
+      <div class="thumb-card">
+        <div class="thumb-bg" style="background:linear-gradient(135deg,#111827,#1F2937);display:flex;align-items:center;justify-content:center;padding:16px;">
+          <span style="font-size:11px;font-weight:700;color:#60A5FA;text-align:center;line-height:1.4;">CRM Lifecycle<br/>Orchestration</span>
+        </div>
+      </div>
+      <div class="thumb-card">
+        <div class="thumb-bg" style="background:linear-gradient(135deg,#F0F9FF,#E0F2FE);display:flex;align-items:center;justify-content:center;padding:16px;">
+          <span style="font-size:11px;font-weight:700;color:#0EA5E9;text-align:center;line-height:1.4;">Lead Intelligence<br/>Pipeline</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ PARTNERS ═══════════════════════════════════════════ -->
+<section style="padding:64px 32px;border-top:1px solid #E5E7EB;border-bottom:1px solid #E5E7EB;max-width:1280px;margin:0 auto;">
+  <p style="font-size:clamp(1.125rem,2.5vw,1.375rem);font-weight:700;color:#0A0A0A;margin-bottom:36px;letter-spacing:-0.01em;">Tools we build with</p>
+  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:40px 48px;">
+    <img src="../application_logos/n8n-color.svg" alt="n8n" class="partner-logo" />
+    <img src="../application_logos/zapier-2.svg" alt="Zapier" class="partner-logo" />
+    <img src="../application_logos/make-color.svg" alt="Make" class="partner-logo" />
+    <img src="../application_logos/gohighlevel-color.svg" alt="GoHighLevel" class="partner-logo" />
+    <img src="../application_logos/airtable-color.svg" alt="Airtable" class="partner-logo" />
+    <img src="../application_logos/asana-color.svg" alt="Asana" class="partner-logo" />
+    <img src="../application_logos/shopify-color.svg" alt="Shopify" class="partner-logo" />
+    <img src="../application_logos/xero-color.svg" alt="Xero" class="partner-logo" />
+    <img src="../application_logos/vapi-color.svg" alt="Vapi" class="partner-logo" />
+    <img src="../application_logos/googlegemini-color.svg" alt="Google Gemini" class="partner-logo" />
+    <img src="../application_logos/apollo-color.svg" alt="Apollo" class="partner-logo" />
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ TESTIMONIALS ═══════════════════════════════════════════ -->
+<section style="padding:96px 32px;max-width:1280px;margin:0 auto;">
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:16px;">
+    <div>
+      <p style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6B7280;margin-bottom:10px;">Client testimonials</p>
+      <h2 style="font-size:clamp(1.5rem,3vw,1.875rem);font-weight:800;letter-spacing:-0.02em;color:#0A0A0A;">Trusted by founders worldwide.</h2>
+    </div>
+    <span style="color:#FBBF24;font-size:18px;">★★★★★</span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
+    <div class="testimonial-card">
+      <p style="font-size:15px;color:#374151;line-height:1.7;font-style:italic;margin-bottom:24px;">"The fact that they did so many revisions and didn't take long to meet the desired outcome on goals. Really appreciated the patience and commitment."</p>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div style="width:40px;height:40px;border-radius:50%;background:#2563EB;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <span style="color:#fff;font-weight:700;font-size:14px;">A</span>
+        </div>
+        <div>
+          <p style="font-weight:700;font-size:14px;color:#0A0A0A;">Anna Amemiya</p>
+          <p style="font-size:12px;color:#6B7280;">Onodera Life Support</p>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <p style="font-size:15px;color:#374151;line-height:1.7;font-style:italic;margin-bottom:24px;">"Provided excellent UI-UX design for our insurance platform. Clean, professional, and always on-brand. The attention to detail was outstanding."</p>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div style="width:40px;height:40px;border-radius:50%;background:#0F172A;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <span style="color:#fff;font-weight:700;font-size:14px;">J</span>
+        </div>
+        <div>
+          <p style="font-weight:700;font-size:14px;color:#0A0A0A;">John Paul Mendoza</p>
+          <p style="font-size:12px;color:#6B7280;">Comfy &amp; Bedder Co.</p>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <p style="font-size:15px;color:#374151;line-height:1.7;font-style:italic;margin-bottom:24px;">"Great customer service — will not stop until client is satisfied. Built our entire e-commerce automation suite and it runs flawlessly."</p>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div style="width:40px;height:40px;border-radius:50%;background:#6D28D9;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <span style="color:#fff;font-weight:700;font-size:14px;">G</span>
+        </div>
+        <div>
+          <p style="font-weight:700;font-size:14px;color:#0A0A0A;">Gwyneth Sarigumba</p>
+          <p style="font-size:12px;color:#6B7280;">Cozy Downloads Store</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ CTA SECTION ═══════════════════════════════════════════ -->
+<section style="background:#fff;padding:96px 32px;text-align:center;border-top:1px solid #E5E7EB;">
+  <div style="max-width:680px;margin:0 auto;">
+    <h2 style="font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;letter-spacing:-0.03em;color:#0A0A0A;line-height:1.2;margin-bottom:32px;">Interested to collaborate?<br/>Let's connect.</h2>
+    <a href="contact.html" class="cta-btn">Let's connect →</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ FOOTER ═══════════════════════════════════════════ -->
+<footer style="background:#0A0A0A;padding:64px 32px 0;">
+  <div style="max-width:1280px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.08);">
+      <div>
+        <p style="font-size:1rem;font-weight:600;color:#fff;line-height:1.6;max-width:220px;margin-bottom:16px;">Building intelligent automation systems with precision</p>
+        <a href="mailto:clarence.gayo@gmail.com" style="font-size:14px;color:#2563EB;text-decoration:none;font-weight:500;" onmouseover="this.style.color='#60A5FA'" onmouseout="this.style.color='#2563EB'">clarence.gayo@gmail.com</a>
+      </div>
+      <div>
+        <p class="footer-section-label">Features</p>
+        <a href="work.html" class="footer-link">Work</a>
+        <a href="services.html" class="footer-link">Services</a>
+        <a href="the-team.html" class="footer-link">Team</a>
+        <a href="insight.html" class="footer-link">Insight</a>
+      </div>
+      <div>
+        <p class="footer-section-label">General</p>
+        <a href="contact.html" class="footer-link">Contact us</a>
+      </div>
+      <div>
+        <p class="footer-section-label">Find Us</p>
+        <p style="color:#fff;font-size:14px;margin-bottom:10px;">Tokyo, Japan</p>
+        <a href="https://maps.google.com/?q=Tokyo,Japan" target="_blank" rel="noopener" class="footer-link">View on Map →</a>
+      </div>
+    </div>
+    <div style="padding:20px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+      <a href="index.html" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+        <div style="width:28px;height:28px;background:#2563EB;border-radius:6px;display:flex;align-items:center;justify-content:center;">
+          <span style="color:#fff;font-weight:800;font-size:10px;">GS</span>
+        </div>
+        <span style="font-weight:600;font-size:13px;color:#fff;">Gayo Sphere</span>
+      </a>
+      <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+        <a href="https://linkedin.com" target="_blank" rel="noopener" style="font-size:13px;color:#6B7280;text-decoration:none;font-weight:500;" onmouseover="this.style.color='#60A5FA'" onmouseout="this.style.color='#6B7280'">LinkedIn</a>
+        <a href="https://github.com" target="_blank" rel="noopener" style="font-size:13px;color:#6B7280;text-decoration:none;font-weight:500;" onmouseover="this.style.color='#60A5FA'" onmouseout="this.style.color='#6B7280'">GitHub</a>
+        <span style="font-size:13px;color:#6B7280;">© 2025 Gayo Sphere. All rights reserved.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════ SCRIPTS ═══════════════════════════════════════════ -->
+<script>
+  // ── Mobile menu toggle ──
+  function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('open');
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+  }
+
+  // ── CMS fetch helper ──
+  const CMS = 'https://cms.gayo-sphere.cloud';
+  async function loadFromCMS(endpoint) {
+    try {
+      const res = await fetch(`${CMS}${endpoint}`);
+      if (!res.ok) return null;
+      return await res.json();
+    } catch { return null; }
+  }
+
+  // ── Render projects from WordPress ──
+  function renderProjects(projects) {
+    const grid = document.getElementById('projects-grid');
+    if (!grid || !projects.length) return;
+    grid.innerHTML = '';
+    projects.forEach((p, i) => {
+      const title = p.title?.rendered || 'Untitled Project';
+      const tools = p.acf?.gs_project_tools || '';
+      const category = p.acf?.gs_project_category || 'Automation';
+      const imgUrl = p.acf?.gs_project_thumbnail?.url || '';
+      const isEven = i % 2 === 0;
+
+      const card = document.createElement('a');
+      card.href = '#';
+      card.className = 'work-card';
+      card.setAttribute('data-project', p.id);
+      card.style.cssText = isEven
+        ? 'background:#F9FAFB;border:1px solid #E5E7EB;'
+        : 'background:#0A0A0A;';
+
+      const imgArea = imgUrl
+        ? `<img src="${imgUrl}" alt="${title}" style="width:100%;height:100%;object-fit:cover;" />`
+        : `<div style="width:100%;height:100%;background:linear-gradient(135deg,${isEven ? '#EFF6FF,#DBEAFE' : '#111827,#1E3A5F'});display:flex;align-items:center;justify-content:center;"><span style="font-size:13px;font-weight:700;color:${isEven ? '#2563EB' : '#60A5FA'};text-align:center;padding:16px;line-height:1.5;">${title}</span></div>`;
+
+      card.innerHTML = `
+        <div class="work-card-img">${imgArea}</div>
+        <div class="work-card-body" style="background:${isEven ? '#fff' : '#0A0A0A'};">
+          <span class="badge ${isEven ? 'badge-blue' : 'badge-dark'}">${category}</span>
+          <p class="project-title" style="font-size:1.0625rem;font-weight:700;color:${isEven ? '#0A0A0A' : '#fff'};margin-top:10px;margin-bottom:6px;line-height:1.4;">${title}</p>
+          <p class="project-tools" style="font-size:13px;color:#6B7280;font-weight:500;margin-bottom:14px;">${tools}</p>
+          <span style="font-size:13px;color:${isEven ? '#2563EB' : '#60A5FA'};font-weight:600;">View case study →</span>
+        </div>`;
+      grid.appendChild(card);
+    });
+  }
+
+  // ── Load from WordPress on page load ──
+  window.addEventListener('DOMContentLoaded', async () => {
+    const projects = await loadFromCMS('/wp-json/wp/v2/gs-projects?acf_format=standard&per_page=100&_fields=id,title,acf');
+    if (projects && projects.length) {
+      renderProjects(projects);
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animation Approach</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0d0d0d; color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 24px; }
+  h2 { font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 6px; }
+  .subtitle { font-size: 13px; color: #888; margin-bottom: 28px; }
+
+  .section-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #666; margin-bottom: 12px; }
+
+  /* CURRENT STATE */
+  .current-flow { display: flex; align-items: flex-start; gap: 20px; margin-bottom: 40px; }
+  .flow-step { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .arrow { font-size: 22px; color: #444; align-self: center; padding-top: 20px; }
+
+  /* SCREEN MOCKUP */
+  .screen { width: 200px; height: 140px; background: #111; border-radius: 10px; border: 1px solid #222; position: relative; overflow: hidden; }
+  .screen-label { font-size: 11px; color: #666; text-align: center; }
+
+  /* HERO SCREEN */
+  .hero-screen { background: linear-gradient(135deg, #0d0d0d 50%, #050a1a 100%); }
+  .hero-left { position: absolute; left: 12px; top: 16px; }
+  .hero-title { font-size: 8px; font-weight: 800; color: #fff; line-height: 1.2; }
+  .hero-orb { position: absolute; right: 10px; top: 10px; width: 80px; height: 80px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #60d0ff, #2563eb 50%, #0a0a2e); box-shadow: 0 0 30px rgba(37,99,235,0.5); }
+
+  /* WIDGET on orb */
+  .widget-on-orb { position: absolute; right: 0; top: 0; left: 0; bottom: 0; display: flex; align-items: center; justify-content: center; }
+  .mini-widget { background: rgba(10,10,15,0.85); border-radius: 20px; padding: 4px 8px; width: 76px; border: 1px solid rgba(255,255,255,0.12); }
+  .mini-input-row { display: flex; align-items: center; gap: 4px; }
+  .mini-input { font-size: 5px; color: #888; flex: 1; }
+  .mini-btn { width: 12px; height: 12px; background: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+  .mini-btn-arrow { width: 5px; height: 5px; border-right: 1px solid #fff; border-top: 1px solid #fff; transform: rotate(45deg) translate(-1px, 1px); }
+  .mini-chips { display: flex; gap: 2px; margin-top: 3px; flex-wrap: wrap; }
+  .mini-chip { font-size: 4px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; padding: 1px 3px; color: #aaa; }
+
+  /* SPECIAL SECTION */
+  .special-screen { background: #050505; }
+  .avatar-area { position: absolute; top: 10px; left: 0; right: 0; text-align: center; }
+  .mini-avatar { width: 24px; height: 24px; background: linear-gradient(135deg, #8b5cf6, #3b82f6); border-radius: 50%; margin: 0 auto 3px; display: flex; align-items: center; justify-content: center; font-size: 10px; }
+  .mini-heading { font-size: 5.5px; font-weight: 700; color: #fff; letter-spacing: 0.05em; text-transform: uppercase; }
+  .mini-subheading { font-size: 4.5px; color: #666; }
+
+  /* TOP widget in special section (CURRENT - to be removed) */
+  .top-widget { position: absolute; bottom: 8px; left: 6px; right: 6px; }
+  .toggle-bar { font-size: 4px; color: #888; text-align: center; margin-bottom: 3px; }
+  .chip-row-top { display: flex; gap: 2px; justify-content: center; margin-bottom: 3px; }
+  .input-row-bottom { background: rgba(255,255,255,0.07); border-radius: 12px; padding: 3px 6px; display: flex; align-items: center; justify-content: space-between; }
+  .input-text { font-size: 4.5px; color: #666; }
+  .up-btn { width: 10px; height: 10px; background: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 6px; color: #fff; line-height: 1; }
+
+  /* X badge */
+  .remove-badge { position: absolute; top: -6px; right: -6px; width: 14px; height: 14px; background: #ef4444; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; color: #fff; z-index: 10; }
+
+  /* NEW special section bottom */
+  .new-bottom-widget { position: absolute; bottom: 8px; left: 6px; right: 6px; }
+  .new-input-row { background: rgba(10,10,15,0.85); border-radius: 12px; padding: 3px 6px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 3px; border: 1px solid rgba(255,255,255,0.1); }
+  .right-btn { width: 10px; height: 10px; background: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+  .right-arrow { width: 4px; height: 4px; border-right: 1px solid #fff; border-top: 1px solid #fff; transform: rotate(45deg) translate(-1px, 1px); }
+  .new-chip-row { display: flex; gap: 2px; justify-content: center; }
+
+  /* ANIMATION SEQUENCE */
+  .anim-sequence { display: flex; align-items: center; gap: 8px; overflow-x: auto; padding-bottom: 8px; }
+  .anim-step { display: flex; flex-direction: column; align-items: center; gap: 6px; min-width: 180px; }
+  .step-label { font-size: 10px; color: #666; text-align: center; }
+  .step-num { width: 18px; height: 18px; background: #1d1d1d; border: 1px solid #333; border-radius: 50%; font-size: 9px; color: #888; display: flex; align-items: center; justify-content: center; }
+
+  .wide-screen { width: 180px; height: 120px; background: #111; border-radius: 8px; border: 1px solid #222; position: relative; overflow: hidden; }
+
+  /* Phase labels */
+  .phase-tag { display: inline-block; font-size: 9px; background: rgba(37,99,235,0.2); border: 1px solid rgba(37,99,235,0.4); color: #60a5fa; border-radius: 4px; padding: 1px 5px; margin-bottom: 4px; }
+
+  /* transition arrow animation */
+  .moving-widget {
+    position: absolute;
+    background: rgba(10,10,15,0.9);
+    border-radius: 16px;
+    padding: 5px 8px;
+    width: 70px;
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .phase-idle .moving-widget { right: 4px; top: 20px; }
+  .phase-hold .moving-widget { right: 4px; top: 20px; opacity: 1; }
+  .phase-drop .moving-widget { left: 50%; transform: translateX(-50%); bottom: 8px; top: auto; }
+  .phase-done .moving-widget { left: 50%; transform: translateX(-50%); bottom: 8px; top: auto; }
+
+  /* Phase screens */
+  .phase-hold { background: linear-gradient(135deg, #0d0d0d 50%, #050a1a 100%); }
+  .phase-drop { background: #050505; }
+  .phase-done { background: #050505; }
+
+  .hero-content { position: absolute; left: 8px; top: 10px; }
+  .hero-title-sm { font-size: 6px; font-weight: 800; color: #fff; line-height: 1.3; }
+  .hero-orb-sm { position: absolute; right: 6px; top: 6px; width: 55px; height: 55px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #60d0ff, #2563eb 50%, #0a0a2e); box-shadow: 0 0 20px rgba(37,99,235,0.4); opacity: 0.4; }
+
+  .special-content { position: absolute; top: 10px; left: 0; right: 0; text-align: center; }
+  .special-avatar-sm { width: 18px; height: 18px; background: #8b5cf6; border-radius: 50%; margin: 0 auto 2px; }
+  .special-heading-sm { font-size: 5px; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  .dots { display: flex; gap: 3px; justify-content: center; padding-top: 30px; }
+  .dot { width: 4px; height: 4px; background: #333; border-radius: 50%; }
+  .dot.active { background: #2563eb; }
+  .chat-bubble { position: absolute; left: 8px; top: 42px; right: 8px; background: rgba(255,255,255,0.05); border-radius: 6px; padding: 4px; font-size: 4px; color: #aaa; }
+
+  .divider { width: 1px; height: 60px; background: #222; align-self: center; }
+
+  /* highlight box */
+  .highlight { border: 1.5px solid #22c55e; border-radius: 4px; position: relative; }
+  .highlight::after { content: 'NEW'; position: absolute; top: -8px; right: -2px; font-size: 7px; background: #22c55e; color: #000; border-radius: 2px; padding: 0px 3px; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<h2>Hero Widget → Special Section Animation</h2>
+<p class="subtitle">Here's the current state and the proposed change — review both before we decide.</p>
+
+<!-- CURRENT STATE -->
+<div class="section-label" style="margin-bottom:14px;">CURRENT STATE — what you have now</div>
+<div class="current-flow">
+  <!-- Hero -->
+  <div class="flow-step">
+    <div class="screen hero-screen">
+      <div class="hero-left">
+        <div class="hero-title">YOUR<br>OPS ON<br>AUTOPILOT</div>
+      </div>
+      <div class="hero-orb">
+        <div class="widget-on-orb">
+          <div class="mini-widget">
+            <div class="mini-input-row">
+              <div class="mini-input">Ask me anything...</div>
+              <div class="mini-btn"><div class="mini-btn-arrow"></div></div>
+            </div>
+            <div class="mini-chips">
+              <div class="mini-chip" style="color:#22c55e;">Me</div>
+              <div class="mini-chip" style="color:#3b82f6;">Projects</div>
+              <div class="mini-chip" style="color:#8b5cf6;">Skills</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="screen-label">Hero — widget on sphere</div>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <!-- Special Section current -->
+  <div class="flow-step">
+    <div class="screen special-screen" style="position:relative;">
+      <div class="avatar-area">
+        <div class="mini-avatar">🤖</div>
+        <div class="mini-heading">AI AUTOMATION SPECIALIST</div>
+        <div class="mini-subheading">Nerima, Tokyo</div>
+      </div>
+      <div class="top-widget" style="position:relative;">
+        <div class="remove-badge">✕</div>
+        <div class="toggle-bar">∨ Hide quick questions</div>
+        <div class="chip-row-top">
+          <div class="mini-chip" style="color:#22c55e;">Me</div>
+          <div class="mini-chip" style="color:#3b82f6;">Projects</div>
+          <div class="mini-chip" style="color:#8b5cf6;">Skills</div>
+          <div class="mini-chip" style="color:#f59e0b;">Fun</div>
+        </div>
+        <div class="input-row-bottom">
+          <div class="input-text">Ask me anything...</div>
+          <div class="up-btn">↑</div>
+        </div>
+      </div>
+    </div>
+    <div class="screen-label">Special Section — <span style="color:#ef4444;">duplicate widget (↑ arrow, toggle)</span></div>
+  </div>
+</div>
+
+<!-- DIVIDER -->
+<div style="height:1px;background:#1a1a1a;margin-bottom:28px;"></div>
+
+<!-- PROPOSED STATE -->
+<div class="section-label" style="margin-bottom:14px; color: #22c55e;">PROPOSED STATE — after the change</div>
+<div class="current-flow">
+  <!-- Hero -->
+  <div class="flow-step">
+    <div class="screen hero-screen">
+      <div class="hero-left">
+        <div class="hero-title">YOUR<br>OPS ON<br>AUTOPILOT</div>
+      </div>
+      <div class="hero-orb">
+        <div class="widget-on-orb">
+          <div class="mini-widget" style="outline:1.5px solid #22c55e;">
+            <div class="mini-input-row">
+              <div class="mini-input">Ask me anything...</div>
+              <div class="mini-btn"><div class="mini-btn-arrow"></div></div>
+            </div>
+            <div class="mini-chips">
+              <div class="mini-chip" style="color:#22c55e;">Me</div>
+              <div class="mini-chip" style="color:#3b82f6;">Projects</div>
+              <div class="mini-chip" style="color:#8b5cf6;">Skills</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="screen-label">Hero — same widget, unchanged ✓</div>
+  </div>
+
+  <div class="arrow">→ animates →</div>
+
+  <!-- Special Section NEW -->
+  <div class="flow-step">
+    <div class="screen special-screen">
+      <div class="avatar-area">
+        <div class="mini-avatar">🤖</div>
+        <div class="mini-heading">AI AUTOMATION SPECIALIST</div>
+        <div class="mini-subheading">Nerima, Tokyo</div>
+      </div>
+      <!-- Replaced widget at bottom -->
+      <div class="new-bottom-widget highlight">
+        <div class="new-input-row">
+          <div class="input-text">Ask me anything...</div>
+          <div class="right-btn"><div class="right-arrow"></div></div>
+        </div>
+        <div class="new-chip-row">
+          <div class="mini-chip" style="color:#22c55e;">Me</div>
+          <div class="mini-chip" style="color:#3b82f6;">Projects</div>
+          <div class="mini-chip" style="color:#8b5cf6;">Skills</div>
+          <div class="mini-chip" style="color:#f59e0b;">Fun</div>
+        </div>
+      </div>
+    </div>
+    <div class="screen-label">Special Section — <span style="color:#22c55e;">hero-style widget (→ arrow, no toggle)</span></div>
+  </div>
+</div>
+
+<!-- DIVIDER -->
+<div style="height:1px;background:#1a1a1a;margin:28px 0;"></div>
+
+<!-- ANIMATION SEQUENCE -->
+<div class="section-label" style="margin-bottom:16px;">ANIMATION SEQUENCE — 4 phases</div>
+<div class="anim-sequence">
+
+  <!-- Phase 1: Hero idle -->
+  <div class="anim-step">
+    <div class="step-num">1</div>
+    <div class="phase-tag">idle</div>
+    <div class="wide-screen phase-hold" style="background: linear-gradient(135deg,#0d0d0d 50%,#050a1a);">
+      <div class="hero-content">
+        <div class="hero-title-sm">YOUR OPS<br>ON AUTOPILOT</div>
+      </div>
+      <div class="hero-orb-sm" style="opacity:1;"></div>
+      <!-- Widget sits on orb -->
+      <div style="position:absolute;right:12px;top:18px;background:rgba(10,10,15,0.9);border-radius:10px;padding:3px 6px;width:56px;border:1px solid rgba(255,255,255,0.15);">
+        <div style="display:flex;align-items:center;gap:3px;margin-bottom:2px;">
+          <div style="font-size:4px;color:#888;flex:1;">Ask me...</div>
+          <div style="width:9px;height:9px;background:#2563eb;border-radius:50%;"></div>
+        </div>
+        <div style="display:flex;gap:2px;">
+          <div style="font-size:3.5px;background:rgba(255,255,255,0.08);border-radius:3px;padding:1px 2px;color:#22c55e;">Me</div>
+          <div style="font-size:3.5px;background:rgba(255,255,255,0.08);border-radius:3px;padding:1px 2px;color:#3b82f6;">Proj</div>
+          <div style="font-size:3.5px;background:rgba(255,255,255,0.08);border-radius:3px;padding:1px 2px;color:#8b5cf6;">Skills</div>
+        </div>
+      </div>
+    </div>
+    <div class="step-label">Widget on hero sphere<br>User clicks it</div>
+  </div>
+
+  <div style="font-size:18px;color:#333;align-self:center;padding-top:10px;">›</div>
+
+  <!-- Phase 2: hold — hero exits left, widget stays fixed -->
+  <div class="anim-step">
+    <div class="step-num">2</div>
+    <div class="phase-tag">hold</div>
+    <div class="wide-screen" style="background:#0a0a10;">
+      <!-- Hero text sliding left / fading out -->
+      <div style="position:absolute;left:-20px;top:10px;opacity:0.2;">
+        <div class="hero-title-sm">YOUR OPS<br>ON AUTOPILOT</div>
+      </div>
+      <!-- Widget: stays fixed at same screen position -->
+      <div style="position:absolute;right:12px;top:18px;background:rgba(10,10,15,0.95);border-radius:10px;padding:3px 6px;width:56px;border:1px solid rgba(37,99,235,0.4);box-shadow:0 0 12px rgba(37,99,235,0.2);">
+        <div style="display:flex;align-items:center;gap:3px;margin-bottom:2px;">
+          <div style="font-size:4px;color:#888;flex:1;">Ask me...</div>
+          <div style="width:9px;height:9px;background:#2563eb;border-radius:50%;"></div>
+        </div>
+        <div style="display:flex;gap:2px;">
+          <div style="font-size:3.5px;background:rgba(255,255,255,0.08);border-radius:3px;padding:1px 2px;color:#22c55e;">Me</div>
+          <div style="font-size:3.5px;background:rgba(255,255,255,0.08);border-radius:3px;padding:1px 2px;color:#3b82f6;">Proj</div>
+          <div style="font-size:3.5px;background:rgba(255,255,255,0.08);border-radius:3px;padding:1px 2px;color:#8b5cf6;">Skills</div>
+        </div>
+      </div>
+      <div style="position:absolute;bottom:6px;left:0;right:0;font-size:4px;color:#444;text-align:center;">hero slides out →</div>
+    </div>
+    <div class="step-label">Widget stays fixed<br>Hero content exits</div>
+  </div>
+
+  <div style="font-size:18px;color:#333;align-self:center;padding-top:10px;">›</div>
+
+  <!-- Phase 3: drop — widget animates to bottom center -->
+  <div class="anim-step">
+    <div class="step-num">3</div>
+    <div class="phase-tag">drop</div>
+    <div class="wide-screen phase-drop">
+      <!-- Special section fading in -->
+      <div class="special-content">
+        <div class="special-avatar-sm"></div>
+        <div class="special-heading-sm">AI AUTOMATION SPECIALIST</div>
+      </div>
+      <!-- Widget mid-journey, with motion trail -->
+      <div style="position:absolute;right:16px;top:28px;background:rgba(10,10,15,0.5);border-radius:10px;padding:3px 6px;width:56px;opacity:0.3;">
+        <div style="font-size:4px;color:#666;">...</div>
+      </div>
+      <div style="position:absolute;left:50%;transform:translateX(-50%);bottom:10px;background:rgba(10,10,15,0.95);border-radius:10px;padding:3px 6px;width:76px;border:1px solid rgba(37,99,235,0.5);box-shadow:0 0 16px rgba(37,99,235,0.3);">
+        <div style="display:flex;align-items:center;gap:3px;margin-bottom:2px;">
+          <div style="font-size:4px;color:#888;flex:1;">Ask me anything...</div>
+          <div style="width:9px;height:9px;background:#2563eb;border-radius:50%;"></div>
+        </div>
+        <div style="display:flex;gap:2px;justify-content:center;">
+          <div style="font-size:3.5px;background:rgba(255,255,255,0.08);border-radius:3px;padding:1px 2px;color:#22c55e;">Me</div>
+          <div style="font-size:3.5px;background:rgba(255,255,255,0.08);border-radius:3px;padding:1px 2px;color:#3b82f6;">Proj</div>
+          <div style="font-size:3.5px;background:rgba(255,255,255,0.08);border-radius:3px;padding:1px 2px;color:#8b5cf6;">Skills</div>
+          <div style="font-size:3.5px;background:rgba(255,255,255,0.08);border-radius:3px;padding:1px 2px;color:#f59e0b;">Fun</div>
+        </div>
+      </div>
+    </div>
+    <div class="step-label">Widget flies to<br>bottom-center of screen</div>
+  </div>
+
+  <div style="font-size:18px;color:#333;align-self:center;padding-top:10px;">›</div>
+
+  <!-- Phase 4: done -->
+  <div class="anim-step">
+    <div class="step-num">4</div>
+    <div class="phase-tag">done</div>
+    <div class="wide-screen phase-done">
+      <div class="special-content">
+        <div class="special-avatar-sm"></div>
+        <div class="special-heading-sm">AI AUTOMATION SPECIALIST</div>
+      </div>
+      <!-- chat area -->
+      <div style="position:absolute;left:8px;right:8px;top:38px;bottom:38px;overflow:hidden;">
+        <div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:4px;font-size:4px;color:#aaa;margin-bottom:4px;">Tell me about your projects...</div>
+        <div style="background:rgba(37,99,235,0.15);border-radius:6px;padding:4px;font-size:4px;color:#93c5fd;text-align:right;">I build AI automation systems...</div>
+      </div>
+      <!-- Final widget at bottom -->
+      <div style="position:absolute;left:6px;right:6px;bottom:6px;background:rgba(10,10,15,0.95);border-radius:10px;padding:3px 6px;border:1px solid rgba(255,255,255,0.1);">
+        <div style="display:flex;align-items:center;gap:3px;margin-bottom:2px;">
+          <div style="font-size:4px;color:#888;flex:1;">Ask me anything...</div>
+          <div style="width:9px;height:9px;background:#2563eb;border-radius:50%;"></div>
+        </div>
+        <div style="display:flex;gap:2px;justify-content:center;">
+          <div style="font-size:3.5px;background:rgba(255,255,255,0.08);border-radius:3px;padding:1px 2px;color:#22c55e;">Me</div>
+          <div style="font-size:3.5px;background:rgba(255,255,255,0.08);border-radius:3px;padding:1px 2px;color:#3b82f6;">Proj</div>
+          <div style="font-size:3.5px;background:rgba(255,255,255,0.08);border-radius:3px;padding:1px 2px;color:#8b5cf6;">Skills</div>
+          <div style="font-size:3.5px;background:rgba(255,255,255,0.08);border-radius:3px;padding:1px 2px;color:#f59e0b;">Fun</div>
+        </div>
+      </div>
+    </div>
+    <div class="step-label">Special section open<br>Hero-style widget at bottom</div>
+  </div>
+
+</div>
+
+<div style="margin-top:32px;padding:16px;background:#0f1a0f;border:1px solid #1a3a1a;border-radius:8px;">
+  <div style="font-size:11px;font-weight:600;color:#22c55e;margin-bottom:8px;">CHANGES REQUIRED</div>
+  <div style="display:flex;flex-direction:column;gap:6px;">
+    <div style="font-size:12px;color:#aaa;">① <strong style="color:#fff;">Remove</strong> the "Hide quick questions" toggle + ↑ arrow input from <code style="color:#60a5fa;">SpecialSection.tsx</code></div>
+    <div style="font-size:12px;color:#aaa;">② <strong style="color:#fff;">Replace</strong> with the <code style="color:#60a5fa;">AskMeAnything</code> component (hero-style: → arrow, input first, chips below)</div>
+    <div style="font-size:12px;color:#aaa;">③ <strong style="color:#fff;">Wire</strong> the AskMeAnything onSubmit in SpecialSection to send the message (not trigger special section)</div>
+    <div style="font-size:12px;color:#aaa;">④ The floating animation in <code style="color:#60a5fa;">Index.tsx</code> already works — minor timing adjustments only</div>
+  </div>
+</div>
+
+</body>
+</html>

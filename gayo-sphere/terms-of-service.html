@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Gayo Sphere</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { manrope: ['Manrope', 'sans-serif'] },
+          colors: { brand: { blue: '#2563EB', dark: '#0A0A0A' } }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Manrope', sans-serif; background: #ffffff; color: #0A0A0A; overflow-x: hidden; }
+
+    /* ── Hamburger ── */
+    #mobile-menu { transition: opacity 0.25s ease, visibility 0.25s ease; }
+    #mobile-menu.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    #mobile-menu:not(.hidden) { opacity: 1; visibility: visible; }
+    .ham-line { display: block; width: 22px; height: 2px; background: #0A0A0A; transition: transform 0.25s ease, opacity 0.25s ease; }
+    .ham-open .ham-line:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .ham-open .ham-line:nth-child(2) { opacity: 0; }
+    .ham-open .ham-line:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    /* ── Footer link hover ── */
+    .footer-link { transition: color 0.15s ease; }
+    .footer-link:hover { color: #ffffff; }
+
+    /* ── TOC ── */
+    .toc-link {
+      display: block;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: #6B7280;
+      padding: 6px 12px;
+      border-left: 2px solid transparent;
+      transition: color 0.15s ease, border-color 0.15s ease;
+      text-decoration: none;
+      line-height: 1.5;
+    }
+    .toc-link:hover { color: #0A0A0A; border-left-color: #D1D5DB; }
+    .toc-link.active { color: #2563EB; border-left-color: #2563EB; font-weight: 600; }
+
+    /* ── Content sections ── */
+    .policy-section { scroll-margin-top: 88px; }
+    .policy-section h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #0A0A0A;
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #F3F4F6;
+    }
+    .policy-section p {
+      font-size: 0.9375rem;
+      line-height: 1.85;
+      color: #374151;
+      margin-bottom: 1rem;
+    }
+    .policy-section p:last-child { margin-bottom: 0; }
+    .policy-section ul {
+      list-style: none;
+      margin: 0.75rem 0 1rem;
+    }
+    .policy-section ul li {
+      font-size: 0.9375rem;
+      line-height: 1.85;
+      color: #374151;
+      padding: 0.375rem 0 0.375rem 1.25rem;
+      position: relative;
+    }
+    .policy-section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.85rem;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #2563EB;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.55s ease forwards; }
+    .fade-up-d1 { animation-delay: 0.1s; opacity: 0; }
+    .fade-up-d2 { animation-delay: 0.2s; opacity: 0; }
+    .fade-up-d3 { animation-delay: 0.3s; opacity: 0; }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════ -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100" style="height:64px;">
+  <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2.5 no-underline">
+      <div class="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center flex-shrink-0">
+        <span class="text-white font-bold text-sm leading-none">GS</span>
+      </div>
+      <span class="text-sm font-semibold text-gray-900">Gayo Sphere</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="work.html"      class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors duration-150">Work</a>
+      <a href="services.html"  class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors duration-150">Services</a>
+      <a href="the-team.html"  class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors duration-150">Team</a>
+      <a href="insight.html"   class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors duration-150">Insight</a>
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <a href="contact-us.html"
+         class="hidden md:inline-flex items-center px-5 py-2 bg-blue-600 text-white text-sm font-semibold rounded-full hover:bg-blue-700 transition-colors duration-150">
+        Contact Us
+      </a>
+      <button id="ham-btn" aria-label="Toggle menu"
+              class="md:hidden flex flex-col gap-[5px] justify-center items-center w-10 h-10 rounded-lg hover:bg-gray-50 transition-colors">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-white flex flex-col" style="padding-top:64px;">
+  <div class="flex flex-col gap-1 px-6 pt-8 pb-6">
+    <a href="work.html"     class="text-2xl font-semibold text-gray-900 py-3 border-b border-gray-100">Work</a>
+    <a href="services.html" class="text-2xl font-semibold text-gray-900 py-3 border-b border-gray-100">Services</a>
+    <a href="the-team.html" class="text-2xl font-semibold text-gray-900 py-3 border-b border-gray-100">Team</a>
+    <a href="insight.html"  class="text-2xl font-semibold text-gray-900 py-3 border-b border-gray-100">Insight</a>
+  </div>
+  <div class="px-6 pt-6">
+    <a href="contact-us.html"
+       class="inline-flex items-center px-8 py-3 bg-blue-600 text-white text-base font-semibold rounded-full hover:bg-blue-700 transition-colors duration-150">
+      Contact Us
+    </a>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section class="pt-24 pb-14 px-6 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto">
+    <div class="max-w-2xl">
+      <span class="fade-up fade-up-d1 inline-flex items-center gap-2 text-xs font-semibold text-blue-600 uppercase tracking-widest mb-5">
+        <span class="w-4 h-px bg-blue-600"></span>Legal
+      </span>
+      <h1 class="fade-up fade-up-d2 text-4xl sm:text-5xl font-extrabold leading-[1.1] tracking-tight text-[#0A0A0A] mb-5">
+        Terms of Service
+      </h1>
+      <p class="fade-up fade-up-d3 text-base text-gray-500 font-medium">
+        Effective Date: <strong class="text-gray-700">March 16, 2026</strong> &nbsp;·&nbsp; gayo-sphere.cloud
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     CONTENT + TOC
+════════════════════════════════════════ -->
+<div class="max-w-7xl mx-auto px-6 py-16">
+  <div class="flex flex-col lg:flex-row gap-16">
+
+    <!-- ── Sticky TOC (desktop) ── -->
+    <aside class="hidden lg:block w-64 flex-shrink-0">
+      <div class="sticky top-24">
+        <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4 px-3">Contents</p>
+        <nav id="toc" class="flex flex-col gap-0.5">
+          <a href="#agreement"            class="toc-link">Agreement to Terms</a>
+          <a href="#intellectual-property" class="toc-link">Intellectual Property</a>
+          <a href="#user-representations" class="toc-link">User Representations</a>
+          <a href="#prohibited-activities" class="toc-link">Prohibited Activities</a>
+          <a href="#termination"          class="toc-link">Term and Termination</a>
+          <a href="#modifications"        class="toc-link">Modifications &amp; Interruptions</a>
+          <a href="#governing-law"        class="toc-link">Governing Law</a>
+          <a href="#disclaimer"           class="toc-link">Disclaimer</a>
+          <a href="#limitations"          class="toc-link">Limitations of Liability</a>
+          <a href="#contact"              class="toc-link">Contact Us</a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- ── Terms Content ── -->
+    <div class="flex-1 min-w-0 max-w-3xl space-y-12">
+
+      <section id="agreement" class="policy-section">
+        <h2>Agreement to Terms</h2>
+        <p>These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity, and Gayo Sphere, concerning your access to and use of our application and services. You agree that by accessing the application, you have read, understood, and agreed to be bound by all of these Terms of Service.</p>
+        <p>If you do not agree with all of these terms, then you are expressly prohibited from using the application and you must discontinue use immediately.</p>
+      </section>
+
+      <section id="intellectual-property" class="policy-section">
+        <h2>Intellectual Property Rights</h2>
+        <p>Unless otherwise indicated, the application is our proprietary property and all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics on the application, and the trademarks, service marks, and logos contained therein, are owned or controlled by us or licensed to us, and are protected by copyright and trademark laws.</p>
+      </section>
+
+      <section id="user-representations" class="policy-section">
+        <h2>User Representations</h2>
+        <p>By using the application, you represent and warrant that:</p>
+        <ul>
+          <li>All registration information you submit will be true, accurate, current, and complete</li>
+          <li>You have the legal capacity to comply with these Terms of Service</li>
+          <li>You will not use the application for any illegal or unauthorized purpose</li>
+        </ul>
+      </section>
+
+      <section id="prohibited-activities" class="policy-section">
+        <h2>Prohibited Activities</h2>
+        <p>You may not access or use the application for any purpose other than that for which we make the application available. The application may not be used in connection with any commercial endeavors except those that are specifically endorsed or approved by us.</p>
+      </section>
+
+      <section id="termination" class="policy-section">
+        <h2>Term and Termination</h2>
+        <p>These Terms of Service shall remain in full force and effect while you use the application. We reserve the right to, in our sole discretion and without notice or liability, deny access to and use of the application to any person for any reason, including without limitation for breach of any representation, warranty, or covenant contained in these Terms of Service.</p>
+      </section>
+
+      <section id="modifications" class="policy-section">
+        <h2>Modifications and Interruptions</h2>
+        <p>We reserve the right to change, modify, or remove the contents of the application at any time or for any reason at our sole discretion without notice. We will not be liable to you or any third party for any modification, price change, suspension, or discontinuance of the application.</p>
+      </section>
+
+      <section id="governing-law" class="policy-section">
+        <h2>Governing Law</h2>
+        <p>These terms shall be governed by and defined following the laws of the Philippines. Gayo Sphere and yourself irrevocably consent that the courts of the Philippines shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these terms.</p>
+      </section>
+
+      <section id="disclaimer" class="policy-section">
+        <h2>Disclaimer</h2>
+        <p>The application is provided on an as-is and as-available basis. You agree that your use of the application and our services will be at your sole risk. To the fullest extent permitted by law, we disclaim all warranties, express or implied, in connection with the application and your use thereof.</p>
+      </section>
+
+      <section id="limitations" class="policy-section">
+        <h2>Limitations of Liability</h2>
+        <p>In no event will we or our directors, employees, or agents be liable to you or any third party for any direct, indirect, consequential, exemplary, incidental, special, or punitive damages, including lost profit, lost revenue, loss of data, or other damages arising from your use of the application.</p>
+      </section>
+
+      <section id="contact" class="policy-section">
+        <h2>Contact Us</h2>
+        <p>In order to resolve a complaint regarding the application or to receive further information regarding use of the application, please contact us at:</p>
+        <div class="mt-5 p-6 rounded-2xl bg-gray-50 border border-gray-100 space-y-2">
+          <p class="font-semibold text-[#0A0A0A]">Gayo Sphere</p>
+          <p class="text-sm text-gray-600">Purok 3, Barangay 3, San Francisco, Agusan del Sur, Philippines 8501</p>
+          <a href="mailto:cozy.downloads.store@gmail.com" class="text-sm text-blue-600 hover:text-blue-700 transition-colors block">cozy.downloads.store@gmail.com</a>
+          <p class="text-sm text-gray-600">07089861692</p>
+          <a href="https://gayo-sphere.cloud" class="text-sm text-blue-600 hover:text-blue-700 transition-colors block">gayo-sphere.cloud</a>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer class="bg-[#0A0A0A] text-white px-6 py-16">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-16">
+
+      <div>
+        <div class="flex items-center gap-2.5 mb-5">
+          <div class="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-sm leading-none">GS</span>
+          </div>
+          <span class="text-sm font-semibold text-white">Gayo Sphere</span>
+        </div>
+        <p class="text-sm text-gray-400 leading-relaxed mb-4">
+          AI automation and e-commerce solutions that scale your business without scaling your team.
+        </p>
+        <a href="mailto:clarence.gayo@gmail.com" class="text-sm text-blue-400 hover:text-blue-300 transition-colors duration-150">
+          clarence.gayo@gmail.com
+        </a>
+      </div>
+
+      <div>
+        <p class="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-5">Features</p>
+        <ul class="space-y-3">
+          <li><a href="work.html"     class="text-sm text-gray-400 footer-link">Work</a></li>
+          <li><a href="services.html" class="text-sm text-gray-400 footer-link">Services</a></li>
+          <li><a href="the-team.html" class="text-sm text-gray-400 footer-link">Team</a></li>
+          <li><a href="insight.html"  class="text-sm text-gray-400 footer-link">Insight</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-5">General</p>
+        <ul class="space-y-3">
+          <li><a href="contact-us.html"       class="text-sm text-blue-400 footer-link">Contact us</a></li>
+          <li><a href="privacy-policy.html"   class="text-sm text-gray-400 footer-link">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html" class="text-sm text-gray-400 footer-link">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-5">Find Us</p>
+        <div class="flex items-start gap-2">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0">
+            <path d="M8 1.5C5.51 1.5 3.5 3.51 3.5 6c0 3.75 4.5 8.5 4.5 8.5S12.5 9.75 12.5 6c0-2.49-2.01-4.5-4.5-4.5zM8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="#6B7280"/>
+          </svg>
+          <p class="text-sm text-gray-400">Tokyo, Japan</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <p class="text-xs text-gray-600">© 2026 Gayo Sphere. All rights reserved.</p>
+        <span class="text-gray-800">·</span>
+        <a href="privacy-policy.html"    class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Privacy Policy</a>
+        <a href="terms-of-service.html"  class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Terms of Service</a>
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="https://www.linkedin.com/in/cldgayo/" target="_blank" rel="noopener"
+           class="text-xs text-gray-500 hover:text-white transition-colors duration-150">LinkedIn</a>
+        <a href="https://github.com/Gayo321" target="_blank" rel="noopener"
+           class="text-xs text-gray-500 hover:text-white transition-colors duration-150">GitHub</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════ -->
+<script>
+  // Hamburger
+  const hamBtn  = document.getElementById('ham-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamBtn.addEventListener('click', () => {
+    const open = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden', open);
+    hamBtn.classList.toggle('ham-open', !open);
+  });
+
+  // Active TOC highlight on scroll
+  const sections = document.querySelectorAll('.policy-section');
+  const tocLinks = document.querySelectorAll('.toc-link');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-64px 0px -60% 0px', threshold: 0 });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>

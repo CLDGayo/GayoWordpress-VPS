@@ -1,0 +1,538 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "ClydeGayo" [ref=e4] [cursor=pointer]:
+        - /url: "#hero"
+      - navigation [ref=e5]:
+        - link "About" [ref=e6] [cursor=pointer]:
+          - /url: "#about"
+          - text: About
+        - link "Work" [ref=e7] [cursor=pointer]:
+          - /url: "#work"
+          - text: Work
+        - link "Tools" [ref=e8] [cursor=pointer]:
+          - /url: "#tools"
+          - text: Tools
+        - link "Journey" [ref=e9] [cursor=pointer]:
+          - /url: "#journey"
+          - text: Journey
+        - link "Contact" [ref=e10] [cursor=pointer]:
+          - /url: "#contact"
+          - text: Contact
+      - generic [ref=e11]:
+        - button "Switch to light mode" [ref=e12] [cursor=pointer]:
+          - generic [ref=e13]:
+            - img [ref=e15]
+            - img [ref=e18]
+        - link "Hire Me" [ref=e24] [cursor=pointer]:
+          - /url: "#contact"
+  - main [ref=e25]:
+    - generic [ref=e26]:
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - generic [ref=e30]: AI Automation · CRM Specialist
+          - generic [ref=e32]:
+            - generic [ref=e33]: Clarence
+            - generic [ref=e34]: Lloyd
+            - generic [ref=e35]: Gayo
+          - paragraph [ref=e36]: I Manage the Chaos. You Lead the Way.
+          - paragraph [ref=e37]: I build digital employees — intelligent workflows using n8n, Make, and Zapier that eliminate operational chaos and give entrepreneurs back their time.
+          - generic [ref=e38]:
+            - link "View Projects" [ref=e39] [cursor=pointer]:
+              - /url: "#work"
+            - link "Let's Work Together" [ref=e40] [cursor=pointer]:
+              - /url: "#contact"
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - generic [ref=e43]: ⚡
+            - text: Idle Automation
+          - generic [ref=e44]:
+            - generic [ref=e45]: 🔄
+            - text: Inner Workflows
+          - generic [ref=e46]:
+            - generic [ref=e47]: 📊
+            - text: Close Pipeline
+          - generic [ref=e48]:
+            - generic [ref=e49]: 🤖
+            - text: Ai Omnipresence
+          - generic [ref=e50]:
+            - img "Clarence Lloyd Gayo" [ref=e51]
+            - generic [ref=e52]:
+              - paragraph [ref=e53]: Clarence Lloyd Gayo
+              - paragraph [ref=e54]: AI Automation Specialist
+      - generic [ref=e56]: Scroll to explore
+    - generic [ref=e60]:
+      - generic [ref=e62]:
+        - generic [ref=e64]: 0+
+        - paragraph [ref=e65]: Automation Systems Built
+      - generic [ref=e67]:
+        - generic [ref=e68]: "0"
+        - paragraph [ref=e69]: Platforms Mastered
+      - generic [ref=e71]:
+        - generic [ref=e73]: 0%
+        - paragraph [ref=e74]: Reduction in Manual Tasks
+      - generic [ref=e76]:
+        - generic [ref=e78]: 0/7
+        - paragraph [ref=e79]: Hour Availability
+    - generic [ref=e81]:
+      - generic [ref=e82]:
+        - generic [ref=e84]: About Me
+        - heading "Turning Operational Chaos Into Automated Precision" [level=2] [ref=e86]:
+          - text: Turning Operational Chaos
+          - text: Into Automated Precision
+        - paragraph [ref=e88]: IT graduate · Based in Tokyo · Automation Architect
+      - generic [ref=e89]:
+        - generic [ref=e90]:
+          - generic [ref=e92]:
+            - paragraph [ref=e93]: Hi, I am Clyde — an AI Automation Specialist based in Tokyo. With a foundation in IT and years managing complex backend operations in e-commerce and food service, I have evolved into an Automation Architect.
+            - paragraph [ref=e94]: "I build digital employees using n8n, Zapier, and Make — AI-driven workflows that handle everything from voice receptionists to real-time CRM synchronization. My goal: empower entrepreneurs by streamlining their most complex tasks so they can focus on growth."
+          - generic [ref=e96]:
+            - heading "Skill Proficiency" [level=3] [ref=e97]
+            - generic [ref=e98]:
+              - generic [ref=e100]:
+                - generic [ref=e101]: n8n Workflow Automation
+                - generic [ref=e102]: 95%
+              - generic [ref=e106]:
+                - generic [ref=e107]: Zapier & Make Automation
+                - generic [ref=e108]: 90%
+              - generic [ref=e112]:
+                - generic [ref=e113]: CRM Systems (GHL, Asana, Monday)
+                - generic [ref=e114]: 88%
+              - generic [ref=e118]:
+                - generic [ref=e119]: AI / LLM Orchestration
+                - generic [ref=e120]: 85%
+              - generic [ref=e124]:
+                - generic [ref=e125]: API Integration & Webhooks
+                - generic [ref=e126]: 87%
+              - generic [ref=e130]:
+                - generic [ref=e131]: E-commerce Operations
+                - generic [ref=e132]: 82%
+        - generic [ref=e136]:
+          - img "Clarence Lloyd Gayo" [ref=e138]
+          - heading "Clarence Lloyd Gayo" [level=3] [ref=e139]
+          - paragraph [ref=e140]: AI & CRM Automation Specialist
+          - generic [ref=e141]:
+            - generic [ref=e142]:
+              - generic [ref=e143]: 📍
+              - paragraph [ref=e144]: Location
+              - paragraph [ref=e145]: Tokyo, Japan
+            - generic [ref=e146]:
+              - generic [ref=e147]: 🎓
+              - paragraph [ref=e148]: Education
+              - paragraph [ref=e149]: Bachelor of Science in IT
+            - generic [ref=e150]:
+              - generic [ref=e151]: ✉️
+              - paragraph [ref=e152]: Email
+              - paragraph [ref=e153]: clarence.gayo@gmail.com
+            - generic [ref=e154]:
+              - generic [ref=e155]: 💼
+              - paragraph [ref=e156]: Available
+              - paragraph [ref=e157]: Freelance / Remote
+          - generic [ref=e158]:
+            - link "LinkedIn LinkedIn ↗" [ref=e159] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/cldgayo/
+              - img "LinkedIn" [ref=e160]
+              - text: LinkedIn ↗
+            - link "Email Me ↗" [ref=e161] [cursor=pointer]:
+              - /url: mailto:clarence.gayo@gmail.com
+    - generic [ref=e163]:
+      - generic [ref=e164]:
+        - generic [ref=e166]: Automation Case Studies
+        - heading "9 Systems. Zero Manual Labor." [level=2] [ref=e168]
+        - paragraph [ref=e170]: Real workflows built with n8n, Make, and Zapier. Each one eliminates hours of repetitive work.
+      - generic [ref=e172]:
+        - button "All Systems" [ref=e173] [cursor=pointer]
+        - button "n8n n8n" [ref=e174] [cursor=pointer]:
+          - generic [ref=e175]:
+            - img "n8n" [ref=e176]
+            - text: n8n
+        - button "Make Make" [ref=e177] [cursor=pointer]:
+          - generic [ref=e178]:
+            - img "Make" [ref=e179]
+            - text: Make
+        - button "Zapier Zapier" [ref=e180] [cursor=pointer]:
+          - generic [ref=e181]:
+            - img "Zapier" [ref=e182]
+            - text: Zapier
+      - generic [ref=e183]:
+        - generic [ref=e185] [cursor=pointer]:
+          - generic [ref=e186]:
+            - img "Autonomous Voice-to-Calendar Orchestration Engine" [ref=e187]
+            - generic [ref=e189]: View Case Study →
+          - generic [ref=e190]:
+            - generic [ref=e191]: n8n
+            - heading "Autonomous Voice-to-Calendar Orchestration Engine" [level=3] [ref=e192]
+            - paragraph [ref=e193]: AI Receptionist • Scheduling
+            - generic [ref=e194]:
+              - generic "Vapi" [ref=e195]:
+                - img "Vapi" [ref=e196]
+              - generic "Airtable" [ref=e197]:
+                - img "Airtable" [ref=e198]
+              - generic "n8n" [ref=e199]:
+                - img "n8n" [ref=e200]
+        - generic [ref=e202] [cursor=pointer]:
+          - generic [ref=e203]:
+            - img "Dynamic Context-Aware Social Engagement Engine" [ref=e204]
+            - generic [ref=e206]: View Case Study →
+          - generic [ref=e207]:
+            - generic [ref=e208]: n8n
+            - heading "Dynamic Context-Aware Social Engagement Engine" [level=3] [ref=e209]
+            - paragraph [ref=e210]: AI Content • Social Media
+            - generic [ref=e211]:
+              - generic "Google Gemini" [ref=e212]:
+                - img "Google Gemini" [ref=e213]
+              - generic "n8n" [ref=e214]:
+                - img "n8n" [ref=e215]
+        - generic [ref=e217] [cursor=pointer]:
+          - generic [ref=e218]:
+            - img "Automated End-to-End Media Production Pipeline" [ref=e219]
+            - generic [ref=e221]: View Case Study →
+          - generic [ref=e222]:
+            - generic [ref=e223]: n8n
+            - heading "Automated End-to-End Media Production Pipeline" [level=3] [ref=e224]
+            - paragraph [ref=e225]: Video Generation • Distribution
+            - generic [ref=e226]:
+              - generic "Google Gemini" [ref=e227]:
+                - img "Google Gemini" [ref=e228]
+              - generic "n8n" [ref=e229]:
+                - img "n8n" [ref=e230]
+        - generic [ref=e232] [cursor=pointer]:
+          - generic [ref=e233]:
+            - img "Knowledge-Base Driven Customer Experience Agent" [ref=e234]
+            - generic [ref=e236]: View Case Study →
+          - generic [ref=e237]:
+            - generic [ref=e238]: n8n
+            - heading "Knowledge-Base Driven Customer Experience Agent" [level=3] [ref=e239]
+            - paragraph [ref=e240]: AI Support • CX Automation
+            - generic [ref=e241]:
+              - generic "OpenAI" [ref=e242]:
+                - img "OpenAI" [ref=e243]
+              - generic "n8n" [ref=e244]:
+                - img "n8n" [ref=e245]
+        - generic [ref=e247] [cursor=pointer]:
+          - generic [ref=e248]:
+            - img "Intelligent Document Management &#038; Logging System" [ref=e249]
+            - generic [ref=e251]: View Case Study →
+          - generic [ref=e252]:
+            - generic [ref=e253]: Make
+            - heading "Intelligent Document Management &#038; Logging System" [level=3] [ref=e254]
+            - paragraph [ref=e255]: File Ops • Admin Automation
+            - generic [ref=e256]:
+              - generic "Make" [ref=e257]:
+                - img "Make" [ref=e258]
+              - generic "OpenAI" [ref=e259]:
+                - img "OpenAI" [ref=e260]
+        - generic [ref=e262] [cursor=pointer]:
+          - generic [ref=e263]:
+            - img "Financial Data &#038; Project Management Synchronization" [ref=e264]
+            - generic [ref=e266]: View Case Study →
+          - generic [ref=e267]:
+            - generic [ref=e268]: Make
+            - heading "Financial Data &#038; Project Management Synchronization" [level=3] [ref=e269]
+            - paragraph [ref=e270]: FinOps • Bi-Directional Sync
+            - generic [ref=e271]:
+              - generic "Xero" [ref=e272]:
+                - img "Xero" [ref=e273]
+              - generic "Asana" [ref=e274]:
+                - img "Asana" [ref=e275]
+              - generic "Make" [ref=e276]:
+                - img "Make" [ref=e277]
+        - generic [ref=e279] [cursor=pointer]:
+          - generic [ref=e280]:
+            - img "Intelligent CRM Lifecycle Orchestration" [ref=e281]
+            - generic [ref=e283]: View Case Study →
+          - generic [ref=e284]:
+            - generic [ref=e285]: Zapier
+            - heading "Intelligent CRM Lifecycle Orchestration" [level=3] [ref=e286]
+            - paragraph [ref=e287]: CRM • Lead Management
+            - generic [ref=e288]:
+              - generic "Asana" [ref=e289]:
+                - img "Asana" [ref=e290]
+              - generic "Zapier" [ref=e291]:
+                - img "Zapier" [ref=e292]
+        - generic [ref=e294] [cursor=pointer]:
+          - generic [ref=e295]:
+            - img "High-Velocity Lead Intelligence &#038; Engagement Pipeline" [ref=e296]
+            - generic [ref=e298]: View Case Study →
+          - generic [ref=e299]:
+            - generic [ref=e300]: Zapier
+            - heading "High-Velocity Lead Intelligence &#038; Engagement Pipeline" [level=3] [ref=e301]
+            - paragraph [ref=e302]: Lead Gen • Enrichment
+            - generic [ref=e303]:
+              - generic "Apollo" [ref=e304]:
+                - img "Apollo" [ref=e305]
+              - generic "Zapier" [ref=e306]:
+                - img "Zapier" [ref=e307]
+        - generic [ref=e309] [cursor=pointer]:
+          - generic [ref=e310]:
+            - img "Multi-Channel Strategic Content Distribution System" [ref=e311]
+            - generic [ref=e313]: View Case Study →
+          - generic [ref=e314]:
+            - generic [ref=e315]: Zapier
+            - heading "Multi-Channel Strategic Content Distribution System" [level=3] [ref=e316]
+            - paragraph [ref=e317]: Content Ops • Omnichannel
+            - generic "OpenAI" [ref=e319]:
+              - img "OpenAI" [ref=e320]
+      - generic [ref=e322]:
+        - generic [ref=e323]:
+          - img "n8n" [ref=e326]
+          - generic [ref=e327]: "4"
+          - paragraph [ref=e328]: n8n Systems
+        - generic [ref=e329]:
+          - img "Make" [ref=e332]
+          - generic [ref=e333]: "2"
+          - paragraph [ref=e334]: Make Systems
+        - generic [ref=e335]:
+          - img "Zapier" [ref=e338]
+          - generic [ref=e339]: "3"
+          - paragraph [ref=e340]: Zapier Systems
+    - generic [ref=e342]:
+      - generic [ref=e343]:
+        - generic [ref=e345]: Tools & Platforms
+        - heading "My Automation Stack" [level=2] [ref=e347]
+        - paragraph [ref=e349]: The platforms and technologies I use to build intelligent workflows.
+      - generic [ref=e350]:
+        - generic [ref=e352]:
+          - img "n8n" [ref=e354]
+          - generic [ref=e355]:
+            - paragraph [ref=e356]: n8n
+            - paragraph [ref=e357]: Automation
+        - generic [ref=e359]:
+          - img "Make" [ref=e361]
+          - generic [ref=e362]:
+            - paragraph [ref=e363]: Make
+            - paragraph [ref=e364]: Integration
+        - generic [ref=e366]:
+          - img "Zapier" [ref=e368]
+          - generic [ref=e369]:
+            - paragraph [ref=e370]: Zapier
+            - paragraph [ref=e371]: Platform
+        - generic [ref=e373]:
+          - img "Go High Level" [ref=e375]
+          - generic [ref=e376]:
+            - paragraph [ref=e377]: Go High Level
+            - paragraph [ref=e378]: Dev / Finance
+        - generic [ref=e380]:
+          - img "Asana" [ref=e382]
+          - generic [ref=e383]:
+            - paragraph [ref=e384]: Asana
+            - paragraph [ref=e385]: Automation
+        - generic [ref=e387]:
+          - img "Monday.com" [ref=e389]
+          - generic [ref=e390]:
+            - paragraph [ref=e391]: Monday.com
+            - paragraph [ref=e392]: Integration
+        - generic [ref=e394]:
+          - img "Vapi" [ref=e396]
+          - generic [ref=e397]:
+            - paragraph [ref=e398]: Vapi
+            - paragraph [ref=e399]: Platform
+        - generic [ref=e401]:
+          - img "Google Gemini" [ref=e403]
+          - generic [ref=e404]:
+            - paragraph [ref=e405]: Google Gemini
+            - paragraph [ref=e406]: Automation
+        - generic [ref=e408]:
+          - img "OpenAI" [ref=e410]
+          - generic [ref=e411]:
+            - paragraph [ref=e412]: OpenAI
+            - paragraph [ref=e413]: Integration
+        - generic [ref=e415]:
+          - img "Airtable" [ref=e417]
+          - generic [ref=e418]:
+            - paragraph [ref=e419]: Airtable
+            - paragraph [ref=e420]: Platform
+        - generic [ref=e422]:
+          - img "Xero" [ref=e424]
+          - generic [ref=e425]:
+            - paragraph [ref=e426]: Xero
+            - paragraph [ref=e427]: Dev / Finance
+        - generic [ref=e429]:
+          - img "Apollo" [ref=e431]
+          - generic [ref=e432]:
+            - paragraph [ref=e433]: Apollo
+            - paragraph [ref=e434]: Automation
+        - generic [ref=e436]:
+          - img "WordPress" [ref=e438]
+          - generic [ref=e439]:
+            - paragraph [ref=e440]: WordPress
+            - paragraph [ref=e441]: Integration
+        - generic [ref=e443]:
+          - img "Shopify/Etsy" [ref=e445]
+          - generic [ref=e446]:
+            - paragraph [ref=e447]: Shopify/Etsy
+            - paragraph [ref=e448]: Platform
+        - generic [ref=e450]:
+          - img "JavaScript" [ref=e452]
+          - generic [ref=e453]:
+            - paragraph [ref=e454]: JavaScript
+            - paragraph [ref=e455]: Dev / Finance
+        - generic [ref=e457]:
+          - img "PHP" [ref=e459]
+          - generic [ref=e460]:
+            - paragraph [ref=e461]: PHP
+            - paragraph [ref=e462]: Automation
+    - generic [ref=e464]:
+      - generic [ref=e465]:
+        - generic [ref=e467]: Education & Training
+        - heading "The Journey to Automation Mastery" [level=2] [ref=e469]
+        - paragraph [ref=e471]: From IT graduate to multi-platform automation architect — a continuous learning path.
+      - generic [ref=e472]:
+        - generic [ref=e473]:
+          - generic [ref=e474]: "2026"
+          - generic [ref=e476]:
+            - generic [ref=e478]:
+              - img "Claude Code" [ref=e480]
+              - generic [ref=e481]:
+                - generic [ref=e482]: AI Tools
+                - paragraph [ref=e483]: Claude Code
+            - generic [ref=e485]:
+              - img "n8n Automation" [ref=e487]
+              - generic [ref=e488]:
+                - generic [ref=e489]: Automation
+                - paragraph [ref=e490]: n8n Automation
+            - generic [ref=e492]:
+              - img "Make Automation" [ref=e494]
+              - generic [ref=e495]:
+                - generic [ref=e496]: Automation
+                - paragraph [ref=e497]: Make Automation
+            - generic [ref=e499]:
+              - img "Zapier" [ref=e501]
+              - generic [ref=e502]:
+                - generic [ref=e503]: Automation
+                - paragraph [ref=e504]: Zapier
+            - generic [ref=e506]:
+              - img "Asana CRM" [ref=e508]
+              - generic [ref=e509]:
+                - generic [ref=e510]: CRM
+                - paragraph [ref=e511]: Asana CRM
+            - generic [ref=e513]:
+              - img "Monday.com CRM" [ref=e515]
+              - generic [ref=e516]:
+                - generic [ref=e517]: CRM
+                - paragraph [ref=e518]: Monday.com CRM
+        - generic [ref=e519]:
+          - generic [ref=e520]: "2025"
+          - generic [ref=e524]:
+            - img "JavaScript" [ref=e526]
+            - generic [ref=e527]:
+              - generic [ref=e528]: Development
+              - paragraph [ref=e529]: JavaScript
+        - generic [ref=e530]:
+          - generic [ref=e531]: "2024"
+          - generic [ref=e533]:
+            - generic [ref=e535]:
+              - img "Go High Level" [ref=e537]
+              - generic [ref=e538]:
+                - generic [ref=e539]: CRM
+                - paragraph [ref=e540]: Go High Level
+            - generic [ref=e542]:
+              - img "Etsy Operations" [ref=e544]
+              - generic [ref=e545]:
+                - generic [ref=e546]: E-Commerce
+                - paragraph [ref=e547]: Etsy Operations
+        - generic [ref=e548]:
+          - generic [ref=e549]: "2014"
+          - generic [ref=e551]:
+            - generic [ref=e553]:
+              - img "PHP Programming" [ref=e555]
+              - generic [ref=e556]:
+                - generic [ref=e557]: Development
+                - paragraph [ref=e558]: PHP Programming
+            - generic [ref=e560]:
+              - img "Photoshop" [ref=e562]
+              - generic [ref=e563]:
+                - generic [ref=e564]: Design
+                - paragraph [ref=e565]: Photoshop
+            - generic [ref=e567]:
+              - img "WordPress" [ref=e569]
+              - generic [ref=e570]:
+                - generic [ref=e571]: Development
+                - paragraph [ref=e572]: WordPress
+            - generic [ref=e574]:
+              - img "B.S. Information Technology — ACLC" [ref=e576]
+              - generic [ref=e577]:
+                - generic [ref=e578]: Education
+                - paragraph [ref=e579]: B.S. Information Technology — ACLC
+    - generic [ref=e581]:
+      - generic [ref=e582]:
+        - generic [ref=e584]: Client Testimonials
+        - heading "What Clients Say" [level=2] [ref=e586]
+        - paragraph [ref=e588]: Drag the card or swipe left to see more. Real feedback from people I've worked with.
+      - generic [ref=e590]:
+        - generic [ref=e591]:
+          - generic [ref=e592]:
+            - generic [ref=e593]:
+              - img "Avatar of Anna Amemiya · Operations Manager @ Onodera Life Support"
+            - generic [ref=e594]: “Working with Clyde was seamless from start to finish. He automated our document management and admin workflows with precision. Highly recommend for complex backend operations.”
+            - generic [ref=e595]: Anna Amemiya · Operations Manager @ Onodera Life Support
+          - generic [ref=e596]:
+            - generic [ref=e597]:
+              - img "Avatar of John Paul Mendoza · Shop Owner @ Comfy & Bedder Co."
+            - generic [ref=e598]: “The workflows Clyde designed completely transformed how we run our e-commerce operations. Tasks that took hours are now fully automated. Reliable, smart backend solutions.”
+            - generic [ref=e599]: John Paul Mendoza · Shop Owner @ Comfy & Bedder Co.
+          - generic [ref=e600]:
+            - generic [ref=e601]:
+              - img "Avatar of Gwyneth Sarigumba · Etsy Shop Owner @ Cozy Downloads Store"
+            - generic [ref=e602]: “Clyde built a 24/7 AI customer support agent for our store. Response time dropped from hours to seconds, and our review ratings have never been higher. Truly impressive work.”
+            - generic [ref=e603]: Gwyneth Sarigumba · Etsy Shop Owner @ Cozy Downloads Store
+        - paragraph [ref=e604]: ← Drag to shuffle cards
+    - generic [ref=e606]:
+      - generic [ref=e607]:
+        - generic [ref=e609]: Get In Touch
+        - heading "Ready to Build Something Extraordinary?" [level=2] [ref=e611]
+        - paragraph [ref=e613]: Pick a date below and let's talk. Book a free 30-minute discovery call directly on my calendar.
+      - generic [ref=e615]:
+        - paragraph [ref=e616]: I Manage the Chaos. You Lead the Way.
+        - iframe [ref=e619]:
+          
+        - generic [ref=e620]:
+          - link "✉️ Email clarence.gayo@gmail.com" [ref=e621] [cursor=pointer]:
+            - /url: mailto:clarence.gayo@gmail.com
+            - generic [ref=e622]: ✉️
+            - generic [ref=e623]:
+              - paragraph [ref=e624]: Email
+              - paragraph [ref=e625]: clarence.gayo@gmail.com
+          - link "📱 Phone (+81) 070-8986-1692" [ref=e626] [cursor=pointer]:
+            - /url: tel:+8107089861692
+            - generic [ref=e627]: 📱
+            - generic [ref=e628]:
+              - paragraph [ref=e629]: Phone
+              - paragraph [ref=e630]: (+81) 070-8986-1692
+          - link "LinkedIn LinkedIn www.linkedin.com/in/cldgayo/" [ref=e631] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/cldgayo/
+            - img "LinkedIn" [ref=e632]
+            - generic [ref=e633]:
+              - paragraph [ref=e634]: LinkedIn
+              - paragraph [ref=e635]: www.linkedin.com/in/cldgayo/
+          - link "💻 GitHub github.com/Gayo321" [ref=e636] [cursor=pointer]:
+            - /url: https://github.com/Gayo321
+            - generic [ref=e637]: 💻
+            - generic [ref=e638]:
+              - paragraph [ref=e639]: GitHub
+              - paragraph [ref=e640]: github.com/Gayo321
+        - link "View GitHub ↗" [ref=e642] [cursor=pointer]:
+          - /url: https://github.com/Gayo321
+        - generic [ref=e645]: Available for new projects · Tokyo, Japan (JST)
+  - contentinfo [ref=e646]:
+    - generic [ref=e647]:
+      - generic [ref=e648]:
+        - generic [ref=e649]:
+          - img "Clarence Lloyd Gayo" [ref=e651]
+          - generic [ref=e652]:
+            - paragraph [ref=e653]: Clyde Gayo
+            - paragraph [ref=e654]: AI Automation Specialist · Tokyo
+        - generic [ref=e655]:
+          - link "About" [ref=e656] [cursor=pointer]:
+            - /url: "#about"
+          - link "Work" [ref=e657] [cursor=pointer]:
+            - /url: "#work"
+          - link "Tools" [ref=e658] [cursor=pointer]:
+            - /url: "#tools"
+          - link "Journey" [ref=e659] [cursor=pointer]:
+            - /url: "#journey"
+          - link "Contact" [ref=e660] [cursor=pointer]:
+            - /url: "#contact"
+        - paragraph [ref=e661]: © 2026 Clarence Lloyd Demetria Gayo
+      - paragraph [ref=e663]: “I Manage the Chaos. You Lead the Way.”
+  - alert [ref=e664]

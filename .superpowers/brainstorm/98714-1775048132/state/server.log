@@ -1,0 +1,4 @@
+{"type":"server-started","port":61254,"host":"127.0.0.1","url_host":"localhost","url":"http://localhost:61254","screen_dir":"/Users/clarencelloydgayo/Gayo Sphere/Portfolio/GayoWordpress-VPS/.superpowers/brainstorm/98714-1775048132/content","state_dir":"/Users/clarencelloydgayo/Gayo Sphere/Portfolio/GayoWordpress-VPS/.superpowers/brainstorm/98714-1775048132/state"}
+{"type":"screen-added","file":"/Users/clarencelloydgayo/Gayo Sphere/Portfolio/GayoWordpress-VPS/.superpowers/brainstorm/98714-1775048132/content/animation-approach.html"}
+{"type":"screen-added","file":"/Users/clarencelloydgayo/Gayo Sphere/Portfolio/GayoWordpress-VPS/.superpowers/brainstorm/98714-1775048132/content/final-layout.html"}
+{"type":"server-stopped","reason":"owner process exited"}

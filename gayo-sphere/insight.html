@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insight — Gayo Sphere</title>
+
+  <!-- Fonts: Manrope all weights -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { manrope: ['Manrope', 'sans-serif'] },
+          colors: {
+            brand: {
+              blue: '#2563EB',
+              dark: '#0A0A0A',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: #ffffff;
+      color: #0A0A0A;
+      overflow-x: hidden;
+    }
+
+    /* ── Nav ── */
+    nav { height: 64px; }
+
+    /* ── Mobile overlay ── */
+    #mobile-menu {
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+    #mobile-menu.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    #mobile-menu:not(.hidden) { opacity: 1; visibility: visible; }
+
+    /* ── Featured article gradient card ── */
+    .featured-card {
+      background: linear-gradient(135deg, #2563EB 0%, #1d4ed8 50%, #1e3a8a 100%);
+    }
+
+    /* ── Article card hover ── */
+    .article-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .article-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(37, 99, 235, 0.12);
+    }
+
+    /* ── Newsletter input ── */
+    .newsletter-input:focus { outline: none; border-color: #2563EB; }
+
+    /* ── Read more link hover ── */
+    .read-more-link { transition: gap 0.15s ease; }
+    .read-more-link:hover { gap: 6px; }
+
+    /* ── Hamburger lines ── */
+    .ham-line {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #0A0A0A;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+    .ham-open .ham-line:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .ham-open .ham-line:nth-child(2) { opacity: 0; }
+    .ham-open .ham-line:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    /* ── Footer link hover ── */
+    .footer-link { transition: color 0.15s ease; }
+    .footer-link:hover { color: #ffffff; }
+
+    /* ── Smooth image load ── */
+    img { display: block; }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════ -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100" style="height:64px;">
+  <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="../index.html" class="flex items-center gap-2.5 no-underline">
+      <div class="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center flex-shrink-0">
+        <span class="text-white font-bold text-sm leading-none">GS</span>
+      </div>
+      <span class="text-sm font-semibold text-gray-900" style="font-family:'Manrope',sans-serif;">Gayo Sphere</span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="#" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors duration-150">Work</a>
+      <a href="#" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors duration-150">Services</a>
+      <a href="#" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors duration-150">Team</a>
+      <a href="insight.html" class="text-sm font-medium text-blue-600">Insight</a>
+    </nav>
+
+    <!-- CTA + Hamburger -->
+    <div class="flex items-center gap-4">
+      <a href="contact-us.html"
+         class="hidden md:inline-flex items-center px-5 py-2 bg-blue-600 text-white text-sm font-semibold rounded-full hover:bg-blue-700 transition-colors duration-150">
+        Contact Us
+      </a>
+      <!-- Hamburger -->
+      <button id="ham-btn" aria-label="Toggle menu"
+              class="md:hidden flex flex-col gap-[5px] justify-center items-center w-10 h-10 rounded-lg hover:bg-gray-50 transition-colors">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-white flex flex-col" style="padding-top:64px;">
+  <div class="flex flex-col gap-1 px-6 pt-8 pb-6">
+    <a href="#" class="text-2xl font-semibold text-gray-900 py-3 border-b border-gray-100">Work</a>
+    <a href="#" class="text-2xl font-semibold text-gray-900 py-3 border-b border-gray-100">Services</a>
+    <a href="#" class="text-2xl font-semibold text-gray-900 py-3 border-b border-gray-100">Team</a>
+    <a href="insight.html" class="text-2xl font-semibold text-blue-600 py-3 border-b border-gray-100">Insight</a>
+  </div>
+  <div class="px-6 pt-6">
+    <a href="contact-us.html"
+       class="inline-flex items-center px-8 py-3 bg-blue-600 text-white text-base font-semibold rounded-full hover:bg-blue-700 transition-colors duration-150">
+      Contact Us
+    </a>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     SECTION 1 — HERO
+════════════════════════════════════════ -->
+<section class="pt-32 pb-16 px-6 max-w-7xl mx-auto">
+  <p class="text-sm font-semibold text-blue-600 uppercase tracking-widest mb-5">Insights &amp; Articles</p>
+  <h1 class="text-5xl md:text-6xl font-bold text-gray-900 leading-tight max-w-2xl"
+      style="letter-spacing:-0.02em;">
+    Ideas, insights, and automation guides.
+  </h1>
+  <p class="text-lg text-gray-500 mt-6 max-w-xl leading-relaxed" style="font-weight:400;">
+    Stay ahead of the curve with our articles on AI automation, CRM strategies, and e-commerce optimization.
+  </p>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SECTION 2 — FEATURED ARTICLE
+════════════════════════════════════════ -->
+<section class="px-6 max-w-7xl mx-auto mb-20">
+  <div class="featured-card rounded-2xl p-10 md:p-14 min-h-80 relative overflow-hidden">
+    <!-- Decorative circle -->
+    <div class="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-white opacity-5"></div>
+    <div class="absolute bottom-0 right-10 w-48 h-48 rounded-full bg-white opacity-5"></div>
+
+    <div class="relative z-10">
+      <!-- Badge -->
+      <span class="inline-block px-4 py-1.5 bg-white/20 text-white text-sm font-medium rounded-full">
+        AI Automation
+      </span>
+
+      <!-- Title -->
+      <h2 class="text-3xl md:text-4xl font-bold text-white mt-5 max-w-2xl leading-tight"
+          style="letter-spacing:-0.02em;">
+        How AI Automation Cuts Operational Costs by 80%
+      </h2>
+
+      <!-- Excerpt -->
+      <p class="text-white/80 mt-4 max-w-xl leading-relaxed" style="font-size:1rem;">
+        We analyze 9 real automation systems we've built and calculate the actual time and cost savings.
+        The numbers are staggering — and repeatable.
+      </p>
+
+      <!-- Read time -->
+      <p class="text-white/60 text-sm mt-4">8 min read · March 2025</p>
+
+      <!-- CTA -->
+      <a href="#"
+         class="inline-flex items-center gap-2 mt-6 px-6 py-2.5 bg-white text-blue-600 font-semibold text-sm rounded-full hover:bg-gray-50 transition-colors duration-150">
+        Read article
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M1 7h12M7 1l6 6-6 6" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SECTION 3 — ARTICLE GRID
+════════════════════════════════════════ -->
+<section class="px-6 max-w-7xl mx-auto mb-20">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="articles-grid">
+
+    <!-- Article 1 -->
+    <article class="article-card rounded-2xl overflow-hidden border border-gray-100">
+      <img src="https://placehold.co/400x220/EEF2FF/2563EB?text=CRM+Automation"
+           alt="CRM Automation"
+           class="w-full object-cover" style="height:220px;" />
+      <div class="p-6">
+        <span class="inline-block px-2.5 py-1 bg-blue-50 text-blue-600 text-xs font-semibold rounded-full mb-3">CRM</span>
+        <h3 class="font-bold text-gray-900 leading-snug mb-2" style="font-size:1.05rem;letter-spacing:-0.01em;">
+          The 5 CRM Workflows Every E-commerce Business Needs
+        </h3>
+        <p class="text-sm text-gray-500 leading-relaxed mb-4">
+          From lead capture to post-purchase follow-up, these 5 automation workflows will transform your customer relationships.
+        </p>
+        <div class="flex items-center justify-between">
+          <span class="text-xs text-gray-400">Clarence Lloyd · 6 min read · Feb 2025</span>
+        </div>
+        <a href="#" class="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 mt-3 read-more-link hover:gap-2 transition-all">
+          Read more
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M1 6h10M6 1l5 5-5 5" stroke="#2563EB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- Article 2 -->
+    <article class="article-card rounded-2xl overflow-hidden border border-gray-100">
+      <img src="https://placehold.co/400x220/F0FDF4/16A34A?text=n8n+Guide"
+           alt="n8n Guide"
+           class="w-full object-cover" style="height:220px;" />
+      <div class="p-6">
+        <span class="inline-block px-2.5 py-1 bg-green-50 text-green-700 text-xs font-semibold rounded-full mb-3">Automation Tips</span>
+        <h3 class="font-bold text-gray-900 leading-snug mb-2" style="font-size:1.05rem;letter-spacing:-0.01em;">
+          Building Your First n8n Automation: A Beginner's Guide
+        </h3>
+        <p class="text-sm text-gray-500 leading-relaxed mb-4">
+          Step-by-step walkthrough of building your first automated workflow using n8n, from installation to deployment.
+        </p>
+        <div class="flex items-center justify-between">
+          <span class="text-xs text-gray-400">Clarence Lloyd · 10 min read · Jan 2025</span>
+        </div>
+        <a href="#" class="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 mt-3 read-more-link hover:gap-2 transition-all">
+          Read more
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M1 6h10M6 1l5 5-5 5" stroke="#2563EB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- Article 3 -->
+    <article class="article-card rounded-2xl overflow-hidden border border-gray-100">
+      <img src="https://placehold.co/400x220/FFF7ED/EA580C?text=Etsy+Automation"
+           alt="Etsy Automation"
+           class="w-full object-cover" style="height:220px;" />
+      <div class="p-6">
+        <span class="inline-block px-2.5 py-1 bg-orange-50 text-orange-600 text-xs font-semibold rounded-full mb-3">E-commerce</span>
+        <h3 class="font-bold text-gray-900 leading-snug mb-2" style="font-size:1.05rem;letter-spacing:-0.01em;">
+          Automating Your Etsy Shop: From Listings to Customer Service
+        </h3>
+        <p class="text-sm text-gray-500 leading-relaxed mb-4">
+          How we helped an Etsy shop owner save 20 hours per week using automation tools integrated with their store.
+        </p>
+        <div class="flex items-center justify-between">
+          <span class="text-xs text-gray-400">Gwyneth Sarigumba · 7 min read · Jan 2025</span>
+        </div>
+        <a href="#" class="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 mt-3 read-more-link hover:gap-2 transition-all">
+          Read more
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M1 6h10M6 1l5 5-5 5" stroke="#2563EB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- Article 4 -->
+    <article class="article-card rounded-2xl overflow-hidden border border-gray-100">
+      <img src="https://placehold.co/400x220/F0F9FF/0369A1?text=Voice+AI"
+           alt="Voice AI"
+           class="w-full object-cover" style="height:220px;" />
+      <div class="p-6">
+        <span class="inline-block px-2.5 py-1 bg-blue-50 text-blue-600 text-xs font-semibold rounded-full mb-3">AI Automation</span>
+        <h3 class="font-bold text-gray-900 leading-snug mb-2" style="font-size:1.05rem;letter-spacing:-0.01em;">
+          Voice AI Receptionists: The Future of 24/7 Customer Booking
+        </h3>
+        <p class="text-sm text-gray-500 leading-relaxed mb-4">
+          How Vapi and n8n combine to create a fully autonomous booking system that handles calls, checks availability, and confirms appointments.
+        </p>
+        <div class="flex items-center justify-between">
+          <span class="text-xs text-gray-400">Clarence Lloyd · 5 min read · Dec 2024</span>
+        </div>
+        <a href="#" class="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 mt-3 read-more-link hover:gap-2 transition-all">
+          Read more
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M1 6h10M6 1l5 5-5 5" stroke="#2563EB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- Article 5 -->
+    <article class="article-card rounded-2xl overflow-hidden border border-gray-100">
+      <img src="https://placehold.co/400x220/FDF4FF/9333EA?text=Data+Sync"
+           alt="Data Sync"
+           class="w-full object-cover" style="height:220px;" />
+      <div class="p-6">
+        <span class="inline-block px-2.5 py-1 bg-purple-50 text-purple-600 text-xs font-semibold rounded-full mb-3">Business Intelligence</span>
+        <h3 class="font-bold text-gray-900 leading-snug mb-2" style="font-size:1.05rem;letter-spacing:-0.01em;">
+          Connecting Xero and Asana: Automated Financial Workflows
+        </h3>
+        <p class="text-sm text-gray-500 leading-relaxed mb-4">
+          A detailed look at how we built a bi-directional sync between accounting and project management tools.
+        </p>
+        <div class="flex items-center justify-between">
+          <span class="text-xs text-gray-400">Clarence Lloyd · 4 min read · Dec 2024</span>
+        </div>
+        <a href="#" class="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 mt-3 read-more-link hover:gap-2 transition-all">
+          Read more
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M1 6h10M6 1l5 5-5 5" stroke="#2563EB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- Article 6 -->
+    <article class="article-card rounded-2xl overflow-hidden border border-gray-100">
+      <img src="https://placehold.co/400x220/ECFDF5/059669?text=Shopify"
+           alt="Shopify"
+           class="w-full object-cover" style="height:220px;" />
+      <div class="p-6">
+        <span class="inline-block px-2.5 py-1 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-full mb-3">E-commerce</span>
+        <h3 class="font-bold text-gray-900 leading-snug mb-2" style="font-size:1.05rem;letter-spacing:-0.01em;">
+          Shopify Store Automation: From Order to Delivery Without Lifting a Finger
+        </h3>
+        <p class="text-sm text-gray-500 leading-relaxed mb-4">
+          Complete walkthrough of automating Shopify order processing, inventory alerts, and customer communication.
+        </p>
+        <div class="flex items-center justify-between">
+          <span class="text-xs text-gray-400">Gwyneth Sarigumba · 8 min read · Nov 2024</span>
+        </div>
+        <a href="#" class="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 mt-3 read-more-link hover:gap-2 transition-all">
+          Read more
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M1 6h10M6 1l5 5-5 5" stroke="#2563EB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SECTION 4 — NEWSLETTER STRIP
+════════════════════════════════════════ -->
+<section class="px-6 max-w-7xl mx-auto mb-24">
+  <div class="bg-blue-50 rounded-2xl p-10 md:p-14 text-center">
+    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3" style="letter-spacing:-0.02em;">
+      Get automation insights delivered to your inbox.
+    </h2>
+    <p class="text-gray-500 mb-8">No spam, just practical guides and case studies.</p>
+    <form class="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto" onsubmit="handleNewsletterSubmit(event)">
+      <input
+        type="email"
+        placeholder="Your email address"
+        required
+        class="newsletter-input flex-1 px-5 py-3 rounded-full border border-gray-200 bg-white text-sm text-gray-900 placeholder-gray-400 focus:border-blue-600 transition-colors duration-150"
+      />
+      <button
+        type="submit"
+        class="px-7 py-3 bg-blue-600 text-white text-sm font-semibold rounded-full hover:bg-blue-700 transition-colors duration-150 whitespace-nowrap"
+      >
+        Subscribe
+      </button>
+    </form>
+    <p id="newsletter-success" class="hidden text-sm text-green-600 font-medium mt-4">
+      Thanks! You're on the list.
+    </p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     CTA SECTION
+════════════════════════════════════════ -->
+<section class="px-6 max-w-7xl mx-auto mb-24 text-center">
+  <div class="py-20 border-t border-b border-gray-100">
+    <p class="text-sm font-semibold text-blue-600 uppercase tracking-widest mb-5">Let's Work Together</p>
+    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8" style="letter-spacing:-0.02em;">
+      Interested to collaborate?<br/>Let's connect.
+    </h2>
+    <a href="contact-us.html"
+       class="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition-colors duration-150 text-base">
+      Get in touch
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M1 8h14M8 1l7 7-7 7" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer class="bg-[#0A0A0A] text-white px-6 py-16">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- 4-column grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-16">
+
+      <!-- Col 1: Brand + tagline -->
+      <div>
+        <div class="flex items-center gap-2.5 mb-5">
+          <div class="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-sm leading-none">GS</span>
+          </div>
+          <span class="text-sm font-semibold text-white">Gayo Sphere</span>
+        </div>
+        <p class="text-sm text-gray-400 leading-relaxed mb-4">
+          AI automation and e-commerce solutions that scale your business without scaling your team.
+        </p>
+        <a href="mailto:clarence.gayo@gmail.com"
+           class="text-sm text-blue-400 hover:text-blue-300 transition-colors duration-150">
+          clarence.gayo@gmail.com
+        </a>
+      </div>
+
+      <!-- Col 2: Features -->
+      <div>
+        <p class="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-5">Features</p>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-sm text-gray-400 footer-link">Work</a></li>
+          <li><a href="#" class="text-sm text-gray-400 footer-link">Services</a></li>
+          <li><a href="#" class="text-sm text-gray-400 footer-link">Team</a></li>
+          <li><a href="insight.html" class="text-sm text-blue-400 footer-link">Insight</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: General -->
+      <div>
+        <p class="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-5">General</p>
+        <ul class="space-y-3">
+          <li><a href="contact-us.html" class="text-sm text-gray-400 footer-link">Contact us</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Find Us -->
+      <div>
+        <p class="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-5">Find Us</p>
+        <div class="flex items-start gap-2">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 flex-shrink-0">
+            <path d="M8 1.5C5.51 1.5 3.5 3.51 3.5 6c0 3.75 4.5 8.5 4.5 8.5S12.5 9.75 12.5 6c0-2.49-2.01-4.5-4.5-4.5zM8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="#6B7280"/>
+          </svg>
+          <div>
+            <p class="text-sm text-gray-400">Tokyo, Japan</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-gray-600">© 2025 Gayo Sphere. All rights reserved.</p>
+      <!-- Social links -->
+      <div class="flex items-center gap-5">
+        <a href="https://www.linkedin.com/in/clarencegayo/" target="_blank" rel="noopener"
+           class="text-xs text-gray-500 hover:text-white transition-colors duration-150">LinkedIn</a>
+        <a href="https://github.com/clarencegayo" target="_blank" rel="noopener"
+           class="text-xs text-gray-500 hover:text-white transition-colors duration-150">GitHub</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════ -->
+<script>
+  // ── CMS Base ──
+  const CMS = 'https://cms.gayo-sphere.cloud';
+
+  async function loadFromCMS(endpoint) {
+    try {
+      const res = await fetch(`${CMS}${endpoint}`);
+      if (!res.ok) return null;
+      return await res.json();
+    } catch { return null; }
+  }
+
+  // ── Hamburger toggle ──
+  const hamBtn = document.getElementById('ham-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  hamBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    if (isOpen) {
+      mobileMenu.classList.add('hidden');
+      hamBtn.classList.remove('ham-open');
+    } else {
+      mobileMenu.classList.remove('hidden');
+      hamBtn.classList.add('ham-open');
+    }
+  });
+
+  // ── Newsletter submit ──
+  function handleNewsletterSubmit(e) {
+    e.preventDefault();
+    document.getElementById('newsletter-success').classList.remove('hidden');
+    e.target.reset();
+  }
+
+  // ── CMS fetch on load ──
+  window.addEventListener('DOMContentLoaded', async () => {
+    const insights = await loadFromCMS('/wp-json/wp/v2/gs-insights?acf_format=standard&per_page=9&_fields=id,title,excerpt,date,acf');
+    if (insights && insights.length) {
+      // Update article cards with real data if available
+      console.log('Loaded insights from CMS:', insights.length);
+    }
+  });
+</script>
+
+</body>
+</html>

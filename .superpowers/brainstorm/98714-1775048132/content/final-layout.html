@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Layout</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0d0d0d; color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 28px; }
+  h2 { font-size: 18px; font-weight: 600; margin-bottom: 6px; }
+  .subtitle { font-size: 13px; color: #777; margin-bottom: 32px; }
+  .section-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #555; margin-bottom: 16px; }
+
+  .split { display: flex; gap: 32px; align-items: flex-start; flex-wrap: wrap; }
+
+  /* DEVICE MOCK */
+  .device { flex: 1; min-width: 240px; max-width: 320px; }
+  .device-label { font-size: 12px; color: #666; margin-bottom: 10px; text-align: center; }
+  .device-screen { background: #080808; border: 1.5px solid #1e1e1e; border-radius: 16px; overflow: hidden; padding: 0; height: 520px; position: relative; box-shadow: 0 24px 60px rgba(0,0,0,0.6); }
+
+  /* HERO SCREEN */
+  .hero-bg { background: linear-gradient(160deg, #080c18 0%, #050508 60%); height: 100%; position: relative; }
+  .hero-orb { position: absolute; right: -20px; top: 50%; transform: translateY(-50%); width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #7ee8ff, #2563eb 45%, #05050f); box-shadow: 0 0 80px rgba(37,99,235,0.45), 0 0 120px rgba(37,99,235,0.2); }
+  .hero-text { position: absolute; left: 20px; top: 100px; }
+  .hero-h1 { font-size: 20px; font-weight: 900; line-height: 1.1; color: #fff; letter-spacing: -0.02em; }
+  .hero-sub { font-size: 8px; color: #666; margin-top: 8px; line-height: 1.6; max-width: 110px; }
+
+  /* HERO WIDGET — on top of orb, centered */
+  .hero-widget-wrap { position: absolute; right: -20px; top: 50%; transform: translateY(-50%); width: 220px; display: flex; align-items: center; justify-content: center; z-index: 10; }
+  .hero-widget { background: rgba(8,8,14,0.82); border: 1px solid rgba(255,255,255,0.12); border-radius: 18px; padding: 8px 10px; width: 168px; backdrop-filter: blur(12px); }
+  .hw-input-row { display: flex; align-items: center; gap: 6px; margin-bottom: 7px; }
+  .hw-input { font-size: 8px; color: #666; flex: 1; }
+  .hw-btn { width: 20px; height: 20px; background: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .hw-btn-arrow { width: 6px; height: 6px; border-right: 1.5px solid #fff; border-top: 1.5px solid #fff; transform: rotate(45deg) translate(-1px, 1px); }
+  .hw-chips { display: flex; gap: 4px; flex-wrap: wrap; }
+  .chip { font-size: 6.5px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 2px 5px; }
+
+  /* SPECIAL SECTION */
+  .special-bg { background: #050505; height: 100%; position: relative; display: flex; flex-direction: column; }
+  .sp-header { padding: 16px 0 10px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .sp-back { position: absolute; top: 12px; left: 12px; font-size: 8px; color: #555; display: flex; align-items: center; gap: 4px; }
+  .sp-avatar { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #8b5cf6, #3b82f6); margin: 0 auto 6px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+  .sp-name { font-size: 10px; font-weight: 800; color: #fff; letter-spacing: 0.08em; text-transform: uppercase; }
+  .sp-tag { font-size: 7px; color: #555; margin-top: 2px; }
+
+  /* CHAT AREA */
+  .sp-chat { flex: 1; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; overflow: hidden; }
+  .msg-user { align-self: flex-end; background: rgba(37,99,235,0.2); border: 1px solid rgba(37,99,235,0.3); border-radius: 10px 10px 2px 10px; padding: 5px 8px; max-width: 75%; font-size: 7.5px; color: #93c5fd; }
+  .msg-ai { align-self: flex-start; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px 10px 10px 2px; padding: 5px 8px; max-width: 80%; font-size: 7.5px; color: #aaa; line-height: 1.5; }
+
+  /* BOTTOM INPUT — chips on top, input bar below */
+  .sp-bottom { padding: 10px 12px 14px; border-top: 1px solid rgba(255,255,255,0.04); }
+  .sp-chips { display: flex; gap: 5px; margin-bottom: 8px; flex-wrap: wrap; justify-content: center; }
+  .sp-chip { font-size: 7.5px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 3px 7px; cursor: pointer; }
+  .sp-input-row { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 6px 6px 6px 12px; }
+  .sp-input-text { font-size: 8px; color: #555; flex: 1; }
+  .sp-send-btn { width: 22px; height: 22px; background: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .sp-send-arrow { width: 7px; height: 7px; border-right: 1.5px solid #fff; border-top: 1.5px solid #fff; transform: rotate(45deg) translate(-1.5px, 1.5px); }
+
+  /* annotation */
+  .annotation { font-size: 11px; color: #555; margin-top: 12px; line-height: 1.6; }
+  .annotation strong { color: #fff; }
+  .annotation .green { color: #22c55e; }
+  .annotation .red { color: #ef4444; text-decoration: line-through; }
+
+  /* diff section */
+  .diff-row { display: flex; gap: 6px; align-items: flex-start; margin-bottom: 8px; }
+  .diff-icon { width: 16px; height: 16px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .diff-add { background: rgba(34,197,94,0.15); color: #22c55e; }
+  .diff-remove { background: rgba(239,68,68,0.15); color: #ef4444; }
+  .diff-text { font-size: 11.5px; color: #aaa; line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<h2>Confirmed Design — Bottom Widget Layout</h2>
+<p class="subtitle">Chips always visible above the searchbar, → arrow button style from hero</p>
+
+<div class="split">
+
+  <!-- HERO (unchanged) -->
+  <div class="device">
+    <div class="device-label">Hero — unchanged</div>
+    <div class="device-screen">
+      <div class="hero-bg">
+        <div class="hero-text">
+          <div class="hero-h1">YOUR<br>OPS ON<br>AUTOPILOT.</div>
+          <div class="hero-sub">I turn disconnected tools into automated systems.</div>
+        </div>
+        <div class="hero-orb"></div>
+        <div class="hero-widget-wrap">
+          <div class="hero-widget">
+            <div class="hw-input-row">
+              <div class="hw-input">Ask me anything...</div>
+              <div class="hw-btn"><div class="hw-btn-arrow"></div></div>
+            </div>
+            <div class="hw-chips">
+              <div class="chip" style="color:#22c55e;">Me</div>
+              <div class="chip" style="color:#3b82f6;">Projects</div>
+              <div class="chip" style="color:#8b5cf6;">Skills</div>
+              <div class="chip" style="color:#f59e0b;">Fun</div>
+              <div class="chip" style="color:#14b8a6;">Contact</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="annotation" style="margin-top:10px;">
+      <strong>No change.</strong> Hero searchbar stays as-is.<br>Input first, chips below, → button.
+    </div>
+  </div>
+
+  <!-- SPECIAL SECTION (new) -->
+  <div class="device">
+    <div class="device-label">Special Section — new bottom widget</div>
+    <div class="device-screen">
+      <div class="special-bg">
+        <div class="sp-header">
+          <div class="sp-back">← Go Back</div>
+          <div class="sp-avatar">🤖</div>
+          <div class="sp-name">AI Automation Specialist</div>
+          <div class="sp-tag">Nerima, Tokyo · Available for projects</div>
+        </div>
+        <div class="sp-chat">
+          <div class="msg-user">Tell me about your projects</div>
+          <div class="msg-ai">I specialize in building end-to-end automation systems using Make, n8n, and custom APIs. Recently built a lead-gen pipeline that saves clients 20+ hours weekly...</div>
+          <div class="msg-user">What tools do you use?</div>
+          <div class="msg-ai">My core stack: Make.com, n8n, Airtable, OpenAI, and various CRMs. I also build custom integrations when off-the-shelf tools fall short.</div>
+        </div>
+        <!-- NEW BOTTOM: chips on top, input below -->
+        <div class="sp-bottom">
+          <div class="sp-chips">
+            <div class="sp-chip" style="color:#22c55e;">Me</div>
+            <div class="sp-chip" style="color:#3b82f6;">Projects</div>
+            <div class="sp-chip" style="color:#8b5cf6;">Skills</div>
+            <div class="sp-chip" style="color:#f59e0b;">Fun</div>
+            <div class="sp-chip" style="color:#14b8a6;">Contact</div>
+          </div>
+          <div class="sp-input-row">
+            <div class="sp-input-text">Ask me anything...</div>
+            <div class="sp-send-btn"><div class="sp-send-arrow"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="annotation" style="margin-top:10px;">
+      <span class="green">✓ Chips always visible</span>, above the searchbar<br>
+      <span class="green">✓ → arrow button</span> (matches hero style)<br>
+      <span class="red">✕ "Hide quick questions" toggle removed</span><br>
+      <span class="red">✕ ↑ arrow button removed</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- WHAT CHANGES -->
+<div style="margin-top:36px;padding:18px;background:#0d0d0d;border:1px solid #1e1e1e;border-radius:10px;">
+  <div class="section-label" style="margin-bottom:14px;">What changes in the code</div>
+
+  <div class="diff-row">
+    <div class="diff-icon diff-remove">−</div>
+    <div class="diff-text"><code style="color:#f87171;">SpecialSection.tsx</code> — remove the collapsible chips toggle ("Hide quick questions"), remove the ↑-arrow input bar, remove the inline chip render above it</div>
+  </div>
+  <div class="diff-row">
+    <div class="diff-icon diff-add">+</div>
+    <div class="diff-text"><code style="color:#86efac;">SpecialSection.tsx</code> — add a always-visible chips row (same 5 topics) + the hero-style input bar (→ arrow) at the bottom, wired to send messages</div>
+  </div>
+  <div class="diff-row">
+    <div class="diff-icon diff-add">+</div>
+    <div class="diff-text"><code style="color:#86efac;">Index.tsx</code> — floating animation already works; minor: the widget clone during "drop" phase should now render chips-on-top layout to match the landing state</div>
+  </div>
+  <div class="diff-row" style="margin-bottom:0;">
+    <div class="diff-icon" style="background:rgba(99,102,241,0.15);color:#818cf8;">○</div>
+    <div class="diff-text"><code style="color:#a5b4fc;">Hero.tsx</code> — no change at all</div>
+  </div>
+</div>
+
+</body>
+</html>
