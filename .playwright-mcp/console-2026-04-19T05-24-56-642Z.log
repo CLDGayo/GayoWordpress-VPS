@@ -1,0 +1,2 @@
+[     104ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://use.fontawesome.com/releases/v5.0.13/webfonts/fa-solid-900.woff2 @ https://www.onlinejobs.ph/jobseekers/info/2169599:782
+[     568ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://www.onlinejobs.ph/jobseekers/info/2169599:0

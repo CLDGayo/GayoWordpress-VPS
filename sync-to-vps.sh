@@ -12,8 +12,8 @@
 
 VPS_USER="root"
 VPS_HOST="72.62.196.231"
-VPS_DEST="/home/gayo-sphere-clarence/next-src"
-LOCAL_SRC="$(dirname "$0")/next-portfolio"
+VPS_DEST="/home/gayo-sphere-clarence/htdocs/clarence.gayo-sphere.cloud"
+LOCAL_SRC="$(dirname "$0")/../clarencegayo-main/dist"
 
 DEPLOY_SECRET="gayo-sphere-deploy-2024-xK9mP7qR"
 DEPLOY_URL="https://cms.gayo-sphere.cloud/wp-json/portfolio/v1/deploy"
@@ -37,7 +37,7 @@ rsync -avz --delete \
 
 echo ""
 echo "🔧 Fixing file ownership on VPS..."
-ssh "$VPS_USER@$VPS_HOST" "chown -R gayo-sphere-clarence:gayo-sphere-clarence $VPS_DEST/"
+ssh "$VPS_USER@$VPS_HOST" "chown -R gayo-sphere-clarence:gayo-sphere-clarence $VPS_DEST"
 
 echo ""
 echo "✅ Source synced!"

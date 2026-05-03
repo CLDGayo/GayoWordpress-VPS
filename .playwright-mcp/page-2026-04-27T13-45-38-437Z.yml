@@ -1,0 +1,808 @@
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e4]:
+    - paragraph [ref=e5]: This site uses cookies to improve your experience. By continuing, you agree to our use of cookies.
+    - generic [ref=e6]:
+      - button "Decline" [ref=e7]
+      - button "Accept" [ref=e8]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e12]: C
+      - generic [ref=e13]: L
+      - generic [ref=e14]: D
+      - generic [ref=e15]: G
+    - generic [ref=e16]:
+      - generic [ref=e17]: L
+      - generic [ref=e18]: O
+      - generic [ref=e19]: A
+      - generic [ref=e20]: D
+      - generic [ref=e21]: I
+      - generic [ref=e22]: "N"
+      - generic [ref=e23]: G
+  - generic [ref=e24]:
+    - generic:
+      - navigation:
+        - link "CLDG":
+          - /url: "#"
+        - generic:
+          - link "About":
+            - /url: "#about"
+          - link "Tools":
+            - /url: "#tools"
+          - link "Work":
+            - /url: "#portfolio"
+          - link "Services":
+            - /url: "#who-i-work-with"
+          - link "Testimonials":
+            - /url: "#testimonials"
+          - link "Pricing":
+            - /url: "#pricing"
+          - link "Contact":
+            - /url: "#contact"
+        - button "Toggle theme":
+          - img
+        - link "Hire Me":
+          - /url: "#contact"
+          - text: Hire Me
+          - img
+    - main [ref=e25]:
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - generic [ref=e32]:
+            - generic [ref=e33]:
+              - img [ref=e34]
+              - img [ref=e36]
+              - img [ref=e38]
+              - img [ref=e40]
+              - img [ref=e42]
+            - generic [ref=e44]:
+              - strong [ref=e45]: 4+ Happy Clients
+              - text: · 5+ years experience
+          - heading "YOUR OPERATIONS ON AUTOPILOT." [level=1] [ref=e46]:
+            - text: YOUR
+            - text: OPERATIONS
+            - text: ON AUTOPILOT.
+          - paragraph [ref=e47]:
+            - text: I take your broken workflows, disconnected tools, and manual chaos — and turn them into automated systems that save you
+            - strong [ref=e48]: 20+ hours every week
+            - text: .
+          - generic [ref=e49]:
+            - link "Book Your Free System Audit" [ref=e50]:
+              - /url: "#contact"
+              - text: Book Your Free System Audit
+              - img [ref=e52]
+            - link "See My Work →" [ref=e54]:
+              - /url: "#portfolio"
+          - generic [ref=e55]:
+            - generic [ref=e56]:
+              - generic [ref=e57]: 20+
+              - generic [ref=e58]: HOURS SAVED WEEKLY
+            - generic [ref=e59]:
+              - generic [ref=e60]: 28+
+              - generic [ref=e61]: WORKFLOWS BUILT
+            - generic [ref=e62]:
+              - generic [ref=e63]: 100%
+              - generic [ref=e64]: CLIENT SATISFACTION
+        - generic [ref=e67]:
+          - generic [ref=e69]:
+            - textbox "Ask me anything..." [ref=e70]
+            - button "Submit question" [ref=e71]:
+              - img [ref=e72]
+          - generic [ref=e74]:
+            - 'button "Ask about: Me" [ref=e75]':
+              - img [ref=e77]
+              - text: Me
+            - 'button "Ask about: Projects" [ref=e80]':
+              - img [ref=e82]
+              - text: Projects
+            - 'button "Ask about: Skills" [ref=e85]':
+              - img [ref=e87]
+              - text: Skills
+            - 'button "Ask about: Fun" [ref=e91]':
+              - img [ref=e93]
+              - text: Fun
+            - 'button "Ask about: Contact" [ref=e95]':
+              - img [ref=e97]
+              - text: Contact
+            - button "Ask about:" [ref=e99]:
+              - img [ref=e101]
+      - generic [ref=e109]:
+        - generic [ref=e110]:
+          - generic [ref=e111]: // About
+          - heading "Technical Operations, Simplified." [level=2] [ref=e112]:
+            - text: Technical
+            - text: Operations, Simplified.
+          - generic [ref=e113]:
+            - paragraph [ref=e114]:
+              - text: I'm a
+              - strong [ref=e115]: Technical Virtual Assistant
+              - text: who specializes in turning chaotic operations into self-running systems. I connect your tools, automate your workflows, and build the backend infrastructure that lets your business scale without adding headcount.
+            - paragraph [ref=e116]: I work with CRMs like GoHighLevel and HubSpot, automation platforms like Zapier, Make, and n8n, and integrate everything so your data flows seamlessly across your entire stack. That CRM-nobody-uses? I fix it. Those 52 tabs your team juggles daily? Gone.
+            - paragraph [ref=e117]: "My focus is simple: eliminate the manual work that's eating your team's time and replace it with systems that run 24/7. The result is more revenue, fewer dropped balls, and operations that grow with you instead of against you."
+          - generic [ref=e118]:
+            - link "Let's Build Something →" [ref=e119]:
+              - /url: "#contact"
+              - text: Let's Build Something →
+            - button "View CV" [ref=e120]
+        - generic [ref=e122]:
+          - img "Clarence Lloyd Gayo — Technical Virtual Assistant based in Tokyo" [ref=e125]
+          - generic [ref=e126]:
+            - paragraph [ref=e127]: Clarence Lloyd Demetria Gayo
+            - paragraph [ref=e128]: Technical Virtual Assistant
+      - generic [ref=e131]:
+        - generic [ref=e132]:
+          - generic [ref=e133]: Tech Stack
+          - heading "Tools & Platforms." [level=2] [ref=e134]
+          - paragraph [ref=e135]: 20+ platforms mastered to build your automation stack end-to-end.
+        - generic [ref=e137]:
+          - generic [ref=e138]:
+            - img [ref=e139]
+            - generic [ref=e141]: n8n
+          - generic [ref=e142]:
+            - img [ref=e143]
+            - generic [ref=e145]: Zapier
+          - generic [ref=e146]:
+            - img [ref=e147]
+            - generic [ref=e149]: Make
+          - generic [ref=e150]:
+            - img [ref=e151]
+            - generic [ref=e153]: Go High Level
+          - generic [ref=e154]:
+            - img [ref=e155]
+            - generic [ref=e157]: Airtable
+          - generic [ref=e158]:
+            - img [ref=e159]
+            - generic [ref=e163]: Monday.com
+          - generic [ref=e164]:
+            - img [ref=e165]
+            - generic [ref=e167]: Asana
+          - generic [ref=e168]:
+            - img [ref=e169]
+            - generic [ref=e174]: Google Workspace
+          - generic [ref=e175]:
+            - img [ref=e176]
+            - generic [ref=e178]: Adobe Photoshop
+          - generic [ref=e179]:
+            - img [ref=e180]
+            - generic [ref=e182]: Adobe Illustrator
+          - generic [ref=e183]:
+            - img [ref=e184]
+            - generic [ref=e186]: Canva
+          - generic [ref=e187]:
+            - img [ref=e188]
+            - generic [ref=e190]: Etsy
+          - generic [ref=e191]:
+            - img [ref=e192]
+            - generic [ref=e194]: Amazon Seller
+          - generic [ref=e195]:
+            - img [ref=e196]
+            - generic [ref=e198]: Shopify
+          - generic [ref=e199]:
+            - img [ref=e200]
+            - generic [ref=e202]: ChatGPT
+          - generic [ref=e203]:
+            - img [ref=e204]
+            - generic [ref=e206]: Claude AI
+          - generic [ref=e207]:
+            - img [ref=e208]
+            - generic [ref=e210]: WordPress
+          - generic [ref=e211]:
+            - img [ref=e212]
+            - generic [ref=e216]: JavaScript
+          - generic [ref=e217]:
+            - img [ref=e218]
+            - generic [ref=e220]: GitHub
+          - generic [ref=e221]:
+            - img [ref=e222]
+            - generic [ref=e226]: PHP
+          - generic [ref=e227]:
+            - img [ref=e228]
+            - generic [ref=e230]: n8n
+          - generic [ref=e231]:
+            - img [ref=e232]
+            - generic [ref=e234]: Zapier
+          - generic [ref=e235]:
+            - img [ref=e236]
+            - generic [ref=e238]: Make
+          - generic [ref=e239]:
+            - img [ref=e240]
+            - generic [ref=e242]: Go High Level
+          - generic [ref=e243]:
+            - img [ref=e244]
+            - generic [ref=e246]: Airtable
+          - generic [ref=e247]:
+            - img [ref=e248]
+            - generic [ref=e252]: Monday.com
+          - generic [ref=e253]:
+            - img [ref=e254]
+            - generic [ref=e256]: Asana
+          - generic [ref=e257]:
+            - img [ref=e258]
+            - generic [ref=e263]: Google Workspace
+          - generic [ref=e264]:
+            - img [ref=e265]
+            - generic [ref=e267]: Adobe Photoshop
+          - generic [ref=e268]:
+            - img [ref=e269]
+            - generic [ref=e271]: Adobe Illustrator
+          - generic [ref=e272]:
+            - img [ref=e273]
+            - generic [ref=e275]: Canva
+          - generic [ref=e276]:
+            - img [ref=e277]
+            - generic [ref=e279]: Etsy
+          - generic [ref=e280]:
+            - img [ref=e281]
+            - generic [ref=e283]: Amazon Seller
+          - generic [ref=e284]:
+            - img [ref=e285]
+            - generic [ref=e287]: Shopify
+          - generic [ref=e288]:
+            - img [ref=e289]
+            - generic [ref=e291]: ChatGPT
+          - generic [ref=e292]:
+            - img [ref=e293]
+            - generic [ref=e295]: Claude AI
+          - generic [ref=e296]:
+            - img [ref=e297]
+            - generic [ref=e299]: WordPress
+          - generic [ref=e300]:
+            - img [ref=e301]
+            - generic [ref=e305]: JavaScript
+          - generic [ref=e306]:
+            - img [ref=e307]
+            - generic [ref=e309]: GitHub
+          - generic [ref=e310]:
+            - img [ref=e311]
+            - generic [ref=e315]: PHP
+      - generic [ref=e319]:
+        - generic [ref=e320]:
+          - generic [ref=e321]: Portfolio
+          - heading "Featured Projects" [level=2] [ref=e322]
+          - heading "Real Automations. Real Results." [level=2] [ref=e323]:
+            - text: Real Automations.
+            - text: Real Results.
+          - paragraph [ref=e324]: From automated lead capture pipelines and CRM workflow systems to multi-platform content distribution and API integrations. Each project is built to eliminate repetitive manual tasks, reduce human error, and scale operations without adding headcount.
+          - paragraph [ref=e325]: "\"Every project solves a real operational bottleneck.\""
+        - generic [ref=e326]:
+          - generic [ref=e327]:
+            - generic [ref=e328]:
+              - generic [ref=e329]:
+                - img [ref=e331]
+                - generic [ref=e333]:
+                  - heading "n8n" [level=3] [ref=e334]
+                  - paragraph [ref=e335]: AI scheduling systems, social media automation, media production pipelines, intelligent customer support agents, RAG chat agents, job scraping, and Gmail automation.
+              - generic [ref=e336]:
+                - generic [ref=e337]: "7"
+                - generic [ref=e338]: n8n
+            - img "Autonomous Voice-to-Calendar Orchestration Engine" [ref=e341]
+            - generic [ref=e343]: Explore →
+          - generic [ref=e344]:
+            - generic [ref=e345]:
+              - generic [ref=e346]:
+                - img [ref=e348]
+                - generic [ref=e350]:
+                  - heading "Make" [level=3] [ref=e351]
+                  - paragraph [ref=e352]: Document management with AI-powered filing and financial data exports between Xero and Asana.
+              - generic [ref=e353]:
+                - generic [ref=e354]: "2"
+                - generic [ref=e355]: Make
+            - img "Intelligent Document Management & Logging System" [ref=e358]
+            - generic [ref=e360]: Explore →
+          - generic [ref=e361]:
+            - generic [ref=e362]:
+              - generic [ref=e363]:
+                - img [ref=e365]
+                - generic [ref=e367]:
+                  - heading "Zapier" [level=3] [ref=e368]
+                  - paragraph [ref=e369]: CRM lead engagement workflows, real-time lead enrichment pipelines, and multi-platform content repurposing.
+              - generic [ref=e370]:
+                - generic [ref=e371]: "3"
+                - generic [ref=e372]: Zapier
+            - img "Asana CRM Lead Engagement Workflow" [ref=e375]
+            - generic [ref=e377]: Explore →
+          - generic [ref=e378]:
+            - generic [ref=e379]:
+              - generic [ref=e380]:
+                - img "GoHighLevel" [ref=e382]
+                - generic [ref=e383]:
+                  - heading "GoHighLevel" [level=3] [ref=e384]
+                  - paragraph [ref=e385]: Full-stack CRM builds, funnel design, pipeline automation, and client portal deployments using GoHighLevel.
+              - generic [ref=e386]:
+                - generic [ref=e387]: "1"
+                - generic [ref=e388]: GoHighLevel
+            - generic [ref=e393]: Explore →
+      - generic [ref=e397]:
+        - generic [ref=e398]:
+          - generic [ref=e399]: // Who I Work With
+          - heading "Who I Work With." [level=2] [ref=e400]:
+            - text: Who I
+            - text: Work With.
+          - paragraph [ref=e401]: Whether you're a solopreneur drowning in admin or a growing team that needs systems yesterday, I build the technical backbone that lets you scale without the growing pains.
+        - generic [ref=e404]:
+          - generic [ref=e405]:
+            - generic [ref=e406]: "01"
+            - img [ref=e408]
+          - heading "Coaches & Course Creators" [level=2] [ref=e412]
+          - paragraph [ref=e413]: Your launches run on autopilot. I build the funnels, CRM pipelines, and automations that nurture leads while you focus on creating content that changes lives.
+        - generic [ref=e415]:
+          - generic [ref=e416]:
+            - generic [ref=e417]: "02"
+            - img [ref=e419]
+          - heading "Agency Owners" [level=2] [ref=e423]
+          - paragraph [ref=e424]: Stop losing clients to sloppy onboarding and missed follow-ups. I wire your entire client lifecycle from lead capture to project delivery so nothing falls through the cracks ever again.
+        - generic [ref=e426]:
+          - generic [ref=e427]:
+            - generic [ref=e428]: "03"
+            - img [ref=e430]
+          - heading "E-Commerce Founders" [level=2] [ref=e434]
+          - paragraph [ref=e435]: Orders, inventory, shipping, customer support — all connected and automated. Your store runs like a Fortune 500 operation without the Fortune 500 payroll.
+        - generic [ref=e437]:
+          - generic [ref=e438]:
+            - generic [ref=e439]: "04"
+            - img [ref=e441]
+          - heading "SaaS Founders" [level=2] [ref=e445]
+          - paragraph [ref=e446]: Onboarding sequences, support bots, usage alerts — I automate the operational layer so your product team stays focused on building what customers love.
+        - generic [ref=e448]:
+          - generic [ref=e449]:
+            - generic [ref=e450]: "05"
+            - img [ref=e452]
+          - heading "Real Estate Professionals" [level=2] [ref=e456]
+          - paragraph [ref=e457]: Lead capture, CRM sync, follow-up sequences — every prospect tracked automatically until they close. Never lose a deal to a missed follow-up again.
+        - generic [ref=e459]:
+          - generic [ref=e460]:
+            - generic [ref=e461]: "06"
+            - img [ref=e463]
+          - heading "Service Businesses" [level=2] [ref=e467]
+          - paragraph [ref=e468]: Proposals, scheduling, invoicing, client check-ins — the entire back office on autopilot. Spend your time delivering the service, not administrating it.
+        - generic [ref=e470]:
+          - paragraph [ref=e471]: Sound familiar?
+          - heading "Let's build your system." [level=3] [ref=e472]
+          - link "Work with me" [ref=e473]:
+            - /url: "#contact"
+            - text: Work with me
+            - img [ref=e474]
+      - generic [ref=e479]:
+        - generic [ref=e480]:
+          - generic [ref=e481]: // Trade Offer
+          - heading "Trade Offer." [level=2] [ref=e482]
+        - generic [ref=e483]:
+          - generic [ref=e485]:
+            - heading "I Receive" [level=3] [ref=e486]
+            - list [ref=e487]:
+              - listitem [ref=e488]:
+                - img [ref=e490]
+                - generic [ref=e492]: Your trust & a shot to prove myself
+              - listitem [ref=e493]:
+                - img [ref=e495]
+                - generic [ref=e497]: A monthly retainer (less than a junior hire)
+              - listitem [ref=e498]:
+                - img [ref=e500]
+                - generic [ref=e502]: Access to your tangled mess of tools
+              - listitem [ref=e503]:
+                - img [ref=e505]
+                - generic [ref=e508]: 30 minutes to walk me through your current setup
+              - listitem [ref=e509]:
+                - img [ref=e511]
+                - generic [ref=e513]: Honest feedback — let me know if something sucks
+              - listitem [ref=e514]:
+                - img [ref=e516]
+                - generic [ref=e520]: Your actual business goals, not buzzwords
+          - generic [ref=e522]:
+            - paragraph [ref=e523]: A Trade Offer
+            - heading "Minimal ask. Maximum return." [level=3] [ref=e524]:
+              - text: Minimal ask.
+              - text: Maximum return.
+            - link "Accept Trade →" [ref=e526]:
+              - /url: "#contact"
+          - generic [ref=e528]:
+            - heading "You Receive" [level=3] [ref=e529]
+            - list [ref=e530]:
+              - listitem [ref=e531]:
+                - img [ref=e533]
+                - generic [ref=e535]: From 47 manual steps into 1 click
+              - listitem [ref=e536]:
+                - img [ref=e538]
+                - generic [ref=e543]: Your team stops copy-pasting between 6 tabs
+              - listitem [ref=e544]:
+                - img [ref=e546]
+                - generic [ref=e548]: Systems that run while you sleep (literally)
+              - listitem [ref=e549]:
+                - img [ref=e551]
+                - generic [ref=e553]: A tech partner who actually answers on weekends
+              - listitem [ref=e554]:
+                - img [ref=e556]
+                - generic [ref=e557]: Dashboards that make you look like a genius in meetings
+              - listitem [ref=e558]:
+                - img [ref=e560]
+                - generic [ref=e563]: A business that scales so you don't have to
+      - generic [ref=e567]:
+        - generic [ref=e568]:
+          - generic [ref=e569]: // The Process
+          - heading "How It Works." [level=2] [ref=e570]
+        - generic [ref=e571]:
+          - generic [ref=e572]:
+            - generic [ref=e573]: "01"
+            - generic [ref=e575]:
+              - img [ref=e577]
+              - heading "Discovery Call" [level=3] [ref=e579]
+              - paragraph [ref=e580]: We jump on a 30-minute call. I map every tool you use, every bottleneck bleeding time, and every manual process begging to be automated.
+          - generic [ref=e581]:
+            - generic [ref=e582]: "02"
+            - generic [ref=e584]:
+              - img [ref=e586]
+              - heading "System Blueprint" [level=3] [ref=e589]
+              - paragraph [ref=e590]: Within 48 hours you get a custom automation roadmap showing exactly what gets built, what gets connected, and how many hours you'll reclaim.
+          - generic [ref=e591]:
+            - generic [ref=e592]: "03"
+            - generic [ref=e594]:
+              - img [ref=e596]
+              - heading "Build & Launch" [level=3] [ref=e598]
+              - paragraph [ref=e599]: I build your entire system, test every workflow, and launch it live. You watch 20+ hours of weekly busywork disappear overnight.
+          - generic [ref=e600]:
+            - generic [ref=e601]: "04"
+            - generic [ref=e603]:
+              - img [ref=e605]
+              - heading "Scale & Optimize" [level=3] [ref=e608]
+              - paragraph [ref=e609]: Monthly performance reviews, proactive upgrades, and new automations as your business grows. Your systems evolve as fast as you do.
+        - generic [ref=e610]:
+          - paragraph [ref=e611]: Stop losing time to broken systems. Let's fix it together.
+          - link "Book a Free Audit →" [ref=e612]:
+            - /url: "#contact"
+            - text: Book a Free Audit →
+      - generic [ref=e616]:
+        - generic [ref=e617]:
+          - generic [ref=e618]: // ROI Calculator
+          - heading "Calculate Your Savings." [level=2] [ref=e619]
+          - paragraph [ref=e620]: Adjust the sliders to see how much time and money automation can save your business.
+        - generic [ref=e621]:
+          - generic [ref=e623]:
+            - generic [ref=e624]:
+              - generic [ref=e625]:
+                - generic [ref=e626]:
+                  - img [ref=e627]
+                  - generic [ref=e630]: Manual Hours / Week
+                - generic [ref=e631]: 20h
+              - slider "Manual hours per week" [ref=e632]: "20"
+              - generic [ref=e633]:
+                - generic [ref=e634]: 5h
+                - generic [ref=e635]: 60h
+            - generic [ref=e636]:
+              - generic [ref=e637]:
+                - generic [ref=e638]:
+                  - img [ref=e639]
+                  - generic [ref=e642]: Average Hourly Cost
+                - generic [ref=e643]: $35
+              - slider "Average hourly cost in dollars" [ref=e644]: "35"
+              - generic [ref=e645]:
+                - generic [ref=e646]: $10
+                - generic [ref=e647]: $150
+            - generic [ref=e648]:
+              - generic [ref=e649]:
+                - generic [ref=e650]:
+                  - img [ref=e651]
+                  - generic [ref=e653]: Automation Level
+                - generic [ref=e654]: 70% Standard
+              - slider "Automation level percentage" [ref=e655]: "70"
+              - generic [ref=e656]:
+                - generic [ref=e657]: 20%
+                - generic [ref=e658]: 90%
+            - paragraph [ref=e659]: "* Estimates based on typical automation scenarios"
+          - generic [ref=e660]:
+            - generic [ref=e662]:
+              - img [ref=e664]
+              - generic [ref=e667]:
+                - paragraph [ref=e668]: 14h
+                - paragraph [ref=e669]: Saved Per Week
+            - generic [ref=e671]:
+              - generic [ref=e672]:
+                - img [ref=e673]
+                - generic [ref=e675]: Estimated Savings
+              - generic [ref=e677]:
+                - generic [ref=e678]: Weekly
+                - generic [ref=e679]: $490
+              - generic [ref=e682]:
+                - generic [ref=e683]: Monthly
+                - generic [ref=e684]: $2,122
+              - generic [ref=e687]:
+                - generic [ref=e688]: Annual
+                - generic [ref=e689]: $25,480
+            - link "Start Saving Today →" [ref=e690]:
+              - /url: "#contact"
+              - text: Start Saving Today →
+      - generic [ref=e694]:
+        - generic [ref=e695]:
+          - generic [ref=e696]: Client Feedback
+          - heading "What Clients Say." [level=2] [ref=e697]:
+            - text: What Clients
+            - text: Say.
+          - paragraph [ref=e698]: Trusted by business owners and professionals across Japan and the Philippines.
+        - generic [ref=e699]:
+          - generic [ref=e701]:
+            - generic [ref=e703]: G
+            - generic [ref=e704]:
+              - generic [ref=e705]: ★
+              - generic [ref=e706]: ★
+              - generic [ref=e707]: ★
+              - generic [ref=e708]: ★
+              - generic [ref=e709]: ★
+            - paragraph [ref=e710]: Clyde transformed my Etsy store with his exceptional graphic design skills and attention to detail. His SEO optimization strategies significantly improved my product visibility.
+            - generic [ref=e712]:
+              - paragraph [ref=e713]: Gwyneth Sarigumba
+              - generic [ref=e714]: Etsy Shop Owner · Cozy Downloads Store
+          - generic [ref=e716]:
+            - generic [ref=e718]: J
+            - generic [ref=e719]:
+              - generic [ref=e720]: ★
+              - generic [ref=e721]: ★
+              - generic [ref=e722]: ★
+              - generic [ref=e723]: ★
+              - generic [ref=e724]: ★
+            - paragraph [ref=e725]: Working with Clyde has been a game-changer for my business. His e-commerce expertise and dedication to delivering quality work is truly commendable.
+            - generic [ref=e727]:
+              - paragraph [ref=e728]: John Paul Mendoza
+              - generic [ref=e729]: Shopee Shop Owner · Comfy & Bedder Co.
+          - generic [ref=e731]:
+            - generic [ref=e733]: A
+            - generic [ref=e734]:
+              - generic [ref=e735]: ★
+              - generic [ref=e736]: ★
+              - generic [ref=e737]: ★
+              - generic [ref=e738]: ★
+              - generic [ref=e739]: ★
+            - paragraph [ref=e740]: Clyde's professionalism and work ethic are exceptional. He consistently delivers high-quality results and maintains excellent communication throughout every project.
+            - generic [ref=e742]:
+              - paragraph [ref=e743]: Anna Amemiya
+              - generic [ref=e744]: Operations Manager · Onodera Life Support
+          - generic [ref=e746]:
+            - generic [ref=e748]: R
+            - generic [ref=e749]:
+              - generic [ref=e750]: ★
+              - generic [ref=e751]: ★
+              - generic [ref=e752]: ★
+              - generic [ref=e753]: ★
+              - generic [ref=e754]: ★
+            - paragraph [ref=e755]: Clyde's ability to manage multiple tasks while maintaining quality is impressive. His virtual assistance skills have greatly improved our operational efficiency.
+            - generic [ref=e757]:
+              - paragraph [ref=e758]: Rhoades Bautista
+              - generic [ref=e759]: Support Associate · Satellite Office
+      - generic [ref=e763]:
+        - generic [ref=e764]:
+          - generic [ref=e765]: Pricing
+          - heading "Investment & Packages" [level=2] [ref=e766]
+          - paragraph [ref=e767]: Transparent packages built for results. Choose the level that fits your goals — every plan includes clean code, great design, and measurable outcomes.
+        - generic [ref=e768]:
+          - generic [ref=e770]:
+            - generic [ref=e771]:
+              - heading "Basic" [level=2] [ref=e772]
+              - paragraph [ref=e773]: Essential automation to get your workflows moving.
+            - generic [ref=e774]:
+              - generic [ref=e775]: $150
+              - generic [ref=e776]: /per week
+            - list [ref=e778]:
+              - listitem [ref=e779]:
+                - img [ref=e780]
+                - text: Automation Consultation
+              - listitem [ref=e782]:
+                - img [ref=e783]
+                - text: Simple Workflow Automation
+              - listitem [ref=e785]:
+                - img [ref=e786]
+                - text: Basic Integration
+              - listitem [ref=e788]:
+                - img [ref=e789]
+                - text: Custom Template
+              - listitem [ref=e791]:
+                - img [ref=e792]
+                - text: Weekly Check-In
+              - listitem [ref=e794]:
+                - img [ref=e795]
+                - text: Basic Reporting
+            - button "CHOOSE PLAN" [ref=e797]: CHOOSE PLAN
+          - generic [ref=e799]:
+            - generic [ref=e800]:
+              - heading "Extended" [level=2] [ref=e801]
+              - paragraph [ref=e802]: Advanced automation for teams ready to scale.
+            - generic [ref=e803]:
+              - generic [ref=e804]: $300
+              - generic [ref=e805]: /per week
+            - list [ref=e807]:
+              - listitem [ref=e808]:
+                - img [ref=e809]
+                - text: Extended Consultation
+              - listitem [ref=e811]:
+                - img [ref=e812]
+                - text: Advanced Workflow Automation
+              - listitem [ref=e814]:
+                - img [ref=e815]
+                - text: Platform Integrations
+              - listitem [ref=e817]:
+                - img [ref=e818]
+                - text: Automation Testing
+              - listitem [ref=e820]:
+                - img [ref=e821]
+                - text: Monthly Performance Report
+              - listitem [ref=e823]:
+                - img [ref=e824]
+                - text: Rapid Communication
+            - button "CHOOSE PLAN" [ref=e826]: CHOOSE PLAN
+          - generic [ref=e828]:
+            - generic [ref=e829]: Most Popular
+            - generic [ref=e830]:
+              - heading "Full" [level=2] [ref=e831]
+              - paragraph [ref=e832]: Complete automation partnership for ambitious operations.
+            - generic [ref=e833]:
+              - generic [ref=e834]: $500
+              - generic [ref=e835]: /per week
+            - list [ref=e837]:
+              - listitem [ref=e838]:
+                - img [ref=e839]
+                - text: Full Automation Audit
+              - listitem [ref=e841]:
+                - img [ref=e842]
+                - text: Complete System Integration
+              - listitem [ref=e844]:
+                - img [ref=e845]
+                - text: Custom Automations
+              - listitem [ref=e847]:
+                - img [ref=e848]
+                - text: 24/7 Support Access
+              - listitem [ref=e850]:
+                - img [ref=e851]
+                - text: Priority Support
+              - listitem [ref=e853]:
+                - img [ref=e854]
+                - text: Daily Work Updates
+            - button "CHOOSE PLAN" [ref=e856]: CHOOSE PLAN
+        - paragraph [ref=e857]:
+          - text: Not sure which plan fits?
+          - link "Let's talk about your project" [ref=e858]:
+            - /url: "#contact"
+          - text: .
+      - generic [ref=e862]:
+        - generic [ref=e863]:
+          - generic [ref=e864]: // Certifications
+          - heading "Skills & Certifications." [level=2] [ref=e865]
+          - paragraph [ref=e866]: Continuously learning and mastering the tools that drive modern automation.
+        - generic [ref=e867]:
+          - generic [ref=e868]:
+            - img "n8n Automation Certificate" [ref=e870]
+            - generic [ref=e871]:
+              - button "Previous certificate" [ref=e872]:
+                - img [ref=e873]
+              - generic [ref=e875]:
+                - 'button "Go to certificate 1: n8n Automation" [ref=e876]'
+                - 'button "Go to certificate 2: Make Automation" [ref=e877]'
+                - 'button "Go to certificate 3: Zapier Automation" [ref=e878]'
+                - 'button "Go to certificate 4: Prompt Engineering" [ref=e879]'
+                - 'button "Go to certificate 5: WordPress Development" [ref=e880]'
+                - 'button "Go to certificate 6: GoHighLevel CRM" [ref=e881]'
+              - button "Next certificate" [ref=e882]:
+                - img [ref=e883]
+          - generic [ref=e885]:
+            - generic [ref=e886]:
+              - generic [ref=e887]: "01"
+              - generic [ref=e889]: 6 total
+            - generic [ref=e890]: Automation
+            - heading "n8n Automation" [level=3] [ref=e891]
+            - paragraph [ref=e892]: n8n
+            - paragraph [ref=e893]: What I Gained
+            - paragraph [ref=e894]: End-to-end workflow automation using n8n — connecting APIs, building AI agents, managing webhooks, and creating complex multi-step integrations.
+            - paragraph [ref=e895]: Key Skills
+            - generic [ref=e896]:
+              - generic [ref=e897]: Workflow Design
+              - generic [ref=e898]: API Integration
+              - generic [ref=e899]: AI Agents
+              - generic [ref=e900]: Webhook Management
+      - generic [ref=e905]:
+        - generic [ref=e906]:
+          - generic [ref=e907]: // Contact
+          - heading "Ready to Streamline Your Operations?" [level=2] [ref=e908]:
+            - text: Ready to Streamline
+            - text: Your Operations?
+          - paragraph [ref=e909]: Let's discuss how I can help you save time and build systems that actually work.
+        - generic [ref=e910]:
+          - heading "Contact Information" [level=3] [ref=e911]
+          - generic [ref=e912]:
+            - generic [ref=e913]:
+              - img [ref=e915]
+              - generic [ref=e918]:
+                - paragraph [ref=e919]: Email
+                - link "clarence.gayo@gmail.com" [ref=e920]:
+                  - /url: mailto:clarence.gayo@gmail.com
+            - generic [ref=e921]:
+              - img [ref=e923]
+              - generic [ref=e925]:
+                - paragraph [ref=e926]: Phone
+                - link "(+81) 070-8986-1692" [ref=e927]:
+                  - /url: tel:+817089861692
+            - generic [ref=e928]:
+              - img [ref=e930]
+              - generic [ref=e933]:
+                - paragraph [ref=e934]: Location
+                - paragraph [ref=e935]: Tokyo, Japan
+        - generic [ref=e936]:
+          - heading "Connect" [level=3] [ref=e937]
+          - generic [ref=e938]:
+            - link "LinkedIn" [ref=e939]:
+              - /url: https://www.linkedin.com/in/cldgayo/
+              - img [ref=e940]
+            - link "Facebook" [ref=e942]:
+              - /url: https://www.facebook.com/clarence.demetria.gayo/
+              - img [ref=e943]
+            - link "GitHub" [ref=e945]:
+              - /url: https://github.com/Gayo321
+              - img [ref=e946]
+          - link "Clarence Lloyd Gayo" [ref=e950]:
+            - /url: https://jp.linkedin.com/in/cldgayo?trk=profile-badge
+    - generic [ref=e954]:
+      - generic [ref=e956]:
+        - generic [ref=e957]:
+          - link "CLDG" [ref=e958]:
+            - /url: "#"
+          - paragraph [ref=e959]: Automation Architect building digital employees with n8n, Zapier, and Make. Based in Nerima City, Tokyo, Japan.
+          - generic [ref=e960]:
+            - link "LinkedIn" [ref=e961]:
+              - /url: https://www.linkedin.com/in/cldgayo/
+              - img [ref=e962]
+            - link "Facebook" [ref=e964]:
+              - /url: https://www.facebook.com/clarence.gayo/
+              - img [ref=e965]
+            - link "GitHub" [ref=e967]:
+              - /url: https://github.com/CLDGayo
+              - img [ref=e968]
+            - link "Upwork" [ref=e970]:
+              - /url: https://www.upwork.com/freelancers/~017c1e9c3ab1e950be
+              - img [ref=e971]
+            - link "OnlineJobs.ph" [ref=e973]:
+              - /url: https://www.onlinejobs.ph/jobseekers/info/2169599
+              - img "OnlineJobs.ph" [ref=e974]
+        - generic [ref=e975]:
+          - heading "Navigation" [level=4] [ref=e976]
+          - navigation [ref=e977]:
+            - link "About" [ref=e978]:
+              - /url: "#about"
+            - link "Tools" [ref=e979]:
+              - /url: "#tools"
+            - link "Work" [ref=e980]:
+              - /url: "#portfolio"
+            - link "Services" [ref=e981]:
+              - /url: "#who-i-work-with"
+            - link "Testimonials" [ref=e982]:
+              - /url: "#testimonials"
+            - link "Pricing" [ref=e983]:
+              - /url: "#pricing"
+            - link "Contact" [ref=e984]:
+              - /url: "#contact"
+        - generic [ref=e985]:
+          - heading "Services" [level=4] [ref=e986]
+          - list [ref=e987]:
+            - listitem [ref=e988]: AI Workflow Automation
+            - listitem [ref=e989]: CRM & Lead Automation
+            - listitem [ref=e990]: E-Commerce Management
+            - listitem [ref=e991]: Graphic Design
+            - listitem [ref=e992]: AI Customer Support
+            - listitem [ref=e993]: Content Automation
+        - generic [ref=e994]:
+          - heading "Contact" [level=4] [ref=e995]
+          - generic [ref=e996]:
+            - generic [ref=e997]:
+              - img [ref=e999]
+              - link "clarence.gayo@gmail.com" [ref=e1002]:
+                - /url: mailto:clarence.gayo@gmail.com
+            - generic [ref=e1003]:
+              - img [ref=e1005]
+              - link "+81 070-8986-1692" [ref=e1007]:
+                - /url: tel:+817089861692
+            - generic [ref=e1008]:
+              - img [ref=e1010]
+              - generic [ref=e1013]: Nerima City, Tokyo, Japan
+          - link "● Available for Hire" [ref=e1015]:
+            - /url: https://www.onlinejobs.ph/jobseekers/info/2169599
+            - generic [ref=e1016]: ●
+            - text: Available for Hire
+      - generic [ref=e1018]:
+        - paragraph [ref=e1019]: © 2026 Clarence Lloyd Demetria Gayo. All rights reserved.
+        - paragraph [ref=e1020]: Built with precision in Tokyo

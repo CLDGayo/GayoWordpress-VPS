@@ -1,0 +1,1 @@
+[    1391ms] [ERROR] Failed to launch 'tg://msg_url?url=http%3A%2F%2Flocalhost%3A8083%2F&text=Autonomous%20Voice-to-Calendar%20Orchestration%20Engine' because the scheme does not have a registered handler. @ https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A8083%2F&text=Autonomous%20Voice-to-Calendar%20Orchestration%20Engine:0

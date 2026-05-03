@@ -1,0 +1,28 @@
+[     304ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:8081/node_modules/.vite/deps/chunk-UZOKQUDP.js?v=f2f82e8c:21550
+[    1470ms] [WARNING] ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition. @ http://localhost:8081/node_modules/.vite/deps/react-router-dom.js?v=f2f82e8c:4392
+[    1470ms] [WARNING] ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath. @ http://localhost:8081/node_modules/.vite/deps/react-router-dom.js?v=f2f82e8c:4392
+[    1657ms] [WARNING] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. @ http://localhost:8081/node_modules/.vite/deps/chunk-OKEB6QIE.js?v=f2f82e8c:136
+[   35726ms] [WARNING] Datadog Browser SDK: No storage available for session. We will not send any data. @ https://assets.calendly.com/assets/booking/js/booking-b89618799.js:76
+[  388706ms] [ERROR] Warning: %s: `ref` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)%s [object Object] 
+    at PopChild (http://localhost:8081/node_modules/.vite/deps/framer-motion.js?v=f2f82e8c:7841:21)
+    at PresenceChild (http://localhost:8081/node_modules/.vite/deps/framer-motion.js?v=f2f82e8c:7891:24)
+    at AnimatePresence (http://localhost:8081/node_modules/.vite/deps/framer-motion.js?v=f2f82e8c:7968:26)
+    at section
+    at Portfolio (http://localhost:8081/src/components/Portfolio.tsx?t=1776342893246:425:45)
+    at ErrorBoundary (http://localhost:8081/src/components/ErrorBoundary.tsx:46:9)
+    at div
+    at MotionDOMComponent (http://localhost:8081/node_modules/.vite/deps/framer-motion.js?v=f2f82e8c:8675:40)
+    at AnimatedSection (http://localhost:8081/src/components/AnimatedSection.tsx:46:28)
+    at main
+    at div
+    at Index (http://localhost:8081/src/pages/Index.tsx?t=1776342893246:45:47)
+    at RenderedRoute (http://localhost:8081/node_modules/.vite/deps/react-router-dom.js?v=f2f82e8c:4088:5)
+    at Routes (http://localhost:8081/node_modules/.vite/deps/react-router-dom.js?v=f2f82e8c:4558:5)
+    at Router (http://localhost:8081/node_modules/.vite/deps/react-router-dom.js?v=f2f82e8c:4501:15)
+    at BrowserRouter (http://localhost:8081/node_modules/.vite/deps/react-router-dom.js?v=f2f82e8c:5247:5)
+    at Provider (http://localhost:8081/node_modules/.vite/deps/chunk-RFMPMDCC.js?v=f2f82e8c:88:15)
+    at TooltipProvider (http://localhost:8081/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=f2f82e8c:2318:5)
+    at O (http://localhost:8081/node_modules/.vite/deps/next-themes.js?v=f2f82e8c:23:25)
+    at z (http://localhost:8081/node_modules/.vite/deps/next-themes.js?v=f2f82e8c:21:18)
+    at QueryClientProvider (http://localhost:8081/node_modules/.vite/deps/@tanstack_react-query.js?v=f2f82e8c:2934:3)
+    at App @ http://localhost:8081/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=f2f82e8c:63

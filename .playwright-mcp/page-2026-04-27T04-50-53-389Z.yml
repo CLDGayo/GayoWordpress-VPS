@@ -1,0 +1,638 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - generic [ref=e6]:
+      - link "MOVA Brewery" [ref=e8] [cursor=pointer]:
+        - /url: /en
+        - img [ref=e9]
+        - img "MOVA Brewery" [ref=e11]
+      - generic [ref=e13]:
+        - link "Brewery" [ref=e14] [cursor=pointer]:
+          - /url: /en/brewery
+          - text: Brewery
+        - link "Restaurant" [ref=e16] [cursor=pointer]:
+          - /url: /en/restaurant
+          - text: Restaurant
+        - link "MOVA BAR" [ref=e18] [cursor=pointer]:
+          - /url: /en/mova-bar
+          - text: MOVA BAR
+        - link "Shop" [ref=e20] [cursor=pointer]:
+          - /url: /en/shop
+          - text: Shop
+        - link "Cooperation" [ref=e22] [cursor=pointer]:
+          - /url: /en/b2b
+          - text: Cooperation
+        - link "Contacts" [ref=e24] [cursor=pointer]:
+          - /url: /en/contacts
+          - text: Contacts
+        - link "Blog" [ref=e26] [cursor=pointer]:
+          - /url: /en/events-news#blog_post
+          - text: Blog
+        - generic [ref=e28]:
+          - link "Укр" [ref=e30] [cursor=pointer]:
+            - /url: /
+          - link "Eng" [ref=e33] [cursor=pointer]:
+            - /url: /en
+  - generic [ref=e41]:
+    - generic [ref=e42]:
+      - img [ref=e43]
+      - generic [ref=e45]:
+        - heading "TASTE. MEET. TALK" [level=1] [ref=e47]:
+          - generic [ref=e48]:
+            - generic [ref=e50]: TASTE. MEET.
+            - generic [ref=e52]: TALK
+        - generic [ref=e53]:
+          - link "MOVA BREWING Our goal is to find a common language between people with the help of beer. arrow" [ref=e54] [cursor=pointer]:
+            - /url: /en/brewery
+            - generic [ref=e55]:
+              - paragraph [ref=e56]: MOVA BREWING
+              - paragraph [ref=e57]: Our goal is to find a common language between people with the help of beer.
+              - img "arrow" [ref=e58]
+          - link "restaurant MOVA prostir This space is about optimism, simple and concise beer-inspired cuisine, change, lively atmosphere and the place of a person in the community. arrow" [ref=e59] [cursor=pointer]:
+            - /url: /en/restaurant
+            - generic [ref=e60]:
+              - paragraph [ref=e61]: restaurant MOVA prostir
+              - paragraph [ref=e62]: This space is about optimism, simple and concise beer-inspired cuisine, change, lively atmosphere and the place of a person in the community.
+              - img "arrow" [ref=e63]
+          - link "BEER SHOP There are no such situations where you cannot find common communications. You just need to choose the right type of beer for conversation. arrow" [ref=e64] [cursor=pointer]:
+            - /url: /en/shop
+            - generic [ref=e65]:
+              - paragraph [ref=e66]: BEER SHOP
+              - paragraph [ref=e67]: There are no such situations where you cannot find common communications. You just need to choose the right type of beer for conversation.
+              - img "arrow" [ref=e68]
+    - generic [ref=e70]:
+      - paragraph [ref=e71]:
+        - generic [ref=e73]: About us
+      - generic [ref=e74]:
+        - heading "We don't brew beer, we brew communications" [level=3] [ref=e77]:
+          - generic [ref=e78]:
+            - generic [ref=e80]: We don't brew beer, we brew
+            - generic [ref=e82]: communications
+        - generic [ref=e86]:
+          - paragraph [ref=e90]: Our goal is to become a stimulus for communication and a driver of beer culture in our hometown. To do this, we help different people find a common language, giving them an incentive to get closer and get to know each other.
+          - paragraph [ref=e91]: THE MAIN FOR US IS TO MAKE AS MANY CONNECTIONS BETWEEN PEOPLE AS POSSIBLE WITH THE HELP OF OUR PRODUCT
+        - generic [ref=e93]:
+          - paragraph [ref=e94]: MOVA is a team that built an entire project around the idea of becoming something more than just a brewery.
+          - paragraph [ref=e95]: We also organize annual festivals and conduct educational projects in Ukrainian institutions and bartending schools, telling about the history in the beer museum of our city.
+          - link "More about us arrow" [ref=e96] [cursor=pointer]:
+            - /url: /en/brewery
+            - generic [ref=e97]: More about us
+            - img "arrow" [ref=e98]
+    - generic [ref=e104]:
+      - paragraph [ref=e105]:
+        - generic [ref=e107]: OUR BEER
+      - heading "THE MAIN ELEMENT, AROUND WHICH EVERYTHING REVOLVES IS BEER" [level=3] [ref=e108]:
+        - generic [ref=e109]:
+          - generic [ref=e111]: THE MAIN ELEMENT, AROUND WHICH EVERYTHING
+          - generic [ref=e113]: REVOLVES IS BEER
+    - generic [ref=e115]:
+      - generic [ref=e117]:
+        - generic [ref=e118]:
+          - generic [ref=e120] [cursor=pointer]: Permanent varieties09
+          - link "Shop arrow" [ref=e121] [cursor=pointer]:
+            - /url: /en/shop
+            - text: Shop
+            - img "arrow" [ref=e122]
+        - generic [ref=e123]:
+          - generic [ref=e124] [cursor=pointer]: DARK NON-ALCOHOL BEER
+          - generic [ref=e125] [cursor=pointer]: Lager
+          - generic [ref=e126] [cursor=pointer]: Amber ale
+          - generic [ref=e127] [cursor=pointer]: Blanche
+          - generic [ref=e128] [cursor=pointer]: Pilsner
+          - generic [ref=e129] [cursor=pointer]: Stout Oatmeal
+          - generic [ref=e130] [cursor=pointer]: non-alcoholic IPA
+          - generic [ref=e131] [cursor=pointer]: Stout vanilla
+          - generic [ref=e132] [cursor=pointer]: IPA
+      - generic [ref=e136]:
+        - generic [ref=e138]:
+          - img [ref=e140]
+          - generic [ref=e141]:
+            - generic [ref=e142]:
+              - heading "DARK NON-ALCOHOL BEER" [level=4] [ref=e143]:
+                - generic [ref=e144]: DARK NON-ALCOHOL BEER
+              - paragraph [ref=e145]: Beer with coffee-chocolate hues of roasted malt in the aroma and a sweetish taste.
+            - generic [ref=e146]:
+              - generic [ref=e147]:
+                - generic [ref=e148]:
+                  - generic [ref=e149]: ABV
+                  - paragraph [ref=e150]:
+                    - generic [ref=e151]: 0.5%
+                - generic [ref=e152]:
+                  - generic [ref=e153]: IBU
+                  - paragraph [ref=e154]:
+                    - generic [ref=e155]: "13"
+                - generic [ref=e156]:
+                  - generic [ref=e157]: PLATO
+                  - paragraph [ref=e158]:
+                    - generic [ref=e159]: "7"
+              - link "Try it" [ref=e160] [cursor=pointer]:
+                - /url: /en/shop/dark-non-alcohol-beer
+                - generic: Try it
+        - generic [ref=e162]:
+          - img "Lager" [ref=e164]
+          - generic [ref=e165]:
+            - generic [ref=e166]:
+              - heading "Lager" [level=4] [ref=e167]:
+                - generic [ref=e168]: Lager
+              - paragraph [ref=e169]: Classic refreshing lager with a light golden color. A bready-grainy aroma is complemented by floral hop notes. The malty taste is light yet full-bodied, and towards the end, there's a pleasant, subtly noticeable herbal bitterness.
+            - generic [ref=e170]:
+              - generic [ref=e171]:
+                - generic [ref=e172]:
+                  - generic [ref=e173]: ABV
+                  - paragraph [ref=e174]:
+                    - generic [ref=e175]: 4.6%
+                - generic [ref=e176]:
+                  - generic [ref=e177]: IBU
+                  - paragraph [ref=e178]:
+                    - generic [ref=e179]: "22"
+                - generic [ref=e180]:
+                  - generic [ref=e181]: PLATO
+                  - paragraph [ref=e182]:
+                    - generic [ref=e183]: "11"
+              - link "Try it" [ref=e184] [cursor=pointer]:
+                - /url: /en/shop/lager
+                - generic: Try it
+        - generic [ref=e186]:
+          - img "Amber ale" [ref=e188]
+          - generic [ref=e189]:
+            - generic [ref=e190]:
+              - heading "Amber ale" [level=4] [ref=e191]:
+                - generic [ref=e192]: Amber ale
+              - paragraph [ref=e193]: The beer has a rich amber color. The aroma has shades of red berries and caramel. Rich and at the same time soft fruit and nut flavor with minimal bitterness.
+            - generic [ref=e194]:
+              - generic [ref=e195]:
+                - generic [ref=e196]:
+                  - generic [ref=e197]: ABV
+                  - paragraph [ref=e198]:
+                    - generic [ref=e199]: 4.3%
+                - generic [ref=e200]:
+                  - generic [ref=e201]: IBU
+                  - paragraph [ref=e202]:
+                    - generic [ref=e203]: "23"
+                - generic [ref=e204]:
+                  - generic [ref=e205]: PLATO
+                  - paragraph [ref=e206]:
+                    - generic [ref=e207]: "13"
+              - link "Try it" [ref=e208] [cursor=pointer]:
+                - /url: /en/shop/amber-ale
+                - generic: Try it
+        - generic [ref=e210]:
+          - img "Blanche" [ref=e212]
+          - generic [ref=e213]:
+            - generic [ref=e214]:
+              - heading "Blanche" [level=4] [ref=e215]:
+                - generic [ref=e216]: Blanche
+              - paragraph [ref=e217]: Light refreshing wheat beer. Fresh floral-citrus aroma continues with fruity sourness in taste and is complemented by pleasant notes of wheat malt.
+            - generic [ref=e218]:
+              - generic [ref=e219]:
+                - generic [ref=e220]:
+                  - generic [ref=e221]: ABV
+                  - paragraph [ref=e222]:
+                    - generic [ref=e223]: 4.7%
+                - generic [ref=e224]:
+                  - generic [ref=e225]: IBU
+                  - paragraph [ref=e226]:
+                    - generic [ref=e227]: "20"
+                - generic [ref=e228]:
+                  - generic [ref=e229]: PLATO
+                  - paragraph [ref=e230]:
+                    - generic [ref=e231]: "10"
+              - link "Try it" [ref=e232] [cursor=pointer]:
+                - /url: /en/shop/blanche
+                - generic: Try it
+        - generic [ref=e234]:
+          - img "Pilsner" [ref=e236]
+          - generic [ref=e237]:
+            - generic [ref=e238]:
+              - heading "Pilsner" [level=4] [ref=e239]:
+                - generic [ref=e240]: Pilsner
+              - paragraph [ref=e241]: Pilsner in the traditional Czech style. Rich golden color, floral aroma, pleasant taste with bready notes of malt and distinct yet soft herbal bitterness from hops.
+            - generic [ref=e242]:
+              - generic [ref=e243]:
+                - generic [ref=e244]:
+                  - generic [ref=e245]: ABV
+                  - paragraph [ref=e246]:
+                    - generic [ref=e247]: 5.3%
+                - generic [ref=e248]:
+                  - generic [ref=e249]: IBU
+                  - paragraph [ref=e250]:
+                    - generic [ref=e251]: "38"
+                - generic [ref=e252]:
+                  - generic [ref=e253]: PLATO
+                  - paragraph [ref=e254]:
+                    - generic [ref=e255]: "13"
+              - link "Try it" [ref=e256] [cursor=pointer]:
+                - /url: /en/shop/pilsner
+                - generic: Try it
+        - generic [ref=e258]:
+          - img "Stout Oatmeal" [ref=e260]
+          - generic [ref=e261]:
+            - generic [ref=e262]:
+              - heading "Stout Oatmeal" [level=4] [ref=e263]:
+                - generic [ref=e264]: Stout Oatmeal
+              - paragraph [ref=e265]: Milk stout with added oat flakes. A soft and delicate beer with a chocolate-coffee aroma and a pleasant creamy texture. Rounded velvety taste, where notes of coffee and chocolate from roasted malt are balanced by the sweetness of lactose.
+            - generic [ref=e266]:
+              - generic [ref=e267]:
+                - generic [ref=e268]:
+                  - generic [ref=e269]: ABV
+                  - paragraph [ref=e270]:
+                    - generic [ref=e271]: 4.9%
+                - generic [ref=e272]:
+                  - generic [ref=e273]: IBU
+                  - paragraph [ref=e274]:
+                    - generic [ref=e275]: "23"
+                - generic [ref=e276]:
+                  - generic [ref=e277]: PLATO
+                  - paragraph [ref=e278]:
+                    - generic [ref=e279]: "15.5"
+              - link "Try it" [ref=e280] [cursor=pointer]:
+                - /url: /en/shop/stout-oatmeal
+                - generic: Try it
+        - generic [ref=e282]:
+          - img [ref=e284]
+          - generic [ref=e285]:
+            - generic [ref=e286]:
+              - heading "non-alcoholic IPA" [level=4] [ref=e287]:
+                - generic [ref=e288]: non-alcoholic IPA
+              - paragraph [ref=e289]: Taste beer even when you can't! Meet MOVA's Non-Alcoholic IPA. Beer with pronounced hop notes in the aroma and a slightly sweet taste.
+            - generic [ref=e290]:
+              - generic [ref=e291]:
+                - generic [ref=e292]:
+                  - generic [ref=e293]: ABV
+                  - paragraph [ref=e294]:
+                    - generic [ref=e295]: 0.4%
+                - generic [ref=e296]:
+                  - generic [ref=e297]: IBU
+                  - paragraph [ref=e298]:
+                    - generic [ref=e299]: "30"
+                - generic [ref=e300]:
+                  - generic [ref=e301]: PLATO
+                  - paragraph [ref=e302]:
+                    - generic [ref=e303]: "6.7"
+              - link "Try it" [ref=e304] [cursor=pointer]:
+                - /url: /en/shop/non-alcohol
+                - generic: Try it
+        - generic [ref=e306]:
+          - img [ref=e308]
+          - generic [ref=e309]:
+            - generic [ref=e310]:
+              - heading "Stout vanilla" [level=4] [ref=e311]:
+                - generic [ref=e312]: Stout vanilla
+              - paragraph [ref=e313]: Our vanilla variation of the classic stout. Dense, rich, and tumultuous. The aroma unfolds with vanilla and cocoa beans. The first sip will be sweet with hints of coffee, gradually transforming into a light, dry bitterness.
+            - generic [ref=e314]:
+              - generic [ref=e315]:
+                - generic [ref=e316]:
+                  - generic [ref=e317]: ABV
+                  - paragraph [ref=e318]:
+                    - generic [ref=e319]: 4.9%
+                - generic [ref=e320]:
+                  - generic [ref=e321]: IBU
+                  - paragraph [ref=e322]:
+                    - generic [ref=e323]: "23"
+                - generic [ref=e324]:
+                  - generic [ref=e325]: PLATO
+                  - paragraph [ref=e326]:
+                    - generic [ref=e327]: "15.5"
+              - link "Try it" [ref=e328] [cursor=pointer]:
+                - /url: /en/shop/stout-vanilla
+                - generic: Try it
+        - generic [ref=e330]:
+          - img "IPA" [ref=e332]
+          - generic [ref=e333]:
+            - generic [ref=e334]:
+              - heading "IPA" [level=4] [ref=e335]:
+                - generic [ref=e336]: IPA
+              - paragraph [ref=e337]: Classic well-hopped pale ale. Fresh multifaceted aroma of American hops. The fruity-citrus taste has a pronounced soft bitterness, which unfolds and pleasantly lingers in the aftertaste.
+            - generic [ref=e338]:
+              - generic [ref=e339]:
+                - generic [ref=e340]:
+                  - generic [ref=e341]: ABV
+                  - paragraph [ref=e342]:
+                    - generic [ref=e343]: 4.8%
+                - generic [ref=e344]:
+                  - generic [ref=e345]: IBU
+                  - paragraph [ref=e346]:
+                    - generic [ref=e347]: "55"
+                - generic [ref=e348]:
+                  - generic [ref=e349]: PLATO
+                  - paragraph [ref=e350]:
+                    - generic [ref=e351]: "12"
+              - link "Try it" [ref=e352] [cursor=pointer]:
+                - /url: /en/shop/ipa
+                - generic: Try it
+    - generic [ref=e355]:
+      - img [ref=e356]
+      - generic [ref=e359]:
+        - img "MOVA простір" [ref=e361]
+        - generic [ref=e363]:
+          - generic [ref=e364]:
+            - generic [ref=e365]:
+              - paragraph [ref=e366]: THE PERFECT THIRD PLACE FOR RELAXATION AND COMMUNICATION OVER A GLASS OF BEER
+              - paragraph [ref=e367]: Here is a space about optimism, simple and concise cuisine inspired by beer, change, a lively atmosphere, and a person's place in the community.
+            - generic [ref=e368]:
+              - paragraph [ref=e369]: Pratsi avenue, 8, Dnipro
+              - link "+38 (067) 280-19-01" [ref=e370] [cursor=pointer]:
+                - /url: tel:+38 (067) 280-19-01
+          - generic [ref=e371]:
+            - link "Menu" [ref=e372] [cursor=pointer]:
+              - /url: https://mova-prostir.choiceqr.com
+              - generic: Menu
+            - link "Book a table" [ref=e373] [cursor=pointer]:
+              - /url: /en/restaurant#order-table
+              - generic: Book a table
+    - generic [ref=e380]:
+      - heading "MEET THE FIRST BEERDRIVE IN UKRAINE!" [level=4] [ref=e381]:
+        - generic [ref=e382]:
+          - generic [ref=e384]: MEET THE
+          - generic [ref=e386]: FIRST BEERDRIVE
+          - generic [ref=e388]: IN UKRAINE!
+      - paragraph [ref=e389]: We took care of people who are constantly on the move and created a convenient way of fast and high-quality service, where you can order your favorite beer or meals and snacks from our restaurant without leaving your car.
+      - paragraph [ref=e390]:
+        - generic [ref=e391]:
+          - text: Call for online ordering
+          - link "067 656 44 31" [ref=e392] [cursor=pointer]:
+            - /url: tel:067 656 44 31
+      - link "See the menu arrow" [ref=e393] [cursor=pointer]:
+        - /url: https://mova-prostir.choiceqr.com
+        - generic [ref=e394]: See the menu
+        - img "arrow" [ref=e395]
+    - generic [ref=e397]:
+      - heading "DNIPRO BEER MUSEUM" [level=4] [ref=e400]:
+        - generic [ref=e401]:
+          - generic [ref=e403]: DNIPRO
+          - generic [ref=e405]: BEER MUSEUM
+      - generic [ref=e406]:
+        - paragraph [ref=e408]: This is a corner for the curious. Here you can find out how exactly beer "flowed" to the city of Dnipro, hear the story of the first breweries and bars of our city.
+        - paragraph [ref=e418]:
+          - generic [ref=e419]:
+            - text: We will show you exhibits from the soviet period and Katerynoslav. Interactive reconstruction of old factories and live deconstruction of beer in the form of ingredients that you can try to dispel all myths and conjectures about brewing.
+            - text: After the historical and industrial excursion, you will get to a tasting and consolidate everything you have learned about beer and different varieties.
+    - generic [ref=e421]:
+      - generic [ref=e424]:
+        - generic [ref=e425]:
+          - generic [ref=e426] [cursor=pointer]: Events
+          - generic [ref=e427] [cursor=pointer]: News
+          - generic [ref=e428] [cursor=pointer]: Blog
+        - link "All events arrow" [ref=e429] [cursor=pointer]:
+          - /url: /en/events-news
+          - text: All events
+          - img "arrow" [ref=e430]
+      - generic [ref=e433]:
+        - generic [ref=e434]:
+          - generic [ref=e435]:
+            - heading "Tours to the brewery" [level=5] [ref=e436]
+            - paragraph [ref=e437]: Wed-Sun
+          - paragraph [ref=e438]: "We have prepared for you comprehensive tours with a professional guide who will immerse you in the history of brewing🍺 ☝🏻During the program you will learn: • How beer got to the Dnipropetrovsk region • Take a sightseeing tour of our brewery • At the end you will have a tasting of the beer you were introduced to. How to get on the tour? 🤔 Book a place by writing to Direct or by phone +380 67 280 1901 Monday\\Tuesday - days off Wednesday-Sunday: 13:00 – 15:00. 15:00 – 17:00. 17:00 – 19:00. The cost is 350 UAH per person. The maximum number of visitors in one group is 10 people. Call +380 67 280 1901"
+        - generic [ref=e439]:
+          - generic [ref=e440]:
+            - paragraph [ref=e441]: Beginning about 12:00
+            - paragraph [ref=e442]: "Entrance: 350 грн"
+          - link "arrow" [ref=e444] [cursor=pointer]:
+            - /url: https://shop.mova.beer/en/ekskursiya-pyvovarneyu
+            - img "arrow" [ref=e448]
+  - generic [ref=e449]:
+    - contentinfo [ref=e450]:
+      - generic [ref=e452]:
+        - generic [ref=e453]:
+          - link "logo" [ref=e455] [cursor=pointer]:
+            - /url: /en
+            - img "logo" [ref=e456]
+          - paragraph [ref=e458]: We are a team that built a whole project around the idea of becoming something more than just a brewery. The main goal is to become an incentive for communication and a driver of beer culture in our hometown and in Ukraine.
+        - generic [ref=e459]:
+          - generic [ref=e460]:
+            - list [ref=e461]:
+              - listitem [ref=e462]:
+                - link "Brewery" [ref=e463] [cursor=pointer]:
+                  - /url: /en/brewery
+              - listitem [ref=e464]:
+                - link "Shop" [ref=e465] [cursor=pointer]:
+                  - /url: /en/shop
+              - listitem [ref=e466]:
+                - link "Cooperation" [ref=e467] [cursor=pointer]:
+                  - /url: /en/b2b
+              - listitem [ref=e468]:
+                - link "Beer museum" [ref=e469] [cursor=pointer]:
+                  - /url: /en/museum
+              - listitem [ref=e470]:
+                - link "Restaurant" [ref=e471] [cursor=pointer]:
+                  - /url: /en/restaurant
+              - listitem [ref=e472]:
+                - link "Book a table" [ref=e473] [cursor=pointer]:
+                  - /url: /en/restaurant#order-table
+              - listitem [ref=e474]:
+                - link "MOVA BAR" [ref=e475] [cursor=pointer]:
+                  - /url: /en/mova-bar
+            - list [ref=e476]:
+              - listitem [ref=e477]:
+                - link "News" [ref=e478] [cursor=pointer]:
+                  - /url: /en/events-news#news
+              - listitem [ref=e479]:
+                - link "Events" [ref=e480] [cursor=pointer]:
+                  - /url: /en/events-news
+              - listitem [ref=e481]:
+                - link "Contacts" [ref=e482] [cursor=pointer]:
+                  - /url: /en/contacts
+              - listitem [ref=e483]:
+                - link "Points of sale" [ref=e484] [cursor=pointer]:
+                  - /url: /en/point-of-sale
+          - generic [ref=e486]:
+            - link "instagram" [ref=e487] [cursor=pointer]:
+              - /url: https://www.instagram.com/mova.beer/
+              - img "instagram"
+            - link "facebook" [ref=e488] [cursor=pointer]:
+              - /url: https://www.facebook.com/mova.beer
+              - img "facebook"
+            - link "TikTok" [ref=e489] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@mova.brewing.co?_t=8kQttxRpbxm&_r=1
+              - img "TikTok"
+            - link "mail" [ref=e490] [cursor=pointer]:
+              - /url: mailto:info@mova.beer
+              - img "mail"
+            - link "mail" [ref=e491] [cursor=pointer]:
+              - /url: https://untappd.com/MOVABrewingCo
+              - img "mail"
+            - link "viber" [ref=e492] [cursor=pointer]:
+              - /url: viber://chat?number=+380671366260
+              - img "viber"
+            - link "telegram" [ref=e493] [cursor=pointer]:
+              - /url: https://t.me/MOVA_internet_mahazyn
+              - img "telegram"
+        - generic [ref=e494]:
+          - generic [ref=e495]:
+            - paragraph [ref=e496]: Pratsi avenue, 8, Dnipro
+            - generic [ref=e497] [cursor=pointer]:
+              - img "arrow"
+          - generic [ref=e498]:
+            - generic [ref=e499]:
+              - generic [ref=e500]:
+                - paragraph [ref=e501]: Restaurant, Museum
+                - link "+38 067 280 19 01" [ref=e502] [cursor=pointer]:
+                  - /url: tel:+38 067 280 19 01
+              - generic [ref=e503]:
+                - paragraph [ref=e504]: Інтернет-магазин
+                - link "+38 067 136 62 60" [ref=e505] [cursor=pointer]:
+                  - /url: tel:+380671366260
+              - generic [ref=e506]:
+                - paragraph [ref=e507]: MOVA BAR
+                - link "+38 067 108 44 54" [ref=e508] [cursor=pointer]:
+                  - /url: tel:+38 067 108 44 54
+              - generic [ref=e509]:
+                - paragraph [ref=e510]: Brewery
+                - link "+38 067 011 03 33" [ref=e511] [cursor=pointer]:
+                  - /url: tel:+38 067 011 03 33
+            - link "How to reach?" [ref=e513] [cursor=pointer]:
+              - /url: https://www.google.com/maps/place/MOVA/@48.4018142,35.0369878,15.58z/data=!4m10!1m2!2m1!1smova+beer!3m6!1s0x40dbfb45c187f145:0xdb42729081bc3e58!8m2!3d48.4042717!4d35.0421403!15sCgltb3ZhIGJlZXKSAQdicmV3ZXJ54AEA!16s%2Fg%2F11hzqhdfjd?authuser=0
+              - generic: How to reach?
+      - paragraph [ref=e517]: mova brewing co
+      - generic [ref=e521]:
+        - paragraph [ref=e522]: © Mova Brewing Co.
+        - generic [ref=e523]:
+          - paragraph [ref=e524]:
+            - generic [ref=e525]: All rights reserved
+          - generic [ref=e527]: "Build date: function () { [native code] }"
+    - generic [ref=e528]:
+      - link "viber" [ref=e529] [cursor=pointer]:
+        - /url: viber://chat?number=+380671366260
+        - img "viber" [ref=e530]
+      - link "telegram" [ref=e531] [cursor=pointer]:
+        - /url: https://t.me/MOVA_internet_mahazyn
+        - img "telegram" [ref=e532]
+  - generic [ref=e534]:
+    - img "close" [ref=e536] [cursor=pointer]
+    - generic [ref=e537]: You have not selected anything yet
+    - generic [ref=e539]:
+      - img "icon" [ref=e540]
+      - paragraph [ref=e541]: We deliver beer in special boxes with a capacity of 12 bottles. You can assemble a basket of different types of beer, but the sum of bottles must be a multiple of 12.
+  - generic:
+    - generic:
+      - img "close menu"
+    - generic:
+      - generic:
+        - link "УКР":
+          - /url: /
+          - generic: УКР
+      - generic:
+        - link "EN":
+          - /url: /en
+          - generic: EN
+    - generic:
+      - generic:
+        - generic:
+          - link "Events":
+            - /url: /en/events-news
+            - generic: Events
+        - generic:
+          - link "News":
+            - /url: /en/events-news#news
+            - generic: News
+        - generic:
+          - link "Blog":
+            - /url: /en/events-news#blog_post
+            - generic: Blog
+        - generic:
+          - link "Contacts":
+            - /url: /en/contacts
+            - generic: Contacts
+        - generic:
+          - link "Points of sale":
+            - /url: /en/point-of-sale
+            - generic: Points of sale
+      - generic:
+        - paragraph: Addresses
+        - paragraph: Pratsi avenue, 8, Dnipro
+        - generic:
+          - link "How to reach?":
+            - /url: /en/contacts#map
+            - generic: How to reach?
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - link "About us About us":
+              - /url: /en#home-about
+              - generic: About us
+              - generic: About us
+          - generic:
+            - link "Brewery Brewery":
+              - /url: /en/brewery
+              - generic: Brewery
+              - generic: Brewery
+          - generic:
+            - link "Restaurant Restaurant":
+              - /url: /en/restaurant
+              - generic: Restaurant
+              - generic: Restaurant
+          - generic:
+            - link "MOVA BAR MOVA BAR":
+              - /url: /en/mova-bar
+              - generic: MOVA BAR
+              - generic: MOVA BAR
+          - generic:
+            - link "Shop Shop":
+              - /url: /en/shop
+              - generic: Shop
+              - generic: Shop
+          - generic:
+            - link "Cooperation Cooperation":
+              - /url: /en/b2b
+              - generic: Cooperation
+              - generic: Cooperation
+          - generic:
+            - link "Beer museum Beer museum":
+              - /url: /en/museum
+              - generic: Beer museum
+              - generic: Beer museum
+        - generic:
+          - link "Menu":
+            - /url: https://mova-prostir.choiceqr.com
+          - generic:
+            - link "Book a table":
+              - /url: /en/restaurant#order-table
+      - generic:
+        - generic:
+          - generic:
+            - paragraph: Restaurant
+            - link "+38 067 280 19 01":
+              - /url: tel:+38 067 280 19 01
+          - generic:
+            - paragraph: Brewery
+            - link "+38 067 011 03 33":
+              - /url: tel:+38 067 011 03 33
+        - generic:
+          - link "instagram":
+            - /url: https://www.instagram.com/mova.beer/
+            - img "instagram"
+          - link "facebook":
+            - /url: https://www.facebook.com/mova.beer
+            - img "facebook"
+          - link "mail":
+            - /url: mailto:info@mova.beer
+            - img "mail"
+          - link "mail":
+            - /url: https://untappd.com/MOVABrewingCo
+            - img "mail"
+    - generic:
+      - generic:
+        - img
+  - generic [ref=e542]:
+    - generic [ref=e544]:
+      - paragraph [ref=e545]: We do not sell alcohol to minors. To go to the site, confirm your age
+      - paragraph [ref=e546]:
+        - text: are you already
+        - text: 18 years old?
+      - generic [ref=e547]:
+        - generic [ref=e549] [cursor=pointer]: "Yes"
+        - paragraph [ref=e550] [cursor=pointer]:
+          - generic [ref=e551]: "No"
+    - paragraph [ref=e553]:
+      - generic [ref=e554]: Excessive alcohol consumption is harmful to health!
+      - img "icon" [ref=e555]
+      - generic [ref=e556]: Excessive alcohol consumption is harmful to health!
+      - img "icon" [ref=e557]
+      - generic [ref=e558]: Excessive alcohol consumption is harmful to health!
+      - img "icon" [ref=e559]
+      - generic [ref=e560]: Excessive alcohol consumption is harmful to health!
+      - img "icon" [ref=e561]
+      - generic [ref=e562]: Excessive alcohol consumption is harmful to health!
+      - img "icon" [ref=e563]
+  - generic:
+    - img "logo"
